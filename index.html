@@ -5,22 +5,14 @@
 
 <meta charset="UTF-8">
 
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Dr. Umakant Butkar | Academic • Researcher • Innovator</title>
+<title>Dr. Umakant Butkar | Research • Innovation • Academia</title>
 
 <meta name="description"
-content="Official academic profile of Dr. Umakant Butkar – Academician, Researcher, Author and Innovator.">
+content="Official profile of Dr. Umakant Butkar – Academician, Researcher, Author and Innovator.">
 
-<meta name="keywords"
-content="Dr Umakant Butkar, Artificial Intelligence, Machine Learning, IoT, Researcher, Patents, Books, Computer Engineering">
-
-
-<!-- GOOGLE FONT -->
-
-<link rel="preconnect"
-href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 
 <link rel="preconnect"
 href="https://fonts.gstatic.com"
@@ -32,9 +24,9 @@ rel="stylesheet">
 
 <style>
 
-/* =========================================================
-   GLOBAL
-========================================================= */
+/* =====================================================
+   BASIC RESET
+===================================================== */
 
 *{
     margin:0;
@@ -47,15 +39,10 @@ html{
 }
 
 body{
-
     font-family:Inter,Arial,sans-serif;
-
-    background:#f6f8fc;
-
+    background:#f5f8fc;
     color:#172033;
-
-    line-height:1.6;
-
+    overflow-x:hidden;
 }
 
 a{
@@ -63,19 +50,15 @@ a{
 }
 
 .container{
-
     width:90%;
-
     max-width:1150px;
-
     margin:auto;
-
 }
 
 
-/* =========================================================
+/* =====================================================
    NAVIGATION
-========================================================= */
+===================================================== */
 
 .navbar{
 
@@ -85,12 +68,11 @@ a{
     left:0;
     right:0;
 
-    z-index:999;
+    z-index:9999;
 
-    background:
-    rgba(4,14,28,.92);
+    background:rgba(2,10,23,.88);
 
-    backdrop-filter:blur(15px);
+    backdrop-filter:blur(18px);
 
     border-bottom:
     1px solid rgba(255,255,255,.08);
@@ -103,26 +85,25 @@ a{
 
     margin:auto;
 
-    padding:16px 25px;
+    padding:15px 25px;
 
     display:flex;
 
-    align-items:center;
-
     justify-content:space-between;
+
+    align-items:center;
 
 }
 
 .logo{
 
-    font-family:
-    "JetBrains Mono";
-
     color:#fff;
 
-    font-weight:700;
+    font-family:"JetBrains Mono";
 
-    font-size:18px;
+    font-size:17px;
+
+    font-weight:700;
 
 }
 
@@ -144,7 +125,7 @@ a{
 
     color:#cbd5e1;
 
-    font-size:13px;
+    font-size:12px;
 
     font-weight:600;
 
@@ -160,47 +141,47 @@ a{
 
     display:none;
 
-    color:#fff;
-
     background:none;
 
     border:0;
 
-    font-size:25px;
+    color:white;
+
+    font-size:26px;
 
     cursor:pointer;
 
 }
 
 
-/* =========================================================
+/* =====================================================
    HERO
-========================================================= */
+===================================================== */
 
 .hero{
 
     min-height:100vh;
 
-    padding:
-    160px 20px
-    100px;
-
     position:relative;
 
     overflow:hidden;
+
+    padding:
+    150px 20px
+    100px;
 
     color:white;
 
     background:
 
     radial-gradient(
-        circle at 80% 20%,
-        rgba(14,165,233,.25),
+        circle at 80% 25%,
+        rgba(14,165,233,.20),
         transparent 30%
     ),
 
     radial-gradient(
-        circle at 10% 80%,
+        circle at 15% 80%,
         rgba(37,99,235,.20),
         transparent 30%
     ),
@@ -208,47 +189,224 @@ a{
     linear-gradient(
         135deg,
         #020617,
-        #0b1d36,
-        #102f52
+        #071b35,
+        #0b2c4d
     );
 
 }
 
 
-/* GRID TECH BACKGROUND */
+/* =====================================================
+   ANIMATED GRID
+===================================================== */
 
-.hero::before{
-
-    content:"";
+.hero-grid{
 
     position:absolute;
 
     inset:0;
 
+    opacity:.25;
+
     background-image:
 
     linear-gradient(
-        rgba(255,255,255,.035) 1px,
+        rgba(56,189,248,.15) 1px,
         transparent 1px
     ),
 
     linear-gradient(
         90deg,
-        rgba(255,255,255,.035) 1px,
+        rgba(56,189,248,.15) 1px,
         transparent 1px
     );
 
     background-size:
-    45px 45px;
+    50px 50px;
+
+    animation:
+    gridMove 15s linear infinite;
 
 }
 
+@keyframes gridMove{
+
+    from{
+        transform:translateY(0);
+    }
+
+    to{
+        transform:translateY(50px);
+    }
+
+}
+
+
+/* =====================================================
+   MOVING GLOW
+===================================================== */
+
+.glow{
+
+    position:absolute;
+
+    width:350px;
+
+    height:350px;
+
+    border-radius:50%;
+
+    background:
+    rgba(14,165,233,.12);
+
+    filter:blur(70px);
+
+    animation:
+    glowMove 8s ease-in-out infinite;
+
+}
+
+.glow.one{
+
+    top:15%;
+
+    right:10%;
+
+}
+
+.glow.two{
+
+    bottom:5%;
+
+    left:5%;
+
+    animation-delay:3s;
+
+}
+
+@keyframes glowMove{
+
+    0%,100%{
+        transform:translate(0,0);
+    }
+
+    50%{
+        transform:translate(40px,-30px);
+    }
+
+}
+
+
+/* =====================================================
+   PARTICLES
+===================================================== */
+
+.particles{
+
+    position:absolute;
+
+    inset:0;
+
+    pointer-events:none;
+
+}
+
+.particle{
+
+    position:absolute;
+
+    width:3px;
+
+    height:3px;
+
+    background:#38bdf8;
+
+    border-radius:50%;
+
+    box-shadow:
+    0 0 10px #38bdf8;
+
+    animation:
+    particleFloat 8s linear infinite;
+
+    opacity:.7;
+
+}
+
+.particle:nth-child(1){
+    left:8%;
+    top:30%;
+    animation-delay:0s;
+}
+
+.particle:nth-child(2){
+    left:20%;
+    top:70%;
+    animation-delay:2s;
+}
+
+.particle:nth-child(3){
+    left:35%;
+    top:20%;
+    animation-delay:4s;
+}
+
+.particle:nth-child(4){
+    left:55%;
+    top:75%;
+    animation-delay:1s;
+}
+
+.particle:nth-child(5){
+    left:70%;
+    top:35%;
+    animation-delay:3s;
+}
+
+.particle:nth-child(6){
+    left:85%;
+    top:65%;
+    animation-delay:5s;
+}
+
+.particle:nth-child(7){
+    left:92%;
+    top:20%;
+    animation-delay:2s;
+}
+
+@keyframes particleFloat{
+
+    0%{
+        transform:translateY(30px);
+        opacity:0;
+    }
+
+    20%{
+        opacity:1;
+    }
+
+    80%{
+        opacity:1;
+    }
+
+    100%{
+        transform:translateY(-120px);
+        opacity:0;
+    }
+
+}
+
+
+/* =====================================================
+   HERO CONTENT
+===================================================== */
 
 .hero-content{
 
     position:relative;
 
-    z-index:2;
+    z-index:5;
 
     max-width:1150px;
 
@@ -257,25 +415,49 @@ a{
     display:grid;
 
     grid-template-columns:
-    1.4fr .8fr;
-
-    align-items:center;
+    1.35fr .75fr;
 
     gap:70px;
+
+    align-items:center;
 
 }
 
 
-/* HERO TEXT */
+/* =====================================================
+   HERO TEXT ANIMATION
+===================================================== */
+
+.hero-text{
+
+    animation:
+    heroText .9s ease forwards;
+
+    opacity:0;
+
+}
+
+@keyframes heroText{
+
+    from{
+        opacity:0;
+        transform:translateY(35px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
 
 .hero-tag{
 
-    font-family:
-    "JetBrains Mono";
+    font-family:"JetBrains Mono";
 
     color:#38bdf8;
 
-    font-size:11px;
+    font-size:10px;
 
     letter-spacing:3px;
 
@@ -286,29 +468,66 @@ a{
 .hero h1{
 
     font-size:
-    clamp(45px,6vw,76px);
+    clamp(48px,6vw,78px);
 
     line-height:1.02;
 
     letter-spacing:-4px;
 
-    margin-bottom:22px;
+    margin-bottom:20px;
 
 }
 
 .hero h1 span{
+
     color:#38bdf8;
+
+    text-shadow:
+    0 0 25px
+    rgba(56,189,248,.4);
+
 }
 
 .hero-subtitle{
 
-    font-size:20px;
+    min-height:30px;
 
     color:#dbeafe;
 
+    font-size:19px;
+
     font-weight:500;
 
-    margin-bottom:18px;
+}
+
+.typing{
+
+    color:#7dd3fc;
+
+}
+
+.cursor{
+
+    display:inline-block;
+
+    width:2px;
+
+    height:20px;
+
+    background:#38bdf8;
+
+    margin-left:5px;
+
+    animation:
+    blink .7s infinite;
+
+}
+
+@keyframes blink{
+
+    50%{
+        opacity:0;
+    }
 
 }
 
@@ -316,16 +535,20 @@ a{
 
     max-width:650px;
 
+    margin-top:18px;
+
     color:#a9bad0;
 
-    font-size:14px;
+    font-size:13px;
 
     line-height:1.9;
 
 }
 
 
-/* BUTTONS */
+/* =====================================================
+   BUTTONS
+===================================================== */
 
 .hero-buttons{
 
@@ -333,19 +556,21 @@ a{
 
     gap:14px;
 
-    margin-top:30px;
-
     flex-wrap:wrap;
+
+    margin-top:30px;
 
 }
 
 .btn{
 
-    padding:13px 20px;
+    display:inline-block;
+
+    padding:13px 21px;
 
     border-radius:8px;
 
-    font-size:12px;
+    font-size:11px;
 
     font-weight:700;
 
@@ -360,16 +585,20 @@ a{
     background:#2563eb;
 
     box-shadow:
-    0 10px 25px
-    rgba(37,99,235,.3);
+    0 0 25px
+    rgba(37,99,235,.35);
 
 }
 
 .btn-primary:hover{
 
-    transform:translateY(-3px);
+    transform:
+    translateY(-4px)
+    scale(1.02);
 
-    background:#1d4ed8;
+    box-shadow:
+    0 0 35px
+    rgba(37,99,235,.55);
 
 }
 
@@ -379,22 +608,55 @@ a{
 
     border:
     1px solid
-    rgba(255,255,255,.2);
+    rgba(125,211,252,.35);
 
 }
 
 .btn-outline:hover{
 
+    color:#38bdf8;
+
     border-color:#38bdf8;
 
-    color:#38bdf8;
+    box-shadow:
+    0 0 20px
+    rgba(56,189,248,.15);
 
 }
 
 
-/* =========================================================
+/* =====================================================
    PROFILE CARD
-========================================================= */
+===================================================== */
+
+.profile-wrapper{
+
+    animation:
+    cardEntrance 1.2s ease forwards;
+
+    opacity:0;
+
+    animation-delay:.4s;
+
+}
+
+@keyframes cardEntrance{
+
+    from{
+        opacity:0;
+        transform:
+        translateY(40px)
+        rotateY(15deg);
+    }
+
+    to{
+        opacity:1;
+        transform:
+        translateY(0)
+        rotateY(0);
+    }
+
+}
 
 .profile-card{
 
@@ -409,44 +671,82 @@ a{
 
     border:
     1px solid
-    rgba(255,255,255,.14);
+    rgba(125,211,252,.20);
 
     backdrop-filter:blur(20px);
 
     box-shadow:
     0 25px 70px
-    rgba(0,0,0,.3);
+    rgba(0,0,0,.35);
+
+    animation:
+    floatingCard 5s ease-in-out infinite;
+
+}
+
+@keyframes floatingCard{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-10px);
+    }
+
+}
+
+
+/* =====================================================
+   PROFILE PHOTO
+===================================================== */
+
+.photo-ring{
+
+    width:190px;
+
+    height:190px;
+
+    margin:
+    0 auto 22px;
+
+    padding:5px;
+
+    border-radius:50%;
+
+    background:
+
+    conic-gradient(
+        #38bdf8,
+        #2563eb,
+        transparent,
+        #38bdf8
+    );
+
+    animation:
+    rotateRing 5s linear infinite;
+
+}
+
+@keyframes rotateRing{
+
+    to{
+        transform:rotate(360deg);
+    }
 
 }
 
 .profile-photo{
 
-    width:180px;
+    width:100%;
 
-    height:180px;
-
-    margin:0 auto 22px;
+    height:100%;
 
     border-radius:50%;
 
     overflow:hidden;
 
-    border:
-    4px solid
-    rgba(56,189,248,.6);
-
-    background:
-    linear-gradient(
-        135deg,
-        #1e3a8a,
-        #0f172a
-    );
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
+    background:#071426;
 
 }
 
@@ -458,16 +758,16 @@ a{
 
     object-fit:cover;
 
+    animation:
+    counterRotate 5s linear infinite;
+
 }
 
-.photo-placeholder{
+@keyframes counterRotate{
 
-    font-family:
-    "JetBrains Mono";
-
-    font-size:35px;
-
-    color:#38bdf8;
+    to{
+        transform:rotate(-360deg);
+    }
 
 }
 
@@ -475,31 +775,71 @@ a{
 
     text-align:center;
 
-    font-size:20px;
-
-    margin-bottom:5px;
+    font-size:19px;
 
 }
 
-.profile-card .role{
+.profile-role{
 
     text-align:center;
 
-    color:#93c5fd;
+    color:#7dd3fc;
 
-    font-size:12px;
+    font-size:11px;
+
+    margin-top:5px;
 
 }
 
-.profile-lines{
+.status{
 
-    margin-top:25px;
+    text-align:center;
+
+    margin-top:14px;
+
+    font-family:"JetBrains Mono";
+
+    color:#86efac;
+
+    font-size:9px;
+
+}
+
+.status::before{
+
+    content:"";
+
+    display:inline-block;
+
+    width:7px;
+
+    height:7px;
+
+    margin-right:6px;
+
+    border-radius:50%;
+
+    background:#22c55e;
+
+    box-shadow:
+    0 0 10px #22c55e;
+
+}
+
+
+/* =====================================================
+   PROFILE INFORMATION
+===================================================== */
+
+.profile-info{
 
     border-top:
     1px solid
-    rgba(255,255,255,.1);
+    rgba(255,255,255,.10);
 
-    padding-top:20px;
+    margin-top:20px;
+
+    padding-top:18px;
 
 }
 
@@ -511,30 +851,72 @@ a{
 
     color:#b6c5d8;
 
-    font-size:11px;
+    font-size:10px;
 
     margin-bottom:10px;
 
 }
 
 .profile-line strong{
-
     color:#fff;
+}
+
+
+/* =====================================================
+   SCROLL INDICATOR
+===================================================== */
+
+.scroll-indicator{
+
+    position:absolute;
+
+    bottom:25px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    z-index:5;
+
+    font-family:"JetBrains Mono";
+
+    color:#64748b;
+
+    font-size:9px;
+
+    letter-spacing:2px;
+
+    animation:
+    scrollBounce 2s infinite;
+
+}
+
+@keyframes scrollBounce{
+
+    0%,100%{
+        transform:
+        translate(-50%,0);
+    }
+
+    50%{
+        transform:
+        translate(-50%,8px);
+    }
 
 }
 
 
-/* =========================================================
+/* =====================================================
    STATS
-========================================================= */
+===================================================== */
 
 .stats{
-
-    margin-top:-55px;
 
     position:relative;
 
     z-index:10;
+
+    margin-top:-55px;
 
 }
 
@@ -559,9 +941,9 @@ a{
 
 .stat{
 
-    padding:28px 10px;
-
     text-align:center;
+
+    padding:28px 10px;
 
     border-right:
     1px solid #e5e7eb;
@@ -584,7 +966,7 @@ a{
 
     color:#64748b;
 
-    font-size:10px;
+    font-size:9px;
 
     font-weight:700;
 
@@ -593,9 +975,9 @@ a{
 }
 
 
-/* =========================================================
-   SECTION
-========================================================= */
+/* =====================================================
+   GENERAL SECTIONS
+===================================================== */
 
 section.content-section{
 
@@ -605,12 +987,11 @@ section.content-section{
 
 .section-label{
 
-    font-family:
-    "JetBrains Mono";
+    font-family:"JetBrains Mono";
 
     color:#2563eb;
 
-    font-size:10px;
+    font-size:9px;
 
     letter-spacing:3px;
 
@@ -634,16 +1015,41 @@ section.content-section{
 
     color:#64748b;
 
-    font-size:14px;
+    font-size:13px;
 
     line-height:1.9;
 
 }
 
 
-/* =========================================================
+/* =====================================================
+   SCROLL REVEAL
+===================================================== */
+
+.reveal{
+
+    opacity:0;
+
+    transform:translateY(35px);
+
+    transition:
+    opacity .8s ease,
+    transform .8s ease;
+
+}
+
+.reveal.active{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+
+/* =====================================================
    ABOUT
-========================================================= */
+===================================================== */
 
 .about-grid{
 
@@ -654,7 +1060,7 @@ section.content-section{
 
     gap:50px;
 
-    align-items:start;
+    margin-top:35px;
 
 }
 
@@ -662,7 +1068,7 @@ section.content-section{
 
     color:#526174;
 
-    font-size:14px;
+    font-size:13px;
 
     line-height:1.9;
 
@@ -689,9 +1095,9 @@ section.content-section{
 
 .about-card h3{
 
-    margin-bottom:20px;
+    font-size:17px;
 
-    font-size:18px;
+    margin-bottom:18px;
 
 }
 
@@ -699,7 +1105,7 @@ section.content-section{
 
     display:inline-block;
 
-    padding:8px 12px;
+    padding:8px 11px;
 
     margin:4px;
 
@@ -709,16 +1115,29 @@ section.content-section{
 
     border-radius:7px;
 
-    font-size:10px;
+    font-size:9px;
 
     font-weight:700;
+
+    transition:.3s;
+
+}
+
+.interest:hover{
+
+    transform:
+    translateY(-3px);
+
+    box-shadow:
+    0 8px 20px
+    rgba(37,99,235,.12);
 
 }
 
 
-/* =========================================================
-   RESEARCH AREAS
-========================================================= */
+/* =====================================================
+   RESEARCH
+===================================================== */
 
 .research-grid{
 
@@ -744,35 +1163,36 @@ section.content-section{
 
     border-radius:16px;
 
-    transition:.3s;
+    transition:.35s;
 
 }
 
 .research-card:hover{
 
-    transform:translateY(-6px);
+    transform:
+    translateY(-8px);
 
-    border-color:#bfdbfe;
+    border-color:#93c5fd;
 
     box-shadow:
-    0 15px 35px
+    0 20px 40px
     rgba(15,23,42,.08);
 
 }
 
 .research-icon{
 
-    font-size:30px;
+    font-size:28px;
 
-    margin-bottom:15px;
+    margin-bottom:14px;
 
 }
 
 .research-card h3{
 
-    font-size:17px;
+    font-size:16px;
 
-    margin-bottom:10px;
+    margin-bottom:9px;
 
 }
 
@@ -780,16 +1200,16 @@ section.content-section{
 
     color:#64748b;
 
-    font-size:12px;
+    font-size:11px;
 
     line-height:1.7;
 
 }
 
 
-/* =========================================================
-   PUBLICATION PREVIEW
-========================================================= */
+/* =====================================================
+   PUBLICATIONS
+===================================================== */
 
 .publication-preview{
 
@@ -806,25 +1226,37 @@ section.content-section{
 
 .pub-card{
 
-    background:white;
+    background:#fff;
 
     padding:25px;
 
-    border-radius:16px;
-
     border:
     1px solid #e2e8f0;
+
+    border-radius:16px;
+
+    transition:.3s;
+
+}
+
+.pub-card:hover{
+
+    transform:
+    translateY(-6px);
+
+    box-shadow:
+    0 15px 35px
+    rgba(15,23,42,.08);
 
 }
 
 .pub-number{
 
+    font-family:"JetBrains Mono";
+
     color:#2563eb;
 
-    font-family:
-    "JetBrains Mono";
-
-    font-size:25px;
+    font-size:27px;
 
     font-weight:700;
 
@@ -832,26 +1264,26 @@ section.content-section{
 
 .pub-card h3{
 
-    margin-top:8px;
-
     font-size:16px;
+
+    margin-top:8px;
 
 }
 
 .pub-card p{
 
-    margin-top:8px;
-
     color:#64748b;
 
     font-size:11px;
 
+    margin-top:8px;
+
 }
 
 
-/* =========================================================
-   JOURNEY / TIMELINE
-========================================================= */
+/* =====================================================
+   TIMELINE
+===================================================== */
 
 .timeline{
 
@@ -878,6 +1310,10 @@ section.content-section{
 
     position:absolute;
 
+    left:-37px;
+
+    top:4px;
+
     width:12px;
 
     height:12px;
@@ -886,23 +1322,20 @@ section.content-section{
 
     background:#2563eb;
 
-    left:-37px;
-
-    top:5px;
-
     box-shadow:
-    0 0 0 5px #eff6ff;
+    0 0 0 5px #eff6ff,
+    0 0 18px
+    rgba(37,99,235,.35);
 
 }
 
 .timeline-year{
 
-    font-family:
-    "JetBrains Mono";
+    font-family:"JetBrains Mono";
 
     color:#2563eb;
 
-    font-size:10px;
+    font-size:9px;
 
     margin-bottom:6px;
 
@@ -910,9 +1343,7 @@ section.content-section{
 
 .timeline-item h3{
 
-    font-size:17px;
-
-    margin-bottom:5px;
+    font-size:16px;
 
 }
 
@@ -920,14 +1351,14 @@ section.content-section{
 
     color:#64748b;
 
-    font-size:12px;
+    font-size:11px;
 
 }
 
 
-/* =========================================================
+/* =====================================================
    CTA
-========================================================= */
+===================================================== */
 
 .cta{
 
@@ -957,7 +1388,7 @@ section.content-section{
 
 .cta h2{
 
-    font-size:34px;
+    font-size:33px;
 
     margin-bottom:12px;
 
@@ -965,20 +1396,20 @@ section.content-section{
 
 .cta p{
 
-    color:#a9bad0;
-
     max-width:650px;
 
     margin:auto;
 
-    font-size:13px;
+    color:#a9bad0;
+
+    font-size:12px;
 
 }
 
 
-/* =========================================================
+/* =====================================================
    CONTACT
-========================================================= */
+===================================================== */
 
 .contact-grid{
 
@@ -997,26 +1428,35 @@ section.content-section{
 
     background:#fff;
 
+    padding:25px;
+
     border:
     1px solid #e2e8f0;
 
-    padding:25px;
-
     border-radius:14px;
+
+    transition:.3s;
+
+}
+
+.contact-card:hover{
+
+    transform:
+    translateY(-5px);
 
 }
 
 .contact-card span{
 
-    font-size:25px;
+    font-size:24px;
 
 }
 
 .contact-card h3{
 
-    margin:10px 0 5px;
-
     font-size:15px;
+
+    margin:10px 0 5px;
 
 }
 
@@ -1024,14 +1464,14 @@ section.content-section{
 
     color:#64748b;
 
-    font-size:11px;
+    font-size:10px;
 
 }
 
 
-/* =========================================================
+/* =====================================================
    FOOTER
-========================================================= */
+===================================================== */
 
 footer{
 
@@ -1059,36 +1499,34 @@ footer{
 
 .footer-left strong{
 
-    font-family:
-    "JetBrains Mono";
+    font-family:"JetBrains Mono";
 
 }
 
 .footer-left p{
 
-    margin-top:6px;
-
     color:#64748b;
 
-    font-size:10px;
+    font-size:9px;
+
+    margin-top:5px;
 
 }
 
 .footer-code{
 
-    font-family:
-    "JetBrains Mono";
-
     color:#38bdf8;
 
-    font-size:10px;
+    font-family:"JetBrains Mono";
+
+    font-size:9px;
 
 }
 
 
-/* =========================================================
+/* =====================================================
    MOBILE
-========================================================= */
+===================================================== */
 
 @media(max-width:800px){
 
@@ -1098,7 +1536,7 @@ footer{
 
         position:absolute;
 
-        top:62px;
+        top:60px;
 
         left:0;
 
@@ -1106,7 +1544,7 @@ footer{
 
         background:#020617;
 
-        padding:20px;
+        padding:22px;
 
         flex-direction:column;
 
@@ -1122,20 +1560,40 @@ footer{
         display:block;
     }
 
+    .hero{
+
+        padding-top:130px;
+
+    }
+
     .hero-content{
 
         grid-template-columns:1fr;
 
         text-align:center;
 
+        gap:45px;
+
     }
 
     .hero-description{
+
         margin:auto;
+
     }
 
     .hero-buttons{
+
         justify-content:center;
+
+    }
+
+    .profile-wrapper{
+
+        max-width:370px;
+
+        margin:auto;
+
     }
 
     .stats-grid{
@@ -1196,20 +1654,17 @@ footer{
 <body>
 
 
-<!-- =========================================================
-     NAVBAR
-========================================================= -->
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
 
 <header class="navbar">
 
 <div class="nav-container">
 
-
 <div class="logo">
 
-<span>&lt;</span>
-DR. BUTKAR
-<span>/&gt;</span>
+<span>&lt;</span> DR. BUTKAR <span>/&gt;</span>
 
 </div>
 
@@ -1223,9 +1678,7 @@ onclick="toggleMenu()">
 </button>
 
 
-<ul
-class="nav-links"
-id="navLinks">
+<ul class="nav-links" id="navLinks">
 
 <li>
 <a href="#home">Home</a>
@@ -1244,15 +1697,11 @@ id="navLinks">
 </li>
 
 <li>
-<a href="publications.html">
-Publications
-</a>
+<a href="publications.html">Publications</a>
 </li>
 
 <li>
-<a href="#contact">
-Contact
-</a>
+<a href="#contact">Contact</a>
 </li>
 
 </ul>
@@ -1262,19 +1711,55 @@ Contact
 </header>
 
 
-<!-- =========================================================
+
+<!-- =====================================================
      HERO
-========================================================= -->
+===================================================== -->
 
 <section
 class="hero"
 id="home">
 
 
+<!-- ANIMATED GRID -->
+
+<div class="hero-grid"></div>
+
+
+<!-- GLOWING BACKGROUND -->
+
+<div class="glow one"></div>
+
+<div class="glow two"></div>
+
+
+<!-- PARTICLES -->
+
+<div class="particles">
+
+<div class="particle"></div>
+
+<div class="particle"></div>
+
+<div class="particle"></div>
+
+<div class="particle"></div>
+
+<div class="particle"></div>
+
+<div class="particle"></div>
+
+<div class="particle"></div>
+
+</div>
+
+
 <div class="hero-content">
 
 
-<div>
+<!-- HERO TEXT -->
+
+<div class="hero-text">
 
 
 <div class="hero-tag">
@@ -1287,6 +1772,7 @@ ACADEMIA • RESEARCH • INNOVATION
 <h1>
 
 Dr. Umakant
+
 <br>
 
 <span>Butkar</span>
@@ -1296,7 +1782,9 @@ Dr. Umakant
 
 <div class="hero-subtitle">
 
-Academician • Researcher • Author • Innovator
+<span class="typing"></span>
+
+<span class="cursor"></span>
 
 </div>
 
@@ -1328,10 +1816,10 @@ Explore Publications →
 
 
 <a
-href="#contact"
+href="#about"
 class="btn btn-outline">
 
-Connect With Me
+Discover My Work
 
 </a>
 
@@ -1341,33 +1829,22 @@ Connect With Me
 </div>
 
 
-<!-- PROFILE CARD -->
+
+<!-- PROFILE -->
+
+<div class="profile-wrapper">
+
 
 <div class="profile-card">
 
 
-<div class="profile-photo">
+<div class="photo-ring">
 
-<!--
-     IMPORTANT:
-     Upload your photo as profile.jpg
-     in the same GitHub folder.
--->
+<div class="profile-photo">
 
 <img
 src="profile.jpg"
-alt="Dr. Umakant Butkar"
-onerror="
-this.style.display='none';
-this.nextElementSibling.style.display='block';
-">
-
-
-<div
-class="photo-placeholder"
-style="display:none;">
-
-UB
+alt="Dr. Umakant Butkar">
 
 </div>
 
@@ -1375,20 +1852,27 @@ UB
 
 
 <h3>
+
 Dr. Umakant Butkar
+
 </h3>
 
 
-<div class="role">
+<div class="profile-role">
 
-Associate Professor
-<br>
-Computer Engineering
+Associate Professor • Computer Engineering
 
 </div>
 
 
-<div class="profile-lines">
+<div class="status">
+
+AVAILABLE FOR ACADEMIC COLLABORATION
+
+</div>
+
+
+<div class="profile-info">
 
 
 <div class="profile-line">
@@ -1397,9 +1881,9 @@ Computer Engineering
 
 <div>
 
-<strong>Qualification</strong>
+<strong>Academic</strong>
 <br>
-Ph.D. in Computer Science
+Teaching • Research • Mentoring
 
 </div>
 
@@ -1414,7 +1898,7 @@ Ph.D. in Computer Science
 
 <strong>Research</strong>
 <br>
-AI • ML • IoT • Computer Science
+AI • ML • IoT • Smart Systems
 
 </div>
 
@@ -1427,9 +1911,9 @@ AI • ML • IoT • Computer Science
 
 <div>
 
-<strong>Academic Work</strong>
+<strong>Innovation</strong>
 <br>
-Books • Patents • Research Papers
+Books • Patents • Publications
 
 </div>
 
@@ -1438,17 +1922,29 @@ Books • Patents • Research Papers
 
 </div>
 
+
+</div>
+
 </div>
 
 
 </div>
+
+
+<div class="scroll-indicator">
+
+SCROLL TO EXPLORE ↓
+
+</div>
+
 
 </section>
 
 
-<!-- =========================================================
-     STATS
-========================================================= -->
+
+<!-- =====================================================
+     STATISTICS
+===================================================== -->
 
 <section class="stats">
 
@@ -1459,7 +1955,13 @@ Books • Patents • Research Papers
 
 <div class="stat">
 
-<h2>10+</h2>
+<h2
+class="counter"
+data-target="10">
+
+0
+
+</h2>
 
 <p>BOOKS</p>
 
@@ -1468,7 +1970,13 @@ Books • Patents • Research Papers
 
 <div class="stat">
 
-<h2>33+</h2>
+<h2
+class="counter"
+data-target="33">
+
+0
+
+</h2>
 
 <p>PUBLISHED PATENTS</p>
 
@@ -1477,7 +1985,13 @@ Books • Patents • Research Papers
 
 <div class="stat">
 
-<h2>03</h2>
+<h2
+class="counter"
+data-target="3">
+
+0
+
+</h2>
 
 <p>GRANTED PATENTS</p>
 
@@ -1486,7 +2000,13 @@ Books • Patents • Research Papers
 
 <div class="stat">
 
-<h2>30+</h2>
+<h2
+class="counter"
+data-target="30">
+
+0
+
+</h2>
 
 <p>RESEARCH PAPERS</p>
 
@@ -1500,15 +2020,16 @@ Books • Patents • Research Papers
 </section>
 
 
-<!-- =========================================================
+
+<!-- =====================================================
      ABOUT
-========================================================= -->
+===================================================== -->
 
 <section
 class="content-section"
 id="about">
 
-<div class="container">
+<div class="container reveal">
 
 
 <div class="section-label">
@@ -1526,6 +2047,7 @@ id="about">
 
 Building Knowledge.
 <br>
+
 Creating Innovation.
 
 </h2>
@@ -1534,8 +2056,8 @@ Creating Innovation.
 <p>
 
 Dr. Umakant Butkar is an academician and researcher
-in the field of Computer Engineering, with a strong
-interest in emerging technologies and their practical
+in Computer Engineering, with a strong interest in
+emerging technologies and their practical
 applications.
 
 </p>
@@ -1543,7 +2065,7 @@ applications.
 
 <p>
 
-His academic and research work covers Artificial
+His academic and research work includes Artificial
 Intelligence, Machine Learning, Internet of Things,
 Computer Science applications and technology-driven
 solutions.
@@ -1553,24 +2075,21 @@ solutions.
 
 <p>
 
-His professional work combines teaching, research,
-academic writing, patents, intellectual property and
-innovation-oriented projects.
+His professional activities combine teaching,
+research, academic writing, patents, intellectual
+property and innovation-oriented projects.
 
 </p>
 
-
-<div class="hero-buttons">
 
 <a
 href="publications.html"
 class="btn btn-primary">
 
-View Complete Profile →
+View Complete Publications →
 
 </a>
 
-</div>
 
 </div>
 
@@ -1626,16 +2145,17 @@ Emerging Technologies
 </section>
 
 
-<!-- =========================================================
+
+<!-- =====================================================
      RESEARCH
-========================================================= -->
+===================================================== -->
 
 <section
 class="content-section"
 id="research"
 style="background:#fff;">
 
-<div class="container">
+<div class="container reveal">
 
 
 <div class="section-label">
@@ -1652,9 +2172,9 @@ Research & Innovation
 
 <p class="section-description">
 
-Research interests focus on developing intelligent,
-connected and practical technology solutions that
-bridge academic research with real-world applications.
+Developing intelligent, connected and practical
+technology solutions that bridge academic research
+with real-world applications.
 
 </p>
 
@@ -1694,9 +2214,8 @@ Machine Learning
 
 <p>
 
-Machine learning techniques for prediction,
-classification, optimization and intelligent
-decision-making.
+Prediction, classification, optimization and
+intelligent decision-making.
 
 </p>
 
@@ -1715,7 +2234,7 @@ Internet of Things
 
 <p>
 
-IoT-based monitoring, automation, smart systems,
+IoT monitoring, automation, smart systems,
 sensing and connected applications.
 
 </p>
@@ -1736,7 +2255,7 @@ Cyber Security
 <p>
 
 Security-oriented research involving intelligent
-systems, networks, data and digital environments.
+systems, networks and digital environments.
 
 </p>
 
@@ -1776,7 +2295,7 @@ Smart Engineering
 <p>
 
 Technology integration for practical engineering,
-automation and innovation-oriented solutions.
+automation and innovation.
 
 </p>
 
@@ -1790,14 +2309,15 @@ automation and innovation-oriented solutions.
 </section>
 
 
-<!-- =========================================================
-     PUBLICATIONS PREVIEW
-========================================================= -->
+
+<!-- =====================================================
+     PUBLICATIONS
+===================================================== -->
 
 <section
 class="content-section">
 
-<div class="container">
+<div class="container reveal">
 
 
 <div class="section-label">
@@ -1815,7 +2335,7 @@ Research Output
 <p class="section-description">
 
 Explore books, patents, copyrights and research
-papers through the complete publication database.
+papers through the complete publication collection.
 
 </p>
 
@@ -1835,9 +2355,8 @@ Books
 
 <p>
 
-Academic and professional books covering
-AI, Machine Learning, IoT, Cyber Security
-and related technologies.
+Academic and professional books covering emerging
+technology domains.
 
 </p>
 
@@ -1856,8 +2375,8 @@ Patents
 
 <p>
 
-Published and granted intellectual property
-covering AI, IoT, robotics and smart devices.
+Published and granted intellectual property covering
+innovative technology concepts.
 
 </p>
 
@@ -1887,12 +2406,7 @@ cyber security and engineering applications.
 </div>
 
 
-<div
-style="
-text-align:center;
-margin-top:35px;
-">
-
+<div style="text-align:center;margin-top:35px;">
 
 <a
 href="publications.html"
@@ -1902,24 +2416,25 @@ class="btn btn-primary">
 
 </a>
 
-
 </div>
+
 
 </div>
 
 </section>
 
 
-<!-- =========================================================
+
+<!-- =====================================================
      JOURNEY
-========================================================= -->
+===================================================== -->
 
 <section
 class="content-section"
 id="journey"
 style="background:#fff;">
 
-<div class="container">
+<div class="container reveal">
 
 
 <div class="section-label">
@@ -2009,9 +2524,8 @@ Patents & Intellectual Property
 
 <p>
 
-Development of innovative technology concepts
-leading to published and granted intellectual
-property.
+Innovative technology concepts leading to
+published and granted intellectual property.
 
 </p>
 
@@ -2031,8 +2545,7 @@ Research • Innovation • Impact
 <p>
 
 Continuing academic, research and innovation
-activities with a focus on practical technology
-solutions.
+activities with a focus on practical solutions.
 
 </p>
 
@@ -2046,14 +2559,15 @@ solutions.
 </section>
 
 
-<!-- =========================================================
+
+<!-- =====================================================
      CTA
-========================================================= -->
+===================================================== -->
 
 <section
 class="content-section">
 
-<div class="container">
+<div class="container reveal">
 
 <div class="cta">
 
@@ -2072,8 +2586,7 @@ collection.
 </p>
 
 
-<div class="hero-buttons"
-style="justify-content:center;">
+<div style="margin-top:25px;">
 
 <a
 href="publications.html"
@@ -2093,16 +2606,17 @@ Open Publication Database →
 </section>
 
 
-<!-- =========================================================
+
+<!-- =====================================================
      CONTACT
-========================================================= -->
+===================================================== -->
 
 <section
 class="content-section"
 id="contact"
 style="background:#fff;">
 
-<div class="container">
+<div class="container reveal">
 
 
 <div class="section-label">
@@ -2152,12 +2666,12 @@ and Research Centre, Nashik
 <span>🔬</span>
 
 <h3>
-Research Profile
+Research
 </h3>
 
 <p>
 
-ResearchID / Google Scholar
+Google Scholar • Research Profiles
 
 </p>
 
@@ -2184,32 +2698,28 @@ GitHub Pages Professional Profile
 </div>
 
 
-<div
-style="
-text-align:center;
-margin-top:35px;
-">
-
+<div style="text-align:center;margin-top:35px;">
 
 <a
 href="publications.html"
 class="btn btn-primary">
 
-View Books & Patents
+View Books & Patents →
 
 </a>
 
-
 </div>
+
 
 </div>
 
 </section>
 
 
-<!-- =========================================================
+
+<!-- =====================================================
      FOOTER
-========================================================= -->
+===================================================== -->
 
 <footer>
 
@@ -2219,7 +2729,9 @@ View Books & Patents
 <div class="footer-left">
 
 <strong>
+
 &lt;DR. BUTKAR /&gt;
+
 </strong>
 
 <p>
@@ -2243,11 +2755,17 @@ research → innovation → impact
 </footer>
 
 
-<!-- =========================================================
+
+<!-- =====================================================
      JAVASCRIPT
-========================================================= -->
+===================================================== -->
 
 <script>
+
+
+/* =====================================================
+   MOBILE MENU
+===================================================== */
 
 function toggleMenu(){
 
@@ -2258,8 +2776,6 @@ function toggleMenu(){
 
 }
 
-
-/* CLOSE MOBILE MENU AFTER CLICK */
 
 document
 .querySelectorAll(".nav-links a")
@@ -2273,6 +2789,222 @@ document
         .remove("active");
 
     });
+
+});
+
+
+
+/* =====================================================
+   TYPING EFFECT
+===================================================== */
+
+const typingText = [
+
+    "Academician",
+    "Researcher",
+    "Author",
+    "Innovator",
+    "Technology Enthusiast"
+
+];
+
+let textIndex = 0;
+
+let charIndex = 0;
+
+let deleting = false;
+
+
+function typeEffect(){
+
+    const element =
+    document.querySelector(".typing");
+
+    const current =
+    typingText[textIndex];
+
+
+    if(!deleting){
+
+        element.textContent =
+        current.substring(
+            0,
+            charIndex + 1
+        );
+
+        charIndex++;
+
+
+        if(charIndex === current.length){
+
+            deleting = true;
+
+            setTimeout(
+                typeEffect,
+                1400
+            );
+
+            return;
+
+        }
+
+    }else{
+
+        element.textContent =
+        current.substring(
+            0,
+            charIndex - 1
+        );
+
+        charIndex--;
+
+
+        if(charIndex === 0){
+
+            deleting = false;
+
+            textIndex =
+            (textIndex + 1)
+            % typingText.length;
+
+        }
+
+    }
+
+
+    setTimeout(
+        typeEffect,
+        deleting ? 50 : 100
+    );
+
+}
+
+
+typeEffect();
+
+
+
+/* =====================================================
+   COUNTER ANIMATION
+===================================================== */
+
+const counters =
+document.querySelectorAll(".counter");
+
+
+const counterObserver =
+new IntersectionObserver(
+
+    function(entries){
+
+        entries.forEach(function(entry){
+
+            if(entry.isIntersecting){
+
+                const counter =
+                entry.target;
+
+                const target =
+                Number(
+                    counter.dataset.target
+                );
+
+                let count = 0;
+
+                const speed =
+                Math.max(
+                    10,
+                    1200 / target
+                );
+
+
+                function update(){
+
+                    if(count < target){
+
+                        count++;
+
+                        counter.textContent =
+                        count;
+
+                        setTimeout(
+                            update,
+                            speed
+                        );
+
+                    }else{
+
+                        counter.textContent =
+                        target + "+";
+
+                    }
+
+                }
+
+
+                update();
+
+                counterObserver
+                .unobserve(counter);
+
+            }
+
+        });
+
+    },
+
+    {
+        threshold:.5
+    }
+
+);
+
+
+counters.forEach(function(counter){
+
+    counterObserver.observe(counter);
+
+});
+
+
+
+/* =====================================================
+   SCROLL REVEAL
+===================================================== */
+
+const reveals =
+document.querySelectorAll(".reveal");
+
+
+const revealObserver =
+new IntersectionObserver(
+
+    function(entries){
+
+        entries.forEach(function(entry){
+
+            if(entry.isIntersecting){
+
+                entry.target
+                .classList
+                .add("active");
+
+            }
+
+        });
+
+    },
+
+    {
+        threshold:.12
+    }
+
+);
+
+
+reveals.forEach(function(element){
+
+    revealObserver.observe(element);
 
 });
 
