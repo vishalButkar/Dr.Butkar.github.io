@@ -1,1 +1,2196 @@
 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Publications | Dr. Umakant Butkar</title>
+
+    <meta name="description"
+          content="Research publications of Dr. Umakant Butkar in Artificial Intelligence, Machine Learning, IoT and Emerging Technologies.">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+          rel="stylesheet">
+
+    <style>
+
+        /* ==========================================
+           PUBLICATIONS PAGE
+        ========================================== */
+
+        .publication-hero {
+
+            min-height: 55vh;
+
+            padding: 150px 25px 80px;
+
+            background:
+                radial-gradient(
+                    circle at 80% 20%,
+                    rgba(37,99,235,.18),
+                    transparent 35%
+                ),
+
+                linear-gradient(
+                    135deg,
+                    #07111f,
+                    #10284a
+                );
+
+            color: white;
+
+            position: relative;
+
+            overflow: hidden;
+
+        }
+
+        .publication-hero::before {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background-image:
+                linear-gradient(
+                    rgba(96,165,250,.06) 1px,
+                    transparent 1px
+                ),
+                linear-gradient(
+                    90deg,
+                    rgba(96,165,250,.06) 1px,
+                    transparent 1px
+                );
+
+            background-size: 45px 45px;
+
+        }
+
+        .publication-hero-content {
+
+            max-width: 1100px;
+
+            margin: auto;
+
+            position: relative;
+
+            z-index: 2;
+
+        }
+
+        .publication-hero h1 {
+
+            font-size: clamp(45px, 7vw, 78px);
+
+            line-height: 1.05;
+
+            letter-spacing: -3px;
+
+            margin-bottom: 20px;
+
+        }
+
+        .publication-hero h1 span {
+
+            color: #60a5fa;
+
+        }
+
+        .publication-hero p {
+
+            max-width: 700px;
+
+            color: #94a3b8;
+
+            font-size: 17px;
+
+        }
+
+        .publication-command {
+
+            margin-top: 25px;
+
+            display: inline-block;
+
+            padding: 10px 15px;
+
+            background: #020817;
+
+            border: 1px solid #1d3048;
+
+            border-radius: 7px;
+
+            color: #22c55e;
+
+            font-family: "JetBrains Mono", monospace;
+
+            font-size: 12px;
+
+        }
+
+        /* ==========================================
+           STATS
+        ========================================== */
+
+        .publication-stats {
+
+            max-width: 1000px;
+
+            margin: -45px auto 60px;
+
+            position: relative;
+
+            z-index: 5;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            background: white;
+
+            border: 1px solid #e4e7ec;
+
+            border-radius: 18px;
+
+            box-shadow:
+                0 20px 50px
+                rgba(16,24,40,.12);
+
+            overflow: hidden;
+
+        }
+
+        .publication-stat {
+
+            text-align: center;
+
+            padding: 28px;
+
+            border-right:
+                1px solid #e4e7ec;
+
+        }
+
+        .publication-stat:last-child {
+
+            border-right: none;
+
+        }
+
+        .publication-stat h2 {
+
+            font-size: 38px;
+
+            color: #2563eb;
+
+        }
+
+        .publication-stat p {
+
+            color: #667085;
+
+            font-size: 13px;
+
+        }
+
+        /* ==========================================
+           MAIN
+        ========================================== */
+
+        .publication-container {
+
+            max-width: 1100px;
+
+            margin: auto;
+
+            padding: 20px 25px 100px;
+
+        }
+
+        /* ==========================================
+           SEARCH
+        ========================================== */
+
+        .publication-tools {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 180px;
+
+            gap: 15px;
+
+            margin-bottom: 50px;
+
+        }
+
+        .publication-search {
+
+            padding: 15px 18px;
+
+            border: 1px solid #e4e7ec;
+
+            border-radius: 10px;
+
+            font-family: "Inter", sans-serif;
+
+            font-size: 14px;
+
+            outline: none;
+
+            background: white;
+
+        }
+
+        .publication-search:focus {
+
+            border-color: #2563eb;
+
+            box-shadow:
+                0 0 0 3px
+                rgba(37,99,235,.1);
+
+        }
+
+        .year-filter {
+
+            padding: 15px;
+
+            border: 1px solid #e4e7ec;
+
+            border-radius: 10px;
+
+            background: white;
+
+            font-family: "Inter", sans-serif;
+
+            cursor: pointer;
+
+        }
+
+        /* ==========================================
+           YEAR
+        ========================================== */
+
+        .publication-year-title {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 15px;
+
+            margin: 45px 0 20px;
+
+        }
+
+        .publication-year-title h2 {
+
+            font-size: 27px;
+
+        }
+
+        .publication-year-title span {
+
+            font-family:
+                "JetBrains Mono",
+                monospace;
+
+            color: #2563eb;
+
+            font-size: 12px;
+
+        }
+
+        /* ==========================================
+           CARD
+        ========================================== */
+
+        .publication-item {
+
+            display: grid;
+
+            grid-template-columns: 65px 1fr;
+
+            gap: 20px;
+
+            padding: 25px;
+
+            margin-bottom: 15px;
+
+            border: 1px solid #e4e7ec;
+
+            border-radius: 14px;
+
+            background: white;
+
+            transition: .3s;
+
+        }
+
+        .publication-item:hover {
+
+            transform: translateY(-4px);
+
+            border-color: #bfdbfe;
+
+            box-shadow:
+                0 15px 35px
+                rgba(16,24,40,.08);
+
+        }
+
+        .publication-number {
+
+            width: 45px;
+
+            height: 45px;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            border-radius: 10px;
+
+            background: #eff6ff;
+
+            color: #2563eb;
+
+            font-family:
+                "JetBrains Mono",
+                monospace;
+
+            font-size: 11px;
+
+        }
+
+        .publication-item h3 {
+
+            font-size: 17px;
+
+            line-height: 1.5;
+
+            margin-bottom: 8px;
+
+        }
+
+        .publication-authors {
+
+            color: #667085;
+
+            font-size: 13px;
+
+            margin-bottom: 5px;
+
+        }
+
+        .publication-journal {
+
+            color: #475467;
+
+            font-size: 13px;
+
+            font-style: italic;
+
+        }
+
+        .publication-tags {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 7px;
+
+            margin-top: 12px;
+
+        }
+
+        .publication-tags span {
+
+            padding: 4px 8px;
+
+            background: #f2f4f7;
+
+            border-radius: 5px;
+
+            font-family:
+                "JetBrains Mono",
+                monospace;
+
+            font-size: 9px;
+
+            color: #475467;
+
+        }
+
+        .no-result {
+
+            text-align: center;
+
+            padding: 50px;
+
+            color: #667085;
+
+            display: none;
+
+        }
+
+        /* ==========================================
+           SCHOLAR BUTTON
+        ========================================== */
+
+        .scholar-box {
+
+            margin-top: 60px;
+
+            padding: 35px;
+
+            background: #07111f;
+
+            color: white;
+
+            border-radius: 18px;
+
+            text-align: center;
+
+        }
+
+        .scholar-box h2 {
+
+            margin-bottom: 10px;
+
+        }
+
+        .scholar-box p {
+
+            color: #94a3b8;
+
+            margin-bottom: 20px;
+
+        }
+
+        .scholar-button {
+
+            display: inline-block;
+
+            padding: 12px 20px;
+
+            background: #2563eb;
+
+            color: white;
+
+            border-radius: 8px;
+
+            font-weight: 700;
+
+        }
+
+        /* ==========================================
+           MOBILE
+        ========================================== */
+
+        @media(max-width:700px) {
+
+            .publication-stats {
+
+                grid-template-columns: 1fr;
+
+                margin-left: 20px;
+
+                margin-right: 20px;
+
+            }
+
+            .publication-stat {
+
+                border-right: none;
+
+                border-bottom:
+                    1px solid #e4e7ec;
+
+            }
+
+            .publication-stat:last-child {
+
+                border-bottom: none;
+
+            }
+
+            .publication-tools {
+
+                grid-template-columns: 1fr;
+
+            }
+
+            .publication-item {
+
+                grid-template-columns: 1fr;
+
+            }
+
+            .publication-hero {
+
+                padding-top: 120px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- ==========================================
+     NAVIGATION
+========================================== -->
+
+<header class="navbar">
+
+    <div class="nav-container">
+
+        <div class="logo">
+
+            <span>&lt;</span>
+            DR. BUTKAR
+            <span>/&gt;</span>
+
+        </div>
+
+        <button
+            class="menu-toggle"
+            id="menuToggle">
+
+            ☰
+
+        </button>
+
+        <nav id="navMenu">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="index.html#about">
+                About
+            </a>
+
+            <a href="index.html#research">
+                Research
+            </a>
+
+            <a href="publications.html">
+                Publications
+            </a>
+
+            <a href="index.html#innovation">
+                Innovation
+            </a>
+
+            <a href="index.html#contact">
+                Contact
+            </a>
+
+            <button
+                id="themeToggle"
+                class="theme-btn">
+
+                ◐
+
+            </button>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- ==========================================
+     HERO
+========================================== -->
+
+<section class="publication-hero">
+
+    <div class="publication-hero-content">
+
+        <p class="section-label">
+            RESEARCH PORTFOLIO
+        </p>
+
+        <h1>
+            My <span>Publications</span>
+        </h1>
+
+        <p>
+            Research contributions in Artificial Intelligence,
+            Machine Learning, Internet of Things, Deep Learning,
+            Data Science and emerging technologies.
+        </p>
+
+        <div class="publication-command">
+
+            &gt; research_database.load()
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+     STATS
+========================================== -->
+
+<div class="publication-stats">
+
+    <div class="publication-stat">
+
+        <h2>66+</h2>
+
+        <p>
+            Publications
+        </p>
+
+    </div>
+
+
+    <div class="publication-stat">
+
+        <h2>190+</h2>
+
+        <p>
+            Google Scholar Citations
+        </p>
+
+    </div>
+
+
+    <div class="publication-stat">
+
+        <h2>9</h2>
+
+        <p>
+            h-index
+        </p>
+
+    </div>
+
+</div>
+
+
+<!-- ==========================================
+     PUBLICATIONS
+========================================== -->
+
+<main class="publication-container">
+
+
+    <!-- SEARCH -->
+
+    <div class="publication-tools">
+
+        <input
+            type="text"
+            id="publicationSearch"
+            class="publication-search"
+            placeholder="🔍 Search publications, authors, journals...">
+
+        <select
+            id="yearFilter"
+            class="year-filter">
+
+            <option value="all">
+                All Years
+            </option>
+
+            <option value="2026">
+                2026
+            </option>
+
+            <option value="2025">
+                2025
+            </option>
+
+            <option value="2024">
+                2024
+            </option>
+
+            <option value="2023">
+                2023
+            </option>
+
+            <option value="2022">
+                2022
+            </option>
+
+            <option value="2021">
+                2021
+            </option>
+
+            <option value="2018">
+                2018
+            </option>
+
+            <option value="2017">
+                2017
+            </option>
+
+            <option value="2016">
+                2016
+            </option>
+
+            <option value="2015">
+                2015
+            </option>
+
+            <option value="2014">
+                2014
+            </option>
+
+        </select>
+
+    </div>
+
+
+    <!-- ================= 2026 ================= -->
+
+    <div class="publication-group"
+         data-year="2026">
+
+        <div class="publication-year-title">
+
+            <h2>2026</h2>
+
+            <span>
+                RECENT RESEARCH
+            </span>
+
+        </div>
+
+
+        <article class="publication-item">
+
+            <div class="publication-number">
+                01
+            </div>
+
+            <div>
+
+                <h3>
+                    Snap2fix: Smart Complaint Management System
+                </h3>
+
+                <p class="publication-authors">
+                    U. Butkar, S. Shaikh, N. Sayyed,
+                    R. Shaikh, S. Sonawane
+                </p>
+
+                <p class="publication-journal">
+                    Indiana Journal of Multidisciplinary Research,
+                    6(3), 25–30, 2026
+                </p>
+
+                <div class="publication-tags">
+
+                    <span>AI</span>
+                    <span>Smart Systems</span>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <article class="publication-item">
+
+            <div class="publication-number">
+                02
+            </div>
+
+            <div>
+
+                <h3>
+                    Design and Implementation of an IoT-Based
+                    Smart Office Automation System
+                </h3>
+
+                <p class="publication-authors">
+                    U. D. Butkar, S. Bhise, Y. Bhoye,
+                    B. Gaikwad, K. Padavi
+                </p>
+
+                <p class="publication-journal">
+                    Indiana Journal of Multidisciplinary Research,
+                    6(3), 31–38, 2026
+                </p>
+
+                <div class="publication-tags">
+
+                    <span>IoT</span>
+                    <span>Automation</span>
+                    <span>Smart Office</span>
+
+                </div>
+
+            </div>
+
+        </article>
+
+    </div>
+
+
+    <!-- ================= 2025 ================= -->
+
+    <div class="publication-group"
+         data-year="2025">
+
+        <div class="publication-year-title">
+
+            <h2>2025</h2>
+
+            <span>
+                AI • ML • IoT
+            </span>
+
+        </div>
+
+
+        <article class="publication-item">
+
+            <div class="publication-number">
+                03
+            </div>
+
+            <div>
+
+                <h3>
+                    Revolutionizing Intelligence:
+                    Synergizing Human and Artificial Intelligence
+                </h3>
+
+                <p class="publication-authors">
+                    Swati Satyajit Ghadage,
+                    Umakant Dinkar Butkar,
+                    Rajesh Autee
+                </p>
+
+                <p class="publication-journal">
+                    Journal of Information Systems Engineering
+                    and Management, 10(37S), 2025
+                </p>
+
+                <div class="publication-tags">
+
+                    <span>AI</span>
+                    <span>Human-AI</span>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <article class="publication-item">
+
+            <div class="publication-number">
+                04
+            </div>
+
+            <div>
+
+                <h3>
+                    Real Time Monitoring System for Women's
+                    Privacy Protection in Gender Sensitive Zones
+                </h3>
+
+                <p class="publication-authors">
+                    Pratima Prakash Sawant,
+                    Anushka Prakash Shelar,
+                    Sakshi Sachin Shelke,
+                    Yash Mohan Shete,
+                    Dr. Umakant Butkar
+                </p>
+
+                <p class="publication-journal">
+                    International Research Journal on Advanced
+                    Engineering Hub (IRJAEH), 2025
+                </p>
+
+                <div class="publication-tags">
+
+                    <span>Computer Vision</span>
+                    <span>Deep Learning</span>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <article class="publication-item">
+
+            <div class="publication-number">
+                05
+            </div>
+
+            <div>
+
+                <h3>
+                    Harnessing Data Science For Sustainable
+                    Environmental Development:
+                    A Path Toward Smarter Ecosystems
+                </h3>
+
+                <p class="publication-authors">
+                    Dr. Sweety Gokul Mahajan,
+                    Dr. Umakant Dinkar Butkar,
+                    Dhanshree Gulabrao Pawar,
+                    Gokul Vasant Mahajan,
+                    Farhat A. Patel
+                </p>
+
+                <p class="publication-journal">
+                    International Journal of Environmental
+                    Sciences, 2025
+                </p>
+
+                <div class="publication-tags">
+
+                    <span>Data Science</span>
+                    <span>Environment</span>
+                    <span>ML</span>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <article class="publication-item">
+
+            <div class="publication-number">
+                06
+            </div>
+
+            <div>
+
+                <h3>
+                    Accident Prevention Using IoT for Car Safety
+                </h3>
+
+                <p class="publication-authors">
+                    Farheena Memon, Priti Sonawane,
+                    Shruti Sunadalli, Siddhi Thorat,
+                    Dr. Umakant Butkar
+                </p>
+
+                <p class="publication-journal">
+                    International Research Journal on Advanced
+                    Engineering Hub (IRJAEH), 2025
+                </p>
+
+                <div class="publication-tags">
+
+                    <span>IoT</span>
+                    <span>Vehicle Safety</span>
+
+                </div>
+
+            </div>
+
+        </article>
+
+    </div>
+
+
+    <!-- ================= 2024 ================= -->
+
+    <div class="publication-group"
+         data-year="2024">
+
+        <div class="publication-year-title">
+
+            <h2>2024</h2>
+
+            <span>
+                EMERGING TECHNOLOGIES
+            </span>
+
+        </div>
+
+
+        <article class="publication-item">
+
+            <div class="publication-number">
+                07
+            </div>
+
+            <div>
+
+                <h3>
+                    The Journey to Sustainable Development
+                    via Solar Energy: A Recap
+                </h3>
+
+                <p class="publication-authors">
+                    Umakant Butkar, Navnath B. Pokale,
+                    Devidas S. Thosar, Satyajit Ramesh Potdar
+                </p>
+
+                <p class="publication-journal">
+                    ShodhKosh: Journal of Visual and Performing Arts,
+                    2024
+                </p>
+
+                <div class="publication-tags">
+
+                    <span>Solar Energy</span>
+                    <span>Sustainability</span>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <article class="publication-item">
+
+            <div class="publication-number">
+                08
+            </div>
+
+            <div>
+
+                <h3>
+                    Application of Internet of Things and Machine
+                    Learning in Smart Farming for Efficient
+                    Resource Management
+                </h3>
+
+                <p class="publication-authors">
+                    Umakant Butkar, Rupesh Mahajan,
+                    Devidas S. Thosar, Sweety Mahajan
+                </p>
+
+                <p class="publication-journal">
+                    ShodhKosh: Journal of Visual and Performing Arts,
+                    2024
+                </p>
+
+                <div class="publication-tags">
+
+                    <span>IoT</span>
+                    <span>Machine Learning</span>
+                    <span>Smart Farming</span>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <article class="publication-item">
+
+            <div class="publication-number">
+                09
+            </div>
+
+            <div>
+
+                <h3>
+                    The Future of Transportation:
+                    A Comprehensive Analysis of Electric Vehicles
+                    and Their Impact on Sustainability, Economy,
+                    and Society
+                </h3>
+
+                <p class="publication-authors">
+                    Umakant Dinkar Butkar,
+                    Rajendra Parshram Sabale,
+                    Prakash Chhagan Patil
+                </p>
+
+                <p class="publication-journal">
+                    ShodhKosh: Journal of Visual and Performing Arts,
+                    2024
+                </p>
+
+                <div class="publication-tags">
+
+                    <span>EV</span>
+                    <span>IoT</span>
+                    <span>Sustainability</span>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <article class="publication-item">
+
+            <div class="publication-number">
+                10
+            </div>
+
+            <div>
+
+                <h3>
+                    Quantum Machine Learning Algorithms
+                    for Complex Optimization Problems
+                </h3>
+
+                <p class="publication-journal">
+                    International Journal of Intelligent Systems
+                    and Applications in Engineering, 2024
+                </p>
+
+                <div class="publication-tags">
+
+                    <span>Quantum ML</span>
+                    <span>Optimization</span>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <article class="publication-item">
+
+            <div class="publication-number">
+                11
+            </div>
+
+            <div>
+
+                <h3>
+                    AI-Human Co-Evolution: Feedback Loop Design,
+                    Organizational Innovation, Ethical Considerations,
+                    and Workforce Dynamics
+                </h3>
+
+                <p class="publication-authors">
+                    Dr. Umakant Dinkar Butkar et al.
+                </p>
+
+                <p class="publication-journal">
+                    Nanotechnology Perceptions 20(5), 2024
+                </p>
+
+                <div class="publication-tags">
+
+                    <span>AI</span>
+                    <span>Ethics</span>
+                    <span>Human-AI</span>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <article class="publication-item">
+
+            <div class="publication-number">
+                12
+            </div>
+
+            <div>
+
+                <h3>
+                    Optical Flow Self-Teaching in Multi-Frame
+                    with Full-Image Warping via Unsupervised
+                    Recurrent All-Pairs Field Transform
+                </h3>
+
+                <p class="publication-authors">
+                    Devidas S. Thosar, Rajashree D. Thosar,
+                    Pramod B. Dhamdhere, Shinde Babaso Ananda,
+                    Umakant D. Butkar et al.
+                </p>
+
+                <p class="publication-journal">
+                    2nd DMIHER International Conference on
+                    Artificial Intelligence in Healthcare,
+                    Education and Industry, 2024
+                </p>
+
+                <div class="publication-tags">
+
+                    <span>Computer Vision</span>
+                    <span>Deep Learning</span>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <article class="publication-item">
+
+            <div class="publication-number">
+                13
+            </div>
+
+            <div>
+
+                <h3>
+                    A Semantic Retrieval System Using Image
+                    Histogram Computation to Reduce Trademark
+                    Infringement Based on the Conceptual
+                    Similarity of Text
+                </h3>
+
+                <p class="publication-journal">
+                    2nd DMIHER International Conference on
+                    Artificial Intelligence in Healthcare,
+                    Education and Industry, 2024
+                </p>
+
+                <div class="publication-tags">
+
+                    <span>AI</span>
+                    <span>Image Processing</span>
+
+                </div>
+
+            </div>
+
+        </article>
+
+    </div>
+
+
+    <!-- ================= 2023 ================= -->
+
+    <div class="publication-group"
+         data-year="2023">
+
+        <div class="publication-year-title">
+
+            <h2>2023</h2>
+
+            <span>
+                RESEARCH & SYSTEMS
+            </span>
+
+        </div>
+
+
+        <article class="publication-item">
+
+            <div class="publication-number">
+                14
+            </div>
+
+            <div>
+
+                <h3>
+                    Novel Energy Storage Material and
+                    Topologies of Computerized Controller
+                </h3>
+
+                <p class="publication-authors">
+                    M. U. D. Butkar, M. J. Waghmare
+                </p>
+
+                <p class="publication-journal">
+                    Computer Integrated Manufacturing Systems
+                    29(2), 83–95, 2023
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <article class="publication-item">
+
+            <div class="publication-number">
+                15
+            </div>
+
+            <div>
+
+                <h3>
+                    Modelling and Simulation of Symmetric Planar
+                    Manipulator Using Hybrid Integrated Manufacturing
+                </h3>
+
+                <p class="publication-authors">
+                    M. U. D. Butkar, P. S. Mane,
+                    P. K. Kumar, A. Saxena, M. Salunke
+                </p>
+
+                <p class="publication-journal">
+                    Computer Integrated Manufacturing Systems
+                    29(1), 464–476, 2023
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <article class="publication-item">
+
+            <div class="publication-number">
+                16
+            </div>
+
+            <div>
+
+                <h3>
+                    Integration of Electric Vehicles, Renewable
+                    Energy Sources, and IoT for Sustainable
+                    Transportation and Energy Management:
+                    A Comprehensive Review and Future Prospects
+                </h3>
+
+                <p class="publication-authors">
+                    N. V. A. Ravikumar, R. S. S. Nuvvula,
+                    P. P. Kumar, N. H. Haroon,
+                    Umakant Dinkar Butkar et al.
+                </p>
+
+                <p class="publication-journal">
+                    IEEE International Conference on Renewable
+                    Energy Research and Applications (ICRERA), 2023
+                </p>
+
+                <div class="publication-tags">
+
+                    <span>EV</span>
+                    <span>IoT</span>
+                    <span>Renewable Energy</span>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <article class="publication-item">
+
+            <div class="publication-number">
+                17
+            </div>
+
+            <div>
+
+                <h3>
+                    Hybrid Serial-Parallel Linkage Based
+                    Six Degrees of Freedom Advanced Robotic Manipulator
+                </h3>
+
+                <p class="publication-authors">
+                    M. U. D. Butkar, M. J. Waghmare
+                </p>
+
+                <p class="publication-journal">
+                    Computer Integrated Manufacturing Systems
+                    29(2), 70–82, 2023
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <article class="publication-item">
+
+            <div class="publication-number">
+                18
+            </div>
+
+            <div>
+
+                <h3>
+                    Crime Risk Forecasting using Cyber Security
+                    and Artificial Intelligent
+                </h3>
+
+                <p class="publication-authors">
+                    M. U. D. Butkar, M. J. Waghmare
+                </p>
+
+                <p class="publication-journal">
+                    Computer Integrated Manufacturing Systems
+                    29(2), 43–57, 2023
+                </p>
+
+                <div class="publication-tags">
+
+                    <span>AI</span>
+                    <span>Cyber Security</span>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <article class="publication-item">
+
+            <div class="publication-number">
+                19
+            </div>
+
+            <div>
+
+                <h3>
+                    An Intelligent System Design for Emotion
+                    Recognition and Rectification Using Machine Learning
+                </h3>
+
+                <p class="publication-authors">
+                    M. U. D. Butkar, M. J. Waghmare
+                </p>
+
+                <p class="publication-journal">
+                    Computer Integrated Manufacturing Systems
+                    29(2), 32–42, 2023
+                </p>
+
+                <div class="publication-tags">
+
+                    <span>ML</span>
+                    <span>Emotion Recognition</span>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <article class="publication-item">
+
+            <div class="publication-number">
+                20
+            </div>
+
+            <div>
+
+                <h3>
+                    Internet Traffic Dynamics in Wireless
+                    Sensor Networks
+                </h3>
+
+                <p class="publication-journal">
+                    3rd International Conference on Advance Computing
+                    and Innovative Technologies in Engineering (ICACITE), 2023
+                </p>
+
+                <div class="publication-tags">
+
+                    <span>IoT</span>
+                    <span>Wireless Sensor Networks</span>
+
+                </div>
+
+            </div>
+
+        </article>
+
+    </div>
+
+
+    <!-- ================= 2022 ================= -->
+
+    <div class="publication-group"
+         data-year="2022">
+
+        <div class="publication-year-title">
+
+            <h2>2022</h2>
+
+            <span>
+                IoT • GPS • AI
+            </span>
+
+        </div>
+
+
+        <article class="publication-item">
+
+            <div class="publication-number">
+                21
+            </div>
+
+            <div>
+
+                <h3>
+                    Accident Detection and Alert System
+                    (Current Location) Using Global Positioning System
+                </h3>
+
+                <p class="publication-authors">
+                    U. D. Butkar, N. Gandhewar
+                </p>
+
+                <p class="publication-journal">
+                    Journal of Algebraic Statistics 13(3), 2022
+                </p>
+
+                <div class="publication-tags">
+
+                    <span>IoT</span>
+                    <span>GPS</span>
+                    <span>Safety</span>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <article class="publication-item">
+
+            <div class="publication-number">
+                22
+            </div>
+
+            <div>
+
+                <h3>
+                    Algorithm Design for Accident Detection
+                    Using the Internet of Things and GPS Module
+                </h3>
+
+                <p class="publication-authors">
+                    U. D. Butkar, D. N. Gandhewar
+                </p>
+
+                <p class="publication-journal">
+                    Journal of East China University of Science
+                    and Technology 65(3), 821–831, 2022
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <article class="publication-item">
+
+            <div class="publication-number">
+                23
+            </div>
+
+            <div>
+
+                <h3>
+                    AN Results of Different Algorithms for
+                    Accident Detection Using the Internet of Things
+                </h3>
+
+                <p class="publication-authors">
+                    U. D. Butkar, N. Gandhewar
+                </p>
+
+                <p class="publication-journal">
+                    Journal of Harbin Institute of Technology,
+                    54(10), 2022
+                </p>
+
+            </div>
+
+        </article>
+
+    </div>
+
+
+    <!-- ================= 2018 ================= -->
+
+    <div class="publication-group"
+         data-year="2018">
+
+        <div class="publication-year-title">
+
+            <h2>2018</h2>
+
+            <span>
+                PROGRAMMING
+            </span>
+
+        </div>
+
+
+        <article class="publication-item">
+
+            <div class="publication-number">
+                24
+            </div>
+
+            <div>
+
+                <h3>
+                    Fundamental Programming Language-2
+                </h3>
+
+                <p class="publication-journal">
+                    Harshwardhan Publication Pvt. Ltd., 2018
+                </p>
+
+            </div>
+
+        </article>
+
+    </div>
+
+
+    <!-- ================= 2017 ================= -->
+
+    <div class="publication-group"
+         data-year="2017">
+
+        <div class="publication-year-title">
+
+            <h2>2017</h2>
+
+        </div>
+
+
+        <article class="publication-item">
+
+            <div class="publication-number">
+                25
+            </div>
+
+            <div>
+
+                <h3>
+                    A Formation of Cloud Data Sharing With
+                    Integrity and User Revocation
+                </h3>
+
+                <p class="publication-authors">
+                    B. Umakant
+                </p>
+
+                <p class="publication-journal">
+                    International Journal of Engineering
+                    and Computer Science 6(5), 2017
+                </p>
+
+                <div class="publication-tags">
+
+                    <span>Cloud Computing</span>
+                    <span>Security</span>
+
+                </div>
+
+            </div>
+
+        </article>
+
+    </div>
+
+
+    <!-- ================= 2016 ================= -->
+
+    <div class="publication-group"
+         data-year="2016">
+
+        <div class="publication-year-title">
+
+            <h2>2016</h2>
+
+        </div>
+
+
+        <article class="publication-item">
+
+            <div class="publication-number">
+                26
+            </div>
+
+            <div>
+
+                <h3>
+                    Review On - Efficient Data Transfer
+                    for Mobile Devices by Using Ad-Hoc Network
+                </h3>
+
+                <p class="publication-authors">
+                    B. Umakant
+                </p>
+
+                <p class="publication-journal">
+                    International Journal of Engineering
+                    and Computer Science 5(3), 2016
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <article class="publication-item">
+
+            <div class="publication-number">
+                27
+            </div>
+
+            <div>
+
+                <h3>
+                    Identity Based Cryptography with Outsourced
+                    Revocation in Cloud Computing for Feedback
+                    Management System for Educational Institute
+                </h3>
+
+                <p class="publication-authors">
+                    B. Umakant
+                </p>
+
+                <p class="publication-journal">
+                    International Journal of Advance Research
+                    and Innovative Ideas in Education, 2016
+                </p>
+
+                <div class="publication-tags">
+
+                    <span>Cryptography</span>
+                    <span>Cloud Security</span>
+
+                </div>
+
+            </div>
+
+        </article>
+
+    </div>
+
+
+    <!-- ================= 2015 ================= -->
+
+    <div class="publication-group"
+         data-year="2015">
+
+        <div class="publication-year-title">
+
+            <h2>2015</h2>
+
+        </div>
+
+
+        <article class="publication-item">
+
+            <div class="publication-number">
+                28
+            </div>
+
+            <div>
+
+                <h3>
+                    User Controlling System Using LAN
+                </h3>
+
+                <p class="publication-authors">
+                    U. Butkar
+                </p>
+
+                <p class="publication-journal">
+                    Asian Journal of Convergence in Technology
+                    2(1), 2015
+                </p>
+
+            </div>
+
+        </article>
+
+    </div>
+
+
+    <!-- ================= 2014 ================= -->
+
+    <div class="publication-group"
+         data-year="2014">
+
+        <div class="publication-year-title">
+
+            <h2>2014</h2>
+
+        </div>
+
+
+        <article class="publication-item">
+
+            <div class="publication-number">
+                29
+            </div>
+
+            <div>
+
+                <h3>
+                    An Execution of Intrusion Detection System
+                    by Using Generic Algorithm
+                </h3>
+
+                <p class="publication-authors">
+                    B. Umakant
+                </p>
+
+                <p class="publication-journal">
+                    IJIFR 1(10), 2014
+                </p>
+
+                <div class="publication-tags">
+
+                    <span>Cyber Security</span>
+                    <span>IDS</span>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <article class="publication-item">
+
+            <div class="publication-number">
+                30
+            </div>
+
+            <div>
+
+                <h3>
+                    A Fuzzy Filtering Rule Based Median Filter
+                    for Artifacts Reduction of Compressed Images
+                </h3>
+
+                <p class="publication-authors">
+                    U. Butkar
+                </p>
+
+                <p class="publication-journal">
+                    International Journal of Informative &
+                    Futuristic Research 1(11), 2014
+                </p>
+
+                <div class="publication-tags">
+
+                    <span>Image Processing</span>
+                    <span>Fuzzy Logic</span>
+
+                </div>
+
+            </div>
+
+        </article>
+
+    </div>
+
+
+    <!-- NO RESULT -->
+
+    <div id="noResult"
+         class="no-result">
+
+        <h3>
+            No publications found
+        </h3>
+
+        <p>
+            Try another keyword or year.
+        </p>
+
+    </div>
+
+
+    <!-- SCHOLAR -->
+
+    <div class="scholar-box">
+
+        <h2>
+            View Complete Google Scholar Profile
+        </h2>
+
+        <p>
+            For the latest citation count,
+            h-index and complete publication record.
+        </p>
+
+        <a
+            href="https://scholar.google.com/citations?hl=en&user=rnX6w4AAAAAJ"
+            target="_blank"
+            class="scholar-button">
+
+            Google Scholar Profile →
+
+        </a>
+
+    </div>
+
+</main>
+
+
+<!-- ==========================================
+     FOOTER
+========================================== -->
+
+<footer>
+
+    <div class="footer-content">
+
+        <div>
+
+            <h3>
+                &lt;DR. BUTKAR/&gt;
+            </h3>
+
+            <p>
+                Academician • Researcher • Innovator
+            </p>
+
+        </div>
+
+        <div class="footer-code">
+
+            research → innovation → impact
+
+        </div>
+
+    </div>
+
+    <div class="copyright">
+
+        © 2026 Dr. Umakant Butkar.
+        All Rights Reserved.
+
+    </div>
+
+</footer>
+
+
+<script>
+
+    /* ==============================
+       MOBILE MENU
+    ============================== */
+
+    const menuToggle =
+        document.getElementById("menuToggle");
+
+    const navMenu =
+        document.getElementById("navMenu");
+
+    menuToggle.addEventListener(
+        "click",
+        () => {
+
+            navMenu.classList.toggle("active");
+
+        }
+    );
+
+
+    /* ==============================
+       SEARCH
+    ============================== */
+
+    const search =
+        document.getElementById(
+            "publicationSearch"
+        );
+
+    const yearFilter =
+        document.getElementById(
+            "yearFilter"
+        );
+
+    const groups =
+        document.querySelectorAll(
+            ".publication-group"
+        );
+
+    const noResult =
+        document.getElementById(
+            "noResult"
+        );
+
+
+    function filterPublications() {
+
+        const keyword =
+            search.value.toLowerCase();
+
+        const selectedYear =
+            yearFilter.value;
+
+        let totalVisible = 0;
+
+
+        groups.forEach(group => {
+
+            const groupYear =
+                group.dataset.year;
+
+            const yearMatches =
+                selectedYear === "all" ||
+                selectedYear === groupYear;
+
+            const items =
+                group.querySelectorAll(
+                    ".publication-item"
+                );
+
+            let visibleInGroup = 0;
+
+
+            items.forEach(item => {
+
+                const text =
+                    item.textContent.toLowerCase();
+
+                const matches =
+                    text.includes(keyword);
+
+                if (
+                    yearMatches &&
+                    matches
+                ) {
+
+                    item.style.display =
+                        "grid";
+
+                    visibleInGroup++;
+
+                    totalVisible++;
+
+                } else {
+
+                    item.style.display =
+                        "none";
+
+                }
+
+            });
+
+
+            if (visibleInGroup > 0) {
+
+                group.style.display =
+                    "block";
+
+            } else {
+
+                group.style.display =
+                    "none";
+
+            }
+
+        });
+
+
+        if (totalVisible === 0) {
+
+            noResult.style.display =
+                "block";
+
+        } else {
+
+            noResult.style.display =
+                "none";
+
+        }
+
+    }
+
+
+    search.addEventListener(
+        "input",
+        filterPublications
+    );
+
+
+    yearFilter.addEventListener(
+        "change",
+        filterPublications
+    );
+
+
+    /* ==============================
+       DARK MODE
+    ============================== */
+
+    const themeToggle =
+        document.getElementById(
+            "themeToggle"
+        );
+
+    themeToggle.addEventListener(
+        "click",
+        () => {
+
+            document.body.classList.toggle(
+                "dark"
+            );
+
+            if (
+                document.body.classList.contains(
+                    "dark"
+                )
+            ) {
+
+                themeToggle.textContent =
+                    "☀";
+
+            } else {
+
+                themeToggle.textContent =
+                    "◐";
+
+            }
+
+        }
+    );
+
+</script>
+
+
+</body>
+
+</html>
