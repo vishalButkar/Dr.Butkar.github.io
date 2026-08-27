@@ -1,880 +1,2285 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Dr. Umakant Dinkar Butkar| Associate Professor | Researcher | Innovator</title>
+<meta charset="UTF-8">
 
-    <meta name="description"
-          content="Academic and research profile of Dr. Umakant Butkar – Artificial Intelligence, Machine Learning, IoT and Emerging Technologies.">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="style.css">
+<title>Dr. Umakant Butkar | Academic • Researcher • Innovator</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<meta name="description"
+content="Official academic profile of Dr. Umakant Butkar – Academician, Researcher, Author and Innovator.">
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
-          rel="stylesheet">
+<meta name="keywords"
+content="Dr Umakant Butkar, Artificial Intelligence, Machine Learning, IoT, Researcher, Patents, Books, Computer Engineering">
+
+
+<!-- GOOGLE FONT -->
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"
+rel="stylesheet">
+
+
+<style>
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:Inter,Arial,sans-serif;
+
+    background:#f6f8fc;
+
+    color:#172033;
+
+    line-height:1.6;
+
+}
+
+a{
+    text-decoration:none;
+}
+
+.container{
+
+    width:90%;
+
+    max-width:1150px;
+
+    margin:auto;
+
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.navbar{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+    right:0;
+
+    z-index:999;
+
+    background:
+    rgba(4,14,28,.92);
+
+    backdrop-filter:blur(15px);
+
+    border-bottom:
+    1px solid rgba(255,255,255,.08);
+
+}
+
+.nav-container{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:16px 25px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+}
+
+.logo{
+
+    font-family:
+    "JetBrains Mono";
+
+    color:#fff;
+
+    font-weight:700;
+
+    font-size:18px;
+
+}
+
+.logo span{
+    color:#38bdf8;
+}
+
+.nav-links{
+
+    display:flex;
+
+    gap:28px;
+
+    list-style:none;
+
+}
+
+.nav-links a{
+
+    color:#cbd5e1;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.nav-links a:hover{
+    color:#38bdf8;
+}
+
+.menu-btn{
+
+    display:none;
+
+    color:#fff;
+
+    background:none;
+
+    border:0;
+
+    font-size:25px;
+
+    cursor:pointer;
+
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+
+    min-height:100vh;
+
+    padding:
+    160px 20px
+    100px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    color:white;
+
+    background:
+
+    radial-gradient(
+        circle at 80% 20%,
+        rgba(14,165,233,.25),
+        transparent 30%
+    ),
+
+    radial-gradient(
+        circle at 10% 80%,
+        rgba(37,99,235,.20),
+        transparent 30%
+    ),
+
+    linear-gradient(
+        135deg,
+        #020617,
+        #0b1d36,
+        #102f52
+    );
+
+}
+
+
+/* GRID TECH BACKGROUND */
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
+
+    linear-gradient(
+        rgba(255,255,255,.035) 1px,
+        transparent 1px
+    ),
+
+    linear-gradient(
+        90deg,
+        rgba(255,255,255,.035) 1px,
+        transparent 1px
+    );
+
+    background-size:
+    45px 45px;
+
+}
+
+
+.hero-content{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:1150px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+    1.4fr .8fr;
+
+    align-items:center;
+
+    gap:70px;
+
+}
+
+
+/* HERO TEXT */
+
+.hero-tag{
+
+    font-family:
+    "JetBrains Mono";
+
+    color:#38bdf8;
+
+    font-size:11px;
+
+    letter-spacing:3px;
+
+    margin-bottom:20px;
+
+}
+
+.hero h1{
+
+    font-size:
+    clamp(45px,6vw,76px);
+
+    line-height:1.02;
+
+    letter-spacing:-4px;
+
+    margin-bottom:22px;
+
+}
+
+.hero h1 span{
+    color:#38bdf8;
+}
+
+.hero-subtitle{
+
+    font-size:20px;
+
+    color:#dbeafe;
+
+    font-weight:500;
+
+    margin-bottom:18px;
+
+}
+
+.hero-description{
+
+    max-width:650px;
+
+    color:#a9bad0;
+
+    font-size:14px;
+
+    line-height:1.9;
+
+}
+
+
+/* BUTTONS */
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:14px;
+
+    margin-top:30px;
+
+    flex-wrap:wrap;
+
+}
+
+.btn{
+
+    padding:13px 20px;
+
+    border-radius:8px;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    transition:.3s;
+
+}
+
+.btn-primary{
+
+    color:#fff;
+
+    background:#2563eb;
+
+    box-shadow:
+    0 10px 25px
+    rgba(37,99,235,.3);
+
+}
+
+.btn-primary:hover{
+
+    transform:translateY(-3px);
+
+    background:#1d4ed8;
+
+}
+
+.btn-outline{
+
+    color:#dbeafe;
+
+    border:
+    1px solid
+    rgba(255,255,255,.2);
+
+}
+
+.btn-outline:hover{
+
+    border-color:#38bdf8;
+
+    color:#38bdf8;
+
+}
+
+
+/* =========================================================
+   PROFILE CARD
+========================================================= */
+
+.profile-card{
+
+    position:relative;
+
+    padding:30px;
+
+    border-radius:22px;
+
+    background:
+    rgba(255,255,255,.07);
+
+    border:
+    1px solid
+    rgba(255,255,255,.14);
+
+    backdrop-filter:blur(20px);
+
+    box-shadow:
+    0 25px 70px
+    rgba(0,0,0,.3);
+
+}
+
+.profile-photo{
+
+    width:180px;
+
+    height:180px;
+
+    margin:0 auto 22px;
+
+    border-radius:50%;
+
+    overflow:hidden;
+
+    border:
+    4px solid
+    rgba(56,189,248,.6);
+
+    background:
+    linear-gradient(
+        135deg,
+        #1e3a8a,
+        #0f172a
+    );
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+.profile-photo img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+.photo-placeholder{
+
+    font-family:
+    "JetBrains Mono";
+
+    font-size:35px;
+
+    color:#38bdf8;
+
+}
+
+.profile-card h3{
+
+    text-align:center;
+
+    font-size:20px;
+
+    margin-bottom:5px;
+
+}
+
+.profile-card .role{
+
+    text-align:center;
+
+    color:#93c5fd;
+
+    font-size:12px;
+
+}
+
+.profile-lines{
+
+    margin-top:25px;
+
+    border-top:
+    1px solid
+    rgba(255,255,255,.1);
+
+    padding-top:20px;
+
+}
+
+.profile-line{
+
+    display:flex;
+
+    gap:10px;
+
+    color:#b6c5d8;
+
+    font-size:11px;
+
+    margin-bottom:10px;
+
+}
+
+.profile-line strong{
+
+    color:#fff;
+
+}
+
+
+/* =========================================================
+   STATS
+========================================================= */
+
+.stats{
+
+    margin-top:-55px;
+
+    position:relative;
+
+    z-index:10;
+
+}
+
+.stats-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    background:#fff;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 20px 50px
+    rgba(15,23,42,.12);
+
+}
+
+.stat{
+
+    padding:28px 10px;
+
+    text-align:center;
+
+    border-right:
+    1px solid #e5e7eb;
+
+}
+
+.stat:last-child{
+    border-right:0;
+}
+
+.stat h2{
+
+    color:#2563eb;
+
+    font-size:34px;
+
+}
+
+.stat p{
+
+    color:#64748b;
+
+    font-size:10px;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+}
+
+
+/* =========================================================
+   SECTION
+========================================================= */
+
+section.content-section{
+
+    padding:100px 0;
+
+}
+
+.section-label{
+
+    font-family:
+    "JetBrains Mono";
+
+    color:#2563eb;
+
+    font-size:10px;
+
+    letter-spacing:3px;
+
+    margin-bottom:10px;
+
+}
+
+.section-title{
+
+    font-size:38px;
+
+    line-height:1.2;
+
+    margin-bottom:20px;
+
+}
+
+.section-description{
+
+    max-width:720px;
+
+    color:#64748b;
+
+    font-size:14px;
+
+    line-height:1.9;
+
+}
+
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.about-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    1.2fr .8fr;
+
+    gap:50px;
+
+    align-items:start;
+
+}
+
+.about-text p{
+
+    color:#526174;
+
+    font-size:14px;
+
+    line-height:1.9;
+
+    margin-bottom:18px;
+
+}
+
+.about-card{
+
+    background:#fff;
+
+    padding:30px;
+
+    border-radius:16px;
+
+    border:
+    1px solid #e2e8f0;
+
+    box-shadow:
+    0 10px 30px
+    rgba(15,23,42,.05);
+
+}
+
+.about-card h3{
+
+    margin-bottom:20px;
+
+    font-size:18px;
+
+}
+
+.interest{
+
+    display:inline-block;
+
+    padding:8px 12px;
+
+    margin:4px;
+
+    background:#eff6ff;
+
+    color:#1d4ed8;
+
+    border-radius:7px;
+
+    font-size:10px;
+
+    font-weight:700;
+
+}
+
+
+/* =========================================================
+   RESEARCH AREAS
+========================================================= */
+
+.research-grid{
+
+    margin-top:40px;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:18px;
+
+}
+
+.research-card{
+
+    background:#fff;
+
+    padding:28px;
+
+    border:
+    1px solid #e2e8f0;
+
+    border-radius:16px;
+
+    transition:.3s;
+
+}
+
+.research-card:hover{
+
+    transform:translateY(-6px);
+
+    border-color:#bfdbfe;
+
+    box-shadow:
+    0 15px 35px
+    rgba(15,23,42,.08);
+
+}
+
+.research-icon{
+
+    font-size:30px;
+
+    margin-bottom:15px;
+
+}
+
+.research-card h3{
+
+    font-size:17px;
+
+    margin-bottom:10px;
+
+}
+
+.research-card p{
+
+    color:#64748b;
+
+    font-size:12px;
+
+    line-height:1.7;
+
+}
+
+
+/* =========================================================
+   PUBLICATION PREVIEW
+========================================================= */
+
+.publication-preview{
+
+    margin-top:40px;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:18px;
+
+}
+
+.pub-card{
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:16px;
+
+    border:
+    1px solid #e2e8f0;
+
+}
+
+.pub-number{
+
+    color:#2563eb;
+
+    font-family:
+    "JetBrains Mono";
+
+    font-size:25px;
+
+    font-weight:700;
+
+}
+
+.pub-card h3{
+
+    margin-top:8px;
+
+    font-size:16px;
+
+}
+
+.pub-card p{
+
+    margin-top:8px;
+
+    color:#64748b;
+
+    font-size:11px;
+
+}
+
+
+/* =========================================================
+   JOURNEY / TIMELINE
+========================================================= */
+
+.timeline{
+
+    margin-top:45px;
+
+    border-left:
+    2px solid #dbeafe;
+
+    padding-left:30px;
+
+}
+
+.timeline-item{
+
+    position:relative;
+
+    margin-bottom:35px;
+
+}
+
+.timeline-item::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:12px;
+
+    height:12px;
+
+    border-radius:50%;
+
+    background:#2563eb;
+
+    left:-37px;
+
+    top:5px;
+
+    box-shadow:
+    0 0 0 5px #eff6ff;
+
+}
+
+.timeline-year{
+
+    font-family:
+    "JetBrains Mono";
+
+    color:#2563eb;
+
+    font-size:10px;
+
+    margin-bottom:6px;
+
+}
+
+.timeline-item h3{
+
+    font-size:17px;
+
+    margin-bottom:5px;
+
+}
+
+.timeline-item p{
+
+    color:#64748b;
+
+    font-size:12px;
+
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.cta{
+
+    padding:65px 30px;
+
+    border-radius:22px;
+
+    text-align:center;
+
+    color:#fff;
+
+    background:
+
+    radial-gradient(
+        circle at 50% 0,
+        rgba(56,189,248,.18),
+        transparent 45%
+    ),
+
+    linear-gradient(
+        135deg,
+        #020617,
+        #12345b
+    );
+
+}
+
+.cta h2{
+
+    font-size:34px;
+
+    margin-bottom:12px;
+
+}
+
+.cta p{
+
+    color:#a9bad0;
+
+    max-width:650px;
+
+    margin:auto;
+
+    font-size:13px;
+
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact-grid{
+
+    margin-top:40px;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:18px;
+
+}
+
+.contact-card{
+
+    background:#fff;
+
+    border:
+    1px solid #e2e8f0;
+
+    padding:25px;
+
+    border-radius:14px;
+
+}
+
+.contact-card span{
+
+    font-size:25px;
+
+}
+
+.contact-card h3{
+
+    margin:10px 0 5px;
+
+    font-size:15px;
+
+}
+
+.contact-card p{
+
+    color:#64748b;
+
+    font-size:11px;
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+
+    background:#020617;
+
+    color:#fff;
+
+    padding:35px 20px;
+
+}
+
+.footer-content{
+
+    max-width:1100px;
+
+    margin:auto;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.footer-left strong{
+
+    font-family:
+    "JetBrains Mono";
+
+}
+
+.footer-left p{
+
+    margin-top:6px;
+
+    color:#64748b;
+
+    font-size:10px;
+
+}
+
+.footer-code{
+
+    font-family:
+    "JetBrains Mono";
+
+    color:#38bdf8;
+
+    font-size:10px;
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:800px){
+
+    .nav-links{
+
+        display:none;
+
+        position:absolute;
+
+        top:62px;
+
+        left:0;
+
+        right:0;
+
+        background:#020617;
+
+        padding:20px;
+
+        flex-direction:column;
+
+        gap:18px;
+
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .menu-btn{
+        display:block;
+    }
+
+    .hero-content{
+
+        grid-template-columns:1fr;
+
+        text-align:center;
+
+    }
+
+    .hero-description{
+        margin:auto;
+    }
+
+    .hero-buttons{
+        justify-content:center;
+    }
+
+    .stats-grid{
+
+        grid-template-columns:
+        repeat(2,1fr);
+
+    }
+
+    .stat{
+
+        border-bottom:
+        1px solid #e5e7eb;
+
+    }
+
+    .about-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .research-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .publication-preview{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .contact-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .footer-content{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:15px;
+
+    }
+
+}
+
+</style>
+
 </head>
+
 
 <body>
 
-<!-- ================= NAVIGATION ================= -->
+
+<!-- =========================================================
+     NAVBAR
+========================================================= -->
 
 <header class="navbar">
 
-    <div class="nav-container">
+<div class="nav-container">
 
-        <div class="logo">
-            <span>&lt;</span>Dr. Umakant Butkar<span>/&gt;</span>
-        </div>
 
-        <button class="menu-toggle" id="menuToggle">
-            ☰
-        </button>
+<div class="logo">
 
-        <nav id="navMenu">
+<span>&lt;</span>
+DR. BUTKAR
+<span>/&gt;</span>
 
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#research">Research</a>
-            <a href="#innovation">Innovation</a>
-            <a href="#publications">Publications</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
+</div>
 
-            <button id="themeToggle" class="theme-btn">
-                ◐
-            </button>
 
-        </nav>
+<button
+class="menu-btn"
+onclick="toggleMenu()">
 
-    </div>
+☰
+
+</button>
+
+
+<ul
+class="nav-links"
+id="navLinks">
+
+<li>
+<a href="#home">Home</a>
+</li>
+
+<li>
+<a href="#about">About</a>
+</li>
+
+<li>
+<a href="#research">Research</a>
+</li>
+
+<li>
+<a href="#journey">Journey</a>
+</li>
+
+<li>
+<a href="publications.html">
+Publications
+</a>
+</li>
+
+<li>
+<a href="#contact">
+Contact
+</a>
+</li>
+
+</ul>
+
+</div>
 
 </header>
 
 
-<!-- ================= HERO ================= -->
+<!-- =========================================================
+     HERO
+========================================================= -->
 
-<section id="about" class="section">
-
-    <div class="section-title">
-
-        <span>01</span>
-
-        <div>
-            <p class="section-label">PROFILE</p>
-            <h2>About Me</h2>
-        </div>
-
-    </div>
-
-    <div class="about-grid">
-
-        <div class="about-text">
-
-            <p>
-                I am <strong>Dr. Umakant Butkar</strong>, an academician,
-                researcher and technology enthusiast with a strong interest
-                in emerging technologies and their real-world applications.
-            </p>
-
-            <p>
-                My academic and research interests primarily focus on
-                <strong>Artificial Intelligence, Machine Learning,
-                Internet of Things (IoT), Deep Learning, Data Science
-                and Intelligent Systems</strong>.
-            </p>
-
-            <p>
-                I am actively involved in research, innovation, academic
-                development, project guidance and knowledge sharing.
-                My work aims to bridge the gap between theoretical concepts
-                and practical technological solutions.
-            </p>
-
-            <p>
-                I also have a keen interest in
-                <strong>research publications, patents, academic books,
-                interdisciplinary projects and industry-academia
-                collaboration</strong>.
-            </p>
-
-            <div class="quote">
-                "Transforming knowledge into innovation,
-                and innovation into meaningful impact."
-            </div>
-
-        </div>
+<section
+class="hero"
+id="home">
 
 
-        <div class="terminal">
+<div class="hero-content">
 
-            <div class="terminal-header">
 
-                <span class="dot red"></span>
-                <span class="dot yellow"></span>
-                <span class="dot green"></span>
+<div>
 
-                <span>profile.exe</span>
 
-            </div>
+<div class="hero-tag">
 
-            <div class="terminal-body">
+ACADEMIA • RESEARCH • INNOVATION
 
-                <p>
-                    <span class="green-text">user</span>@researcher:~$ whoami
-                </p>
+</div>
 
-                <p class="terminal-output">
-                    Dr. Umakant Butkar
-                </p>
 
-                <p>
-                    <span class="green-text">user</span>@researcher:~$ role
-                </p>
+<h1>
 
-                <p class="terminal-output">
-                    Academician | Researcher | Innovator
-                </p>
+Dr. Umakant
+<br>
 
-                <p>
-                    <span class="green-text">user</span>@researcher:~$ research
-                </p>
+<span>Butkar</span>
 
-                <p class="terminal-output">
-                    AI • ML • IoT • Deep Learning • Data Science
-                </p>
+</h1>
 
-                <p>
-                    <span class="green-text">user</span>@researcher:~$ focus
-                </p>
 
-                <p class="terminal-output">
-                    Intelligent & Emerging Technologies
-                </p>
+<div class="hero-subtitle">
 
-                <p>
-                    <span class="green-text">user</span>@researcher:~$ mission
-                </p>
+Academician • Researcher • Author • Innovator
 
-                <p class="terminal-output">
-                    Research → Innovation → Impact
-                </p>
+</div>
 
-                <p>
-                    <span class="green-text">user</span>@researcher:~$ status
-                </p>
 
-                <p class="terminal-output">
-                    <span class="online">● ACTIVE IN RESEARCH</span>
-                </p>
+<p class="hero-description">
 
-            </div>
+Associate Professor in Computer Engineering with
+research and teaching interests in Artificial
+Intelligence, Machine Learning, Internet of Things,
+Computer Science and emerging technologies.
 
-        </div>
+Focused on transforming ideas into research,
+intellectual property, publications and practical
+technology solutions.
 
-    </div>
+</p>
+
+
+<div class="hero-buttons">
+
+
+<a
+href="publications.html"
+class="btn btn-primary">
+
+Explore Publications →
+
+</a>
+
+
+<a
+href="#contact"
+class="btn btn-outline">
+
+Connect With Me
+
+</a>
+
+
+</div>
+
+</div>
+
+
+<!-- PROFILE CARD -->
+
+<div class="profile-card">
+
+
+<div class="profile-photo">
+
+<!--
+     IMPORTANT:
+     Upload your photo as profile.jpg
+     in the same GitHub folder.
+-->
+
+<img
+src="profile.jpg"
+alt="Dr. Umakant Butkar"
+onerror="
+this.style.display='none';
+this.nextElementSibling.style.display='block';
+">
+
+
+<div
+class="photo-placeholder"
+style="display:none;">
+
+UB
+
+</div>
+
+</div>
+
+
+<h3>
+Dr. Umakant Butkar
+</h3>
+
+
+<div class="role">
+
+Associate Professor
+<br>
+Computer Engineering
+
+</div>
+
+
+<div class="profile-lines">
+
+
+<div class="profile-line">
+
+<span>🎓</span>
+
+<div>
+
+<strong>Qualification</strong>
+<br>
+Ph.D. in Computer Science
+
+</div>
+
+</div>
+
+
+<div class="profile-line">
+
+<span>🔬</span>
+
+<div>
+
+<strong>Research</strong>
+<br>
+AI • ML • IoT • Computer Science
+
+</div>
+
+</div>
+
+
+<div class="profile-line">
+
+<span>📚</span>
+
+<div>
+
+<strong>Academic Work</strong>
+<br>
+Books • Patents • Research Papers
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+</div>
 
 </section>
 
 
-<!-- ================= STATS ================= -->
+<!-- =========================================================
+     STATS
+========================================================= -->
 
 <section class="stats">
 
-    <div class="stat-card">
+<div class="container">
 
-        <h3 class="counter" data-target="50">0</h3>
-        <p>Publications</p>
-
-    </div>
-
-    <div class="stat-card">
-
-        <h3 class="counter" data-target="10">0</h3>
-        <p>Patents</p>
-
-    </div>
-
-    <div class="stat-card">
-
-        <h3 class="counter" data-target="5">0</h3>
-        <p>Books</p>
-
-    </div>
-
-    <div class="stat-card">
-
-        <h3 class="counter" data-target="20">0</h3>
-        <p>Projects</p>
-
-    </div>
-
-</section>
+<div class="stats-grid">
 
 
-<!-- ================= ABOUT ================= -->
+<div class="stat">
 
-<section id="about" class="section">
+<h2>10+</h2>
 
-    <div class="section-title">
+<p>BOOKS</p>
 
-        <span>01</span>
-
-        <div>
-            <p class="section-label">PROFILE</p>
-            <h2>About Me</h2>
-        </div>
-
-    </div>
-
-    <div class="about-grid">
-
-        <div class="about-text">
-
-            <p>
-                Welcome to my academic and research portfolio.
-                I am a passionate educator, researcher and technology
-                enthusiast working in emerging areas of computing and
-                intelligent technologies.
-            </p>
-
-            <p>
-                My research focuses on developing practical,
-                explainable and intelligent solutions using
-                Artificial Intelligence, Machine Learning,
-                Internet of Things and Deep Learning.
-            </p>
-
-            <p>
-                I believe that meaningful research should bridge the
-                gap between academic knowledge and real-world
-                technological challenges.
-            </p>
-
-            <div class="quote">
-                "Research creates knowledge. Innovation transforms it
-                into impact."
-            </div>
-
-        </div>
+</div>
 
 
-        <div class="terminal">
+<div class="stat">
 
-            <div class="terminal-header">
+<h2>33+</h2>
 
-                <span class="dot red"></span>
-                <span class="dot yellow"></span>
-                <span class="dot green"></span>
+<p>PUBLISHED PATENTS</p>
 
-                <span>research_profile.exe</span>
+</div>
 
-            </div>
 
-            <div class="terminal-body">
+<div class="stat">
 
-                <p><span class="green-text">user</span>@researcher:~$ whoami</p>
+<h2>03</h2>
 
-                <p class="terminal-output">
-                    Professor | Researcher | Innovator
-                </p>
+<p>GRANTED PATENTS</p>
 
-                <p><span class="green-text">user</span>@researcher:~$ interests</p>
+</div>
 
-                <p class="terminal-output">
-                    AI, ML, IoT, Deep Learning,
-                    Intelligent Systems
-                </p>
 
-                <p><span class="green-text">user</span>@researcher:~$ mission</p>
+<div class="stat">
 
-                <p class="terminal-output">
-                    Build technology that creates impact.
-                </p>
+<h2>30+</h2>
 
-                <p><span class="green-text">user</span>@researcher:~$ status</p>
+<p>RESEARCH PAPERS</p>
 
-                <p class="terminal-output">
-                    <span class="online">● ONLINE</span>
-                </p>
+</div>
 
-            </div>
 
-        </div>
+</div>
 
-    </div>
+</div>
 
 </section>
 
 
-<!-- ================= RESEARCH ================= -->
+<!-- =========================================================
+     ABOUT
+========================================================= -->
 
-<section id="research" class="section dark-section">
+<section
+class="content-section"
+id="about">
 
-    <div class="section-title">
-
-        <span>02</span>
-
-        <div>
-            <p class="section-label">EXPLORATION</p>
-            <h2>Research Areas</h2>
-        </div>
-
-    </div>
+<div class="container">
 
 
-    <div class="research-grid">
-
-        <article class="research-card">
-
-            <div class="card-number">01</div>
-
-            <div class="research-icon">🤖</div>
-
-            <h3>Artificial Intelligence</h3>
-
-            <p>
-                Intelligent computational models for
-                solving complex real-world problems.
-            </p>
-
-            <div class="card-tags">
-                <span>AI</span>
-                <span>Intelligent Systems</span>
-            </div>
-
-        </article>
+<div class="section-label">
+01 / ABOUT
+</div>
 
 
-        <article class="research-card">
-
-            <div class="card-number">02</div>
-
-            <div class="research-icon">🧠</div>
-
-            <h3>Machine Learning</h3>
-
-            <p>
-                Predictive modelling, pattern recognition
-                and data-driven intelligent systems.
-            </p>
-
-            <div class="card-tags">
-                <span>ML</span>
-                <span>Prediction</span>
-            </div>
-
-        </article>
+<div class="about-grid">
 
 
-        <article class="research-card">
-
-            <div class="card-number">03</div>
-
-            <div class="research-icon">🌐</div>
-
-            <h3>Internet of Things</h3>
-
-            <p>
-                Connected intelligent systems integrating
-                sensing, communication and analytics.
-            </p>
-
-            <div class="card-tags">
-                <span>IoT</span>
-                <span>IIoT</span>
-            </div>
-
-        </article>
+<div class="about-text">
 
 
-        <article class="research-card">
+<h2 class="section-title">
 
-            <div class="card-number">04</div>
+Building Knowledge.
+<br>
+Creating Innovation.
 
-            <div class="research-icon">📊</div>
-
-            <h3>Deep Learning</h3>
-
-            <p>
-                Neural architectures for intelligent
-                classification, prediction and automation.
-            </p>
-
-            <div class="card-tags">
-                <span>CNN</span>
-                <span>DL</span>
-            </div>
-
-        </article>
+</h2>
 
 
-        <article class="research-card">
+<p>
 
-            <div class="card-number">05</div>
+Dr. Umakant Butkar is an academician and researcher
+in the field of Computer Engineering, with a strong
+interest in emerging technologies and their practical
+applications.
 
-            <div class="research-icon">👁️</div>
-
-            <h3>Computer Vision</h3>
-
-            <p>
-                AI-based visual intelligence and
-                automated image understanding.
-            </p>
-
-            <div class="card-tags">
-                <span>Vision</span>
-                <span>Recognition</span>
-            </div>
-
-        </article>
+</p>
 
 
-        <article class="research-card">
+<p>
 
-            <div class="card-number">06</div>
+His academic and research work covers Artificial
+Intelligence, Machine Learning, Internet of Things,
+Computer Science applications and technology-driven
+solutions.
 
-            <div class="research-icon">⚡</div>
+</p>
 
-            <h3>Emerging Technologies</h3>
 
-            <p>
-                Exploring next-generation technologies
-                and interdisciplinary innovation.
-            </p>
+<p>
 
-            <div class="card-tags">
-                <span>Innovation</span>
-                <span>Future Tech</span>
-            </div>
+His professional work combines teaching, research,
+academic writing, patents, intellectual property and
+innovation-oriented projects.
 
-        </article>
+</p>
 
-    </div>
+
+<div class="hero-buttons">
+
+<a
+href="publications.html"
+class="btn btn-primary">
+
+View Complete Profile →
+
+</a>
+
+</div>
+
+</div>
+
+
+<div class="about-card">
+
+
+<h3>
+Research Interests
+</h3>
+
+
+<span class="interest">
+Artificial Intelligence
+</span>
+
+<span class="interest">
+Machine Learning
+</span>
+
+<span class="interest">
+Internet of Things
+</span>
+
+<span class="interest">
+Computer Engineering
+</span>
+
+<span class="interest">
+Data Science
+</span>
+
+<span class="interest">
+Cyber Security
+</span>
+
+<span class="interest">
+Smart Systems
+</span>
+
+<span class="interest">
+Emerging Technologies
+</span>
+
+
+</div>
+
+
+</div>
+
+</div>
 
 </section>
 
 
-<!-- ================= INNOVATION ================= -->
+<!-- =========================================================
+     RESEARCH
+========================================================= -->
 
-<section id="innovation" class="section">
+<section
+class="content-section"
+id="research"
+style="background:#fff;">
 
-    <div class="section-title">
-
-        <span>03</span>
-
-        <div>
-            <p class="section-label">INNOVATION</p>
-            <h2>Research & Innovation</h2>
-        </div>
-
-    </div>
+<div class="container">
 
 
-    <div class="innovation-grid">
-
-        <div class="innovation-card">
-
-            <span class="innovation-icon">⚙️</span>
-
-            <h3>Patents</h3>
-
-            <p>
-                Innovative technological solutions developed
-                through research and experimentation.
-            </p>
-
-            <a href="#">View Patents →</a>
-
-        </div>
+<div class="section-label">
+02 / RESEARCH
+</div>
 
 
-        <div class="innovation-card">
+<h2 class="section-title">
 
-            <span class="innovation-icon">📑</span>
+Research & Innovation
 
-            <h3>Research Papers</h3>
-
-            <p>
-                Peer-reviewed research contributions in
-                AI, ML, IoT and emerging technologies.
-            </p>
-
-            <a href="publications.html">
-                   View All Publications →
-            </a>
-
-        </div>
+</h2>
 
 
-        <div class="innovation-card">
+<p class="section-description">
 
-            <span class="innovation-icon">📚</span>
+Research interests focus on developing intelligent,
+connected and practical technology solutions that
+bridge academic research with real-world applications.
 
-            <h3>Books</h3>
+</p>
 
-            <p>
-                Academic books and technical resources
-                developed for learners and researchers.
-            </p>
 
-            <a href="#">View Books →</a>
+<div class="research-grid">
 
-        </div>
 
-    </div>
+<div class="research-card">
+
+<div class="research-icon">
+🤖
+</div>
+
+<h3>
+Artificial Intelligence
+</h3>
+
+<p>
+
+Intelligent systems, AI applications,
+deep learning and emerging AI technologies.
+
+</p>
+
+</div>
+
+
+<div class="research-card">
+
+<div class="research-icon">
+🧠
+</div>
+
+<h3>
+Machine Learning
+</h3>
+
+<p>
+
+Machine learning techniques for prediction,
+classification, optimization and intelligent
+decision-making.
+
+</p>
+
+</div>
+
+
+<div class="research-card">
+
+<div class="research-icon">
+🌐
+</div>
+
+<h3>
+Internet of Things
+</h3>
+
+<p>
+
+IoT-based monitoring, automation, smart systems,
+sensing and connected applications.
+
+</p>
+
+</div>
+
+
+<div class="research-card">
+
+<div class="research-icon">
+🔐
+</div>
+
+<h3>
+Cyber Security
+</h3>
+
+<p>
+
+Security-oriented research involving intelligent
+systems, networks, data and digital environments.
+
+</p>
+
+</div>
+
+
+<div class="research-card">
+
+<div class="research-icon">
+📊
+</div>
+
+<h3>
+Data & Analytics
+</h3>
+
+<p>
+
+Data-driven systems, analytics and computational
+approaches for intelligent applications.
+
+</p>
+
+</div>
+
+
+<div class="research-card">
+
+<div class="research-icon">
+⚙️
+</div>
+
+<h3>
+Smart Engineering
+</h3>
+
+<p>
+
+Technology integration for practical engineering,
+automation and innovation-oriented solutions.
+
+</p>
+
+</div>
+
+
+</div>
+
+</div>
 
 </section>
 
 
-<!-- ================= PUBLICATIONS ================= -->
+<!-- =========================================================
+     PUBLICATIONS PREVIEW
+========================================================= -->
 
-<section id="publications" class="section dark-section">
+<section
+class="content-section">
 
-    <div class="section-title">
-
-        <span>04</span>
-
-        <div>
-            <p class="section-label">KNOWLEDGE</p>
-            <h2>Selected Publications</h2>
-        </div>
-
-    </div>
+<div class="container">
 
 
-    <div class="publication-list">
+<div class="section-label">
+03 / PUBLICATIONS
+</div>
 
 
-        <article class="publication">
+<h2 class="section-title">
 
-            <div class="publication-year">
-                2026
-            </div>
+Research Output
 
-            <div>
-
-                <h3>
-                    Adaptive Machine Learning Systems for
-                    Intelligent Pattern Detection
-                </h3>
-
-                <p>
-                    Research publication • Artificial Intelligence
-                    • Machine Learning
-                </p>
-
-                <a href="#">Read Paper →</a>
-
-            </div>
-
-        </article>
+</h2>
 
 
-        <article class="publication">
+<p class="section-description">
 
-            <div class="publication-year">
-                2025
-            </div>
+Explore books, patents, copyrights and research
+papers through the complete publication database.
 
-            <div>
-
-                <h3>
-                    Intelligent IoT Framework for
-                    Real-Time Decision Support
-                </h3>
-
-                <p>
-                    Research publication • IoT • Intelligent Systems
-                </p>
-
-                <a href="#">Read Paper →</a>
-
-            </div>
-
-        </article>
+</p>
 
 
-        <article class="publication">
+<div class="publication-preview">
 
-            <div class="publication-year">
-                2025
-            </div>
 
-            <div>
+<div class="pub-card">
 
-                <h3>
-                    Deep Learning Approaches for
-                    Emerging Computational Applications
-                </h3>
+<div class="pub-number">
+10+
+</div>
 
-                <p>
-                    Research publication • Deep Learning
-                </p>
+<h3>
+Books
+</h3>
 
-                <a href="#">Read Paper →</a>
+<p>
 
-            </div>
+Academic and professional books covering
+AI, Machine Learning, IoT, Cyber Security
+and related technologies.
 
-        </article>
+</p>
 
-    </div>
+</div>
+
+
+<div class="pub-card">
+
+<div class="pub-number">
+33+
+</div>
+
+<h3>
+Patents
+</h3>
+
+<p>
+
+Published and granted intellectual property
+covering AI, IoT, robotics and smart devices.
+
+</p>
+
+</div>
+
+
+<div class="pub-card">
+
+<div class="pub-number">
+30+
+</div>
+
+<h3>
+Research Papers
+</h3>
+
+<p>
+
+Research contributions across AI, ML, IoT,
+cyber security and engineering applications.
+
+</p>
+
+</div>
+
+
+</div>
+
+
+<div
+style="
+text-align:center;
+margin-top:35px;
+">
+
+
+<a
+href="publications.html"
+class="btn btn-primary">
+
+📚 View Complete Publications
+
+</a>
+
+
+</div>
+
+</div>
 
 </section>
 
 
-<!-- ================= PROJECTS ================= -->
+<!-- =========================================================
+     JOURNEY
+========================================================= -->
 
-<section id="projects" class="section">
+<section
+class="content-section"
+id="journey"
+style="background:#fff;">
 
-    <div class="section-title">
-
-        <span>05</span>
-
-        <div>
-            <p class="section-label">APPLICATION</p>
-            <h2>Selected Projects</h2>
-        </div>
-
-    </div>
+<div class="container">
 
 
-    <div class="projects-grid">
+<div class="section-label">
+04 / ACADEMIC JOURNEY
+</div>
 
 
-        <article class="project-card">
+<h2 class="section-title">
 
-            <div class="project-top">
+Academic & Research Journey
 
-                <span>PROJECT_01</span>
-
-                <span>AI / ML</span>
-
-            </div>
-
-            <h3>
-                Intelligent Predictive Analytics System
-            </h3>
-
-            <p>
-                Machine learning based predictive system
-                designed for intelligent decision making.
-            </p>
-
-            <div class="project-tech">
-
-                <span>Python</span>
-                <span>Machine Learning</span>
-                <span>Analytics</span>
-
-            </div>
-
-            <a href="#">View Project →</a>
-
-        </article>
+</h2>
 
 
-        <article class="project-card">
-
-            <div class="project-top">
-
-                <span>PROJECT_02</span>
-
-                <span>IoT</span>
-
-            </div>
-
-            <h3>
-                Smart IoT Monitoring Platform
-            </h3>
-
-            <p>
-                Connected monitoring architecture integrating
-                sensors, communication and cloud analytics.
-            </p>
-
-            <div class="project-tech">
-
-                <span>IoT</span>
-                <span>Cloud</span>
-                <span>Sensors</span>
-
-            </div>
-
-            <a href="#">View Project →</a>
-
-        </article>
+<div class="timeline">
 
 
-        <article class="project-card">
+<div class="timeline-item">
 
-            <div class="project-top">
+<div class="timeline-year">
+ACADEMIA
+</div>
 
-                <span>PROJECT_03</span>
+<h3>
+Computer Engineering & Higher Education
+</h3>
 
-                <span>AI</span>
+<p>
 
-            </div>
+Academic teaching, mentoring and research in
+Computer Engineering and emerging technologies.
 
-            <h3>
-                AI-Based Intelligent Decision System
-            </h3>
+</p>
 
-            <p>
-                Intelligent computational framework designed
-                for automated decision support.
-            </p>
-
-            <div class="project-tech">
-
-                <span>AI</span>
-                <span>Deep Learning</span>
-                <span>Python</span>
-
-            </div>
-
-            <a href="#">View Project →</a>
-
-        </article>
-
-    </div>
-
-</section>
+</div>
 
 
-<!-- ================= ACHIEVEMENTS ================= -->
+<div class="timeline-item">
 
-<section class="achievement-section">
+<div class="timeline-year">
+RESEARCH
+</div>
 
-    <div class="achievement-content">
+<h3>
+Artificial Intelligence • ML • IoT
+</h3>
 
-        <p class="section-label">
-            JOURNEY
-        </p>
+<p>
 
-        <h2>
-            Research. Teach. Innovate.
-        </h2>
+Research and development activities focused on
+intelligent systems and connected technologies.
 
-        <p>
-            Building knowledge today for the technologies
-            of tomorrow.
-        </p>
+</p>
 
-    </div>
+</div>
+
+
+<div class="timeline-item">
+
+<div class="timeline-year">
+AUTHOR
+</div>
+
+<h3>
+Books & Academic Publications
+</h3>
+
+<p>
+
+Author and contributor to books and research
+publications in emerging technology domains.
+
+</p>
+
+</div>
+
+
+<div class="timeline-item">
+
+<div class="timeline-year">
+INNOVATION
+</div>
+
+<h3>
+Patents & Intellectual Property
+</h3>
+
+<p>
+
+Development of innovative technology concepts
+leading to published and granted intellectual
+property.
+
+</p>
+
+</div>
+
+
+<div class="timeline-item">
+
+<div class="timeline-year">
+TODAY
+</div>
+
+<h3>
+Research • Innovation • Impact
+</h3>
+
+<p>
+
+Continuing academic, research and innovation
+activities with a focus on practical technology
+solutions.
+
+</p>
+
+</div>
+
+
+</div>
+
+</div>
 
 </section>
 
 
-<!-- ================= CONTACT ================= -->
+<!-- =========================================================
+     CTA
+========================================================= -->
 
-<section id="contact" class="section contact-section">
+<section
+class="content-section">
 
-    <div class="section-title">
+<div class="container">
 
-        <span>06</span>
-
-        <div>
-            <p class="section-label">CONNECT</p>
-            <h2>Let's Collaborate</h2>
-        </div>
-
-    </div>
+<div class="cta">
 
 
-    <div class="contact-grid">
-
-        <div class="contact-text">
-
-            <h3>
-                Have a research idea?
-            </h3>
-
-            <p>
-                I am open to academic collaborations,
-                research discussions, innovative projects
-                and knowledge sharing.
-            </p>
-
-            <a href="mailto:your.email@example.com"
-               class="email-button">
-
-                ✉ vishal.butkar@gmail.com 
-                ✉ umakant.butkar@ggsf.edu.in
-
-            </a>
-
-        </div>
+<h2>
+Explore My Work
+</h2>
 
 
-        <div class="social-links">
+<p>
 
-            <a href="#" target="_blank">
-                <span>GS</span>
-                Google Scholar
-            </a>
+Discover books, patents, copyrights and research
+papers through the complete academic publication
+collection.
 
-            <a href="#" target="_blank">
-                <span>OR</span>
-                ORCID
-            </a>
+</p>
 
-            <a href="#" target="_blank">
-                <span>LI</span>
-                LinkedIn
-            </a>
 
-            <a href="#" target="_blank">
-                <span>GH</span>
-                GitHub
-            </a>
+<div class="hero-buttons"
+style="justify-content:center;">
 
-        </div>
+<a
+href="publications.html"
+class="btn btn-primary">
 
-    </div>
+Open Publication Database →
+
+</a>
+
+</div>
+
+
+</div>
+
+</div>
 
 </section>
 
 
-<!-- ================= FOOTER ================= -->
+<!-- =========================================================
+     CONTACT
+========================================================= -->
+
+<section
+class="content-section"
+id="contact"
+style="background:#fff;">
+
+<div class="container">
+
+
+<div class="section-label">
+05 / CONNECT
+</div>
+
+
+<h2 class="section-title">
+
+Connect & Collaborate
+
+</h2>
+
+
+<p class="section-description">
+
+For academic collaboration, research discussions,
+student projects, publications and innovation
+activities.
+
+</p>
+
+
+<div class="contact-grid">
+
+
+<div class="contact-card">
+
+<span>🏛️</span>
+
+<h3>
+Institution
+</h3>
+
+<p>
+
+Guru Gobind Singh College of Engineering
+and Research Centre, Nashik
+
+</p>
+
+</div>
+
+
+<div class="contact-card">
+
+<span>🔬</span>
+
+<h3>
+Research Profile
+</h3>
+
+<p>
+
+ResearchID / Google Scholar
+
+</p>
+
+</div>
+
+
+<div class="contact-card">
+
+<span>💻</span>
+
+<h3>
+Academic Website
+</h3>
+
+<p>
+
+GitHub Pages Professional Profile
+
+</p>
+
+</div>
+
+
+</div>
+
+
+<div
+style="
+text-align:center;
+margin-top:35px;
+">
+
+
+<a
+href="publications.html"
+class="btn btn-primary">
+
+View Books & Patents
+
+</a>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
 
 <footer>
 
-    <div class="footer-content">
+<div class="footer-content">
 
-        <div>
 
-            <h3>&lt;Umakant Butkar/&gt;</h3>
+<div class="footer-left">
 
-            <p>
-                Professor • Researcher • Innovator
-            </p>
+<strong>
+&lt;DR. BUTKAR /&gt;
+</strong>
 
-        </div>
+<p>
 
-        <div class="footer-code">
-            &lt;innovation /&gt;
-        </div>
+Academician • Researcher • Author • Innovator
 
-    </div>
+</p>
 
-    <div class="copyright">
+</div>
 
-        © 2026 Your Name. All Rights Reserved.
 
-        <span>
-            Designed with curiosity + technology.
-        </span>
+<div class="footer-code">
 
-    </div>
+research → innovation → impact
+
+</div>
+
+
+</div>
 
 </footer>
 
 
-<script src="script.js"></script>
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+function toggleMenu(){
+
+    document
+    .getElementById("navLinks")
+    .classList
+    .toggle("active");
+
+}
+
+
+/* CLOSE MOBILE MENU AFTER CLICK */
+
+document
+.querySelectorAll(".nav-links a")
+.forEach(function(link){
+
+    link.addEventListener("click",function(){
+
+        document
+        .getElementById("navLinks")
+        .classList
+        .remove("active");
+
+    });
+
+});
+
+
+</script>
+
 
 </body>
+
 </html>
