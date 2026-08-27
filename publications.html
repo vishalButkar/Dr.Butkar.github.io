@@ -5,581 +5,799 @@
 
 <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
 <title>Publications | Dr. Umakant Butkar</title>
 
 <meta name="description"
 content="Books, Patents, Copyrights and Research Publications of Dr. Umakant Butkar">
 
-<link rel="stylesheet" href="style.css">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
 
 <link rel="preconnect"
 href="https://fonts.gstatic.com"
 crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"
 rel="stylesheet">
 
 
 <style>
 
-/* ==================================================
-   PUBLICATION PAGE
-================================================== */
+/* =========================================================
+   GLOBAL
+========================================================= */
 
-* {
-    box-sizing: border-box;
+*{
+    box-sizing:border-box;
 }
 
-body {
-    margin: 0;
-    font-family: "Inter", sans-serif;
-    background: #f8fafc;
-    color: #172033;
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    margin:0;
+    font-family:Inter,Arial,sans-serif;
+    background:#f5f7fb;
+    color:#172033;
 }
 
 
-/* ==================================================
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(5,15,30,.94);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.nav-container{
+    max-width:1200px;
+    margin:auto;
+    padding:15px 25px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    color:white;
+    font-family:"JetBrains Mono";
+    font-weight:700;
+    font-size:18px;
+}
+
+.logo span{
+    color:#60a5fa;
+}
+
+nav{
+    display:flex;
+    gap:28px;
+}
+
+nav a{
+    color:#cbd5e1;
+    text-decoration:none;
+    font-size:13px;
+    font-weight:600;
+}
+
+nav a:hover{
+    color:#60a5fa;
+}
+
+.menu-toggle{
+    display:none;
+    background:none;
+    color:white;
+    border:0;
+    font-size:25px;
+}
+
+
+/* =========================================================
    HERO
-================================================== */
+========================================================= */
 
-.pub-hero {
+.hero{
 
-    padding: 140px 25px 90px;
+    padding:120px 25px 95px;
 
     background:
     radial-gradient(
         circle at 80% 20%,
-        rgba(37,99,235,.25),
+        rgba(37,99,235,.28),
         transparent 35%
     ),
 
     linear-gradient(
         135deg,
-        #07111f,
-        #102d52
+        #06101e,
+        #123762
     );
 
-    color: white;
+    color:white;
 
-    position: relative;
-
-    overflow: hidden;
-
+    position:relative;
+    overflow:hidden;
 }
 
+.hero:before{
 
-.pub-hero::before {
+    content:"";
 
-    content: "";
+    position:absolute;
 
-    position: absolute;
-
-    inset: 0;
+    inset:0;
 
     background-image:
     linear-gradient(
-        rgba(255,255,255,.04) 1px,
+        rgba(255,255,255,.035) 1px,
         transparent 1px
     ),
     linear-gradient(
         90deg,
-        rgba(255,255,255,.04) 1px,
+        rgba(255,255,255,.035) 1px,
         transparent 1px
     );
 
-    background-size: 40px 40px;
-
+    background-size:40px 40px;
 }
 
+.hero-content{
 
-.pub-hero-content {
+    max-width:1100px;
+    margin:auto;
 
-    max-width: 1100px;
-
-    margin: auto;
-
-    position: relative;
-
-    z-index: 2;
-
+    position:relative;
+    z-index:2;
 }
 
+.hero-label{
 
-.pub-label {
+    color:#60a5fa;
 
-    color: #60a5fa;
+    font-family:"JetBrains Mono";
 
-    font-family:
-    "JetBrains Mono",
-    monospace;
+    font-size:11px;
 
-    font-size: 12px;
-
-    letter-spacing: 2px;
-
+    letter-spacing:3px;
 }
 
-
-.pub-hero h1 {
+.hero h1{
 
     font-size:
-    clamp(42px, 7vw, 76px);
+    clamp(45px,7vw,78px);
 
-    line-height: 1;
+    line-height:1;
 
-    margin: 15px 0;
+    margin:18px 0;
 
-    letter-spacing: -3px;
+    letter-spacing:-4px;
+}
 
+.hero h1 span{
+    color:#60a5fa;
+}
+
+.hero p{
+
+    max-width:700px;
+
+    color:#bdcce0;
+
+    line-height:1.8;
+
+    font-size:15px;
 }
 
 
-.pub-hero h1 span {
+/* =========================================================
+   STATS
+========================================================= */
 
-    color: #60a5fa;
+.stats{
 
-}
+    max-width:1050px;
 
+    margin:-42px auto 55px;
 
-.pub-hero p {
+    position:relative;
 
-    max-width: 720px;
+    z-index:5;
 
-    color: #b6c4d8;
-
-    line-height: 1.7;
-
-}
-
-
-/* ==================================================
-   STATISTICS
-================================================== */
-
-.pub-stats {
-
-    max-width: 1050px;
-
-    margin: -45px auto 55px;
-
-    position: relative;
-
-    z-index: 5;
-
-    display: grid;
+    display:grid;
 
     grid-template-columns:
-    repeat(4, 1fr);
+    repeat(4,1fr);
 
-    background: white;
+    background:white;
 
-    border-radius: 18px;
+    border-radius:18px;
 
-    overflow: hidden;
+    overflow:hidden;
 
     box-shadow:
-    0 20px 50px
-    rgba(15,23,42,.12);
+    0 20px 55px
+    rgba(15,23,42,.13);
+}
 
+.stat{
+
+    text-align:center;
+
+    padding:28px 10px;
+
+    border-right:1px solid #e5e7eb;
+}
+
+.stat:last-child{
+    border-right:none;
+}
+
+.stat h2{
+
+    margin:0;
+
+    color:#2563eb;
+
+    font-size:36px;
+}
+
+.stat p{
+
+    margin:7px 0 0;
+
+    color:#64748b;
+
+    font-size:11px;
 }
 
 
-.pub-stat {
+/* =========================================================
+   CONTAINER
+========================================================= */
 
-    padding: 28px 15px;
+.container{
 
-    text-align: center;
+    max-width:1100px;
 
-    border-right:
-    1px solid #e5e7eb;
+    margin:auto;
 
+    padding:0 25px 100px;
 }
 
 
-.pub-stat:last-child {
-
-    border-right: none;
-
-}
-
-
-.pub-stat h2 {
-
-    margin: 0;
-
-    font-size: 35px;
-
-    color: #2563eb;
-
-}
-
-
-.pub-stat p {
-
-    margin-top: 8px;
-
-    font-size: 12px;
-
-    color: #64748b;
-
-}
-
-
-/* ==================================================
-   MAIN CONTAINER
-================================================== */
-
-.pub-container {
-
-    max-width: 1100px;
-
-    margin: auto;
-
-    padding: 0 25px 100px;
-
-}
-
-
-/* ==================================================
+/* =========================================================
    TABS
-================================================== */
+========================================================= */
 
-.pub-tabs {
+.tabs{
 
-    display: grid;
+    display:grid;
 
     grid-template-columns:
-    repeat(4, 1fr);
+    repeat(4,1fr);
 
-    gap: 12px;
+    gap:12px;
 
-    margin-bottom: 30px;
-
+    margin-bottom:25px;
 }
 
+.tab{
 
-.pub-tab {
+    border:1px solid #dbe2ea;
 
-    padding: 17px 12px;
+    background:white;
 
-    border: 1px solid #dbe2ea;
+    padding:17px 10px;
 
-    background: white;
+    border-radius:10px;
 
-    border-radius: 10px;
+    cursor:pointer;
 
-    cursor: pointer;
+    font-weight:700;
 
-    font-family: "Inter";
+    color:#475569;
 
-    font-weight: 700;
-
-    font-size: 13px;
-
-    color: #475569;
-
-    transition: .3s;
-
+    transition:.25s;
 }
 
+.tab:hover{
 
-.pub-tab:hover {
+    color:#2563eb;
 
-    border-color: #2563eb;
+    border-color:#2563eb;
 
-    color: #2563eb;
-
-    transform: translateY(-2px);
-
+    transform:translateY(-2px);
 }
 
+.tab.active{
 
-.pub-tab.active {
+    background:#2563eb;
 
-    background: #2563eb;
+    border-color:#2563eb;
 
-    color: white;
-
-    border-color: #2563eb;
+    color:white;
 
     box-shadow:
     0 8px 20px
     rgba(37,99,235,.25);
-
 }
 
 
-/* ==================================================
-   SEARCH AREA
-================================================== */
+/* =========================================================
+   SEARCH
+========================================================= */
 
-.pub-tools {
+.search-area{
 
-    display: grid;
+    display:grid;
 
-    grid-template-columns:
-    1fr 180px;
+    grid-template-columns:1fr 180px;
 
-    gap: 12px;
+    gap:12px;
 
-    margin-bottom: 35px;
-
+    margin-bottom:30px;
 }
 
+.search{
 
-.pub-search {
+    width:100%;
 
-    padding: 15px 18px;
+    padding:16px 18px;
 
-    border: 1px solid #dbe2ea;
+    border:1px solid #dbe2ea;
 
-    border-radius: 9px;
+    border-radius:10px;
 
-    background: white;
+    background:white;
 
-    font-size: 14px;
+    outline:none;
 
-    outline: none;
-
+    font-size:14px;
 }
 
+.search:focus{
 
-.pub-search:focus {
-
-    border-color: #2563eb;
+    border-color:#2563eb;
 
     box-shadow:
     0 0 0 3px
     rgba(37,99,235,.1);
+}
 
+.year{
+
+    border:1px solid #dbe2ea;
+
+    border-radius:10px;
+
+    background:white;
+
+    padding:15px;
 }
 
 
-.pub-year {
+/* =========================================================
+   SECTIONS
+========================================================= */
 
-    padding: 15px;
+.section{
+    display:none;
+}
 
-    border: 1px solid #dbe2ea;
+.section.active{
+    display:block;
+}
 
-    border-radius: 9px;
+.section-title{
 
-    background: white;
+    display:flex;
 
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin:30px 0 18px;
+}
+
+.section-title h2{
+
+    margin:0;
+
+    font-size:28px;
+}
+
+.section-title span{
+
+    font-family:"JetBrains Mono";
+
+    font-size:10px;
+
+    color:#2563eb;
 }
 
 
-/* ==================================================
-   CONTENT
-================================================== */
+/* =========================================================
+   BOOK CARD
+========================================================= */
 
-.pub-section {
+.book-card{
 
-    display: none;
+    display:grid;
 
-}
+    grid-template-columns:210px 1fr;
 
+    gap:30px;
 
-.pub-section.active {
+    background:white;
 
-    display: block;
+    border:1px solid #e2e8f0;
 
-}
+    border-radius:18px;
 
+    padding:25px;
 
-.pub-section-heading {
+    margin-bottom:20px;
 
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: center;
-
-    margin: 25px 0 18px;
-
-}
-
-
-.pub-section-heading h2 {
-
-    margin: 0;
-
-    font-size: 28px;
-
-}
-
-
-.pub-section-heading span {
-
-    font-family:
-    "JetBrains Mono";
-
-    color: #2563eb;
-
-    font-size: 11px;
-
-}
-
-
-/* ==================================================
-   CARDS
-================================================== */
-
-.pub-card {
-
-    background: white;
-
-    border: 1px solid #e2e8f0;
-
-    border-radius: 14px;
-
-    padding: 23px;
-
-    margin-bottom: 15px;
-
-    display: grid;
-
-    grid-template-columns: 58px 1fr;
-
-    gap: 18px;
-
-    transition: .3s;
-
-}
-
-
-.pub-card:hover {
-
-    transform: translateY(-4px);
-
-    border-color: #bfdbfe;
+    transition:.3s;
 
     box-shadow:
-    0 15px 35px
-    rgba(15,23,42,.08);
+    0 5px 18px
+    rgba(15,23,42,.03);
+}
 
+.book-card:hover{
+
+    transform:translateY(-4px);
+
+    border-color:#bfdbfe;
+
+    box-shadow:
+    0 18px 40px
+    rgba(15,23,42,.09);
 }
 
 
-.pub-icon {
+/* COVER */
 
-    width: 48px;
+.book-cover{
 
-    height: 48px;
+    display:flex;
 
-    border-radius: 10px;
+    align-items:center;
 
-    display: flex;
+    justify-content:center;
 
-    align-items: center;
+    min-height:270px;
 
-    justify-content: center;
+    background:
+    linear-gradient(
+        135deg,
+        #eaf1fb,
+        #f8fafc
+    );
 
-    background: #eff6ff;
+    border-radius:12px;
 
-    font-size: 21px;
+    overflow:hidden;
+}
 
+.book-cover img{
+
+    width:180px;
+
+    max-height:270px;
+
+    object-fit:cover;
+
+    border-radius:5px;
+
+    box-shadow:
+    0 15px 30px
+    rgba(15,23,42,.22);
+
+    transition:.3s;
+}
+
+.book-cover img:hover{
+
+    transform:scale(1.03);
 }
 
 
-.pub-card h3 {
+/* BOOK INFO */
 
-    margin: 0 0 8px;
+.book-info{
 
-    font-size: 17px;
+    display:flex;
 
-    line-height: 1.5;
+    flex-direction:column;
 
+    justify-content:center;
+}
+
+.book-year{
+
+    font-family:"JetBrains Mono";
+
+    font-size:10px;
+
+    color:#2563eb;
+
+    margin-bottom:8px;
+}
+
+.book-title{
+
+    font-size:23px;
+
+    line-height:1.35;
+
+    margin:0 0 12px;
+
+    color:#111827;
+}
+
+.book-authors{
+
+    color:#475569;
+
+    font-size:13px;
+
+    line-height:1.6;
+
+    margin-bottom:12px;
+}
+
+.book-details{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:8px;
+
+    margin:10px 0 18px;
+}
+
+.detail{
+
+    background:#f8fafc;
+
+    border:1px solid #e5e7eb;
+
+    border-radius:7px;
+
+    padding:9px 10px;
+
+    font-size:11px;
+
+    color:#475569;
+}
+
+.detail strong{
+
+    display:block;
+
+    color:#111827;
+
+    font-size:10px;
+
+    margin-bottom:3px;
 }
 
 
-.pub-card p {
+/* BUTTON */
 
-    margin: 5px 0;
+.buy-button{
 
-    color: #64748b;
+    display:inline-flex;
 
-    font-size: 13px;
+    align-items:center;
 
-    line-height: 1.6;
+    justify-content:center;
 
+    width:max-content;
+
+    padding:12px 20px;
+
+    background:#2563eb;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:8px;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    transition:.25s;
+}
+
+.buy-button:hover{
+
+    background:#1d4ed8;
+
+    transform:translateY(-2px);
 }
 
 
-.pub-meta {
+/* =========================================================
+   PATENTS
+========================================================= */
 
-    font-family:
-    "JetBrains Mono";
+.patent-card{
 
-    font-size: 10px;
+    background:white;
 
-    color: #2563eb;
+    border:1px solid #e2e8f0;
 
+    border-radius:14px;
+
+    padding:20px;
+
+    margin-bottom:12px;
+
+    display:grid;
+
+    grid-template-columns:55px 1fr auto;
+
+    gap:18px;
+
+    align-items:center;
+
+    transition:.25s;
+}
+
+.patent-card:hover{
+
+    border-color:#bfdbfe;
+
+    transform:translateY(-2px);
+
+    box-shadow:
+    0 12px 30px
+    rgba(15,23,42,.07);
+}
+
+.patent-icon{
+
+    width:48px;
+    height:48px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:10px;
+
+    background:#eff6ff;
+
+    font-size:22px;
+}
+
+.patent-title{
+
+    font-size:15px;
+
+    font-weight:700;
+
+    line-height:1.5;
+
+    margin-bottom:7px;
+}
+
+.patent-meta{
+
+    font-family:"JetBrains Mono";
+
+    color:#64748b;
+
+    font-size:9px;
+
+    line-height:1.7;
+}
+
+.status{
+
+    padding:7px 10px;
+
+    border-radius:20px;
+
+    font-size:9px;
+
+    font-weight:700;
+
+    white-space:nowrap;
+}
+
+.granted{
+
+    background:#dcfce7;
+
+    color:#166534;
+}
+
+.published{
+
+    background:#dbeafe;
+
+    color:#1d4ed8;
+}
+
+.filed{
+
+    background:#fef3c7;
+
+    color:#92400e;
 }
 
 
-.pub-tags {
+/* =========================================================
+   OTHER RECORDS
+========================================================= */
 
-    display: flex;
+.simple-card{
 
-    flex-wrap: wrap;
+    background:white;
 
-    gap: 6px;
+    padding:20px;
 
-    margin-top: 12px;
+    border-radius:14px;
 
+    border:1px solid #e2e8f0;
+
+    margin-bottom:12px;
+}
+
+.simple-card h3{
+
+    margin:0 0 8px;
+
+    font-size:16px;
+}
+
+.simple-card p{
+
+    margin:4px 0;
+
+    color:#64748b;
+
+    font-size:12px;
 }
 
 
-.pub-tags span {
+/* =========================================================
+   GOOGLE SCHOLAR
+========================================================= */
 
-    padding: 5px 9px;
+.scholar{
 
-    border-radius: 5px;
+    margin-top:50px;
 
-    background: #f1f5f9;
+    padding:40px;
 
-    color: #475569;
+    border-radius:18px;
 
-    font-size: 9px;
+    text-align:center;
 
-    font-family:
-    "JetBrains Mono";
-
-}
-
-
-/* ==================================================
-   EMPTY
-================================================== */
-
-.no-results {
-
-    display: none;
-
-    text-align: center;
-
-    padding: 50px;
-
-    color: #64748b;
-
-}
-
-
-/* ==================================================
-   SCHOLAR
-================================================== */
-
-.scholar {
-
-    margin-top: 50px;
-
-    padding: 40px;
-
-    border-radius: 18px;
+    color:white;
 
     background:
     linear-gradient(
@@ -587,109 +805,210 @@ body {
         #07111f,
         #12345b
     );
+}
 
-    color: white;
+.scholar h2{
 
-    text-align: center;
+    margin-top:0;
+}
 
+.scholar p{
+
+    color:#b6c4d8;
+
+    font-size:13px;
+}
+
+.scholar-btn{
+
+    display:inline-block;
+
+    margin-top:12px;
+
+    padding:12px 20px;
+
+    background:#2563eb;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:8px;
+
+    font-size:12px;
+
+    font-weight:700;
 }
 
 
-.scholar h2 {
+/* =========================================================
+   NO RESULT
+========================================================= */
 
-    margin-top: 0;
+.no-result{
 
+    display:none;
+
+    text-align:center;
+
+    padding:50px;
+
+    color:#64748b;
 }
 
 
-.scholar p {
+/* =========================================================
+   FOOTER
+========================================================= */
 
-    color: #aebed2;
+footer{
 
-    font-size: 14px;
+    background:#050f1e;
 
+    color:white;
+
+    padding:35px 25px;
+}
+
+.footer-inner{
+
+    max-width:1100px;
+
+    margin:auto;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+}
+
+.footer-inner p{
+
+    color:#94a3b8;
+
+    font-size:11px;
+}
+
+.footer-code{
+
+    font-family:"JetBrains Mono";
+
+    color:#60a5fa;
+
+    font-size:10px;
 }
 
 
-.scholar-button {
-
-    display: inline-block;
-
-    margin-top: 15px;
-
-    padding: 12px 22px;
-
-    background: #2563eb;
-
-    color: white;
-
-    text-decoration: none;
-
-    border-radius: 8px;
-
-    font-weight: 700;
-
-    font-size: 13px;
-
-}
-
-
-/* ==================================================
+/* =========================================================
    MOBILE
-================================================== */
+========================================================= */
 
-@media(max-width:750px) {
+@media(max-width:750px){
 
-    .pub-stats {
+    nav{
+
+        display:none;
+
+        position:absolute;
+
+        top:60px;
+
+        left:0;
+
+        right:0;
+
+        background:#07111f;
+
+        flex-direction:column;
+
+        padding:20px 25px;
+    }
+
+    nav.active{
+        display:flex;
+    }
+
+    .menu-toggle{
+        display:block;
+    }
+
+    .stats{
 
         grid-template-columns:
-        repeat(2, 1fr);
+        repeat(2,1fr);
 
-        margin-left: 18px;
+        margin-left:18px;
 
-        margin-right: 18px;
-
+        margin-right:18px;
     }
 
+    .stat{
 
-    .pub-stat {
-
-        border-bottom:
-        1px solid #e5e7eb;
-
+        border-bottom:1px solid #e5e7eb;
     }
 
-
-    .pub-tabs {
+    .tabs{
 
         grid-template-columns:
-        repeat(2, 1fr);
-
+        repeat(2,1fr);
     }
 
+    .search-area{
 
-    .pub-tools {
-
-        grid-template-columns: 1fr;
-
+        grid-template-columns:1fr;
     }
 
+    .book-card{
 
-    .pub-card {
+        grid-template-columns:1fr;
 
-        grid-template-columns: 1fr;
-
+        gap:20px;
     }
 
+    .book-cover{
+
+        min-height:320px;
+    }
+
+    .book-cover img{
+
+        width:210px;
+
+        max-height:300px;
+    }
+
+    .patent-card{
+
+        grid-template-columns:50px 1fr;
+    }
+
+    .status{
+
+        grid-column:2;
+        width:max-content;
+    }
+
+    .footer-inner{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:15px;
+    }
 }
 
+@media(max-width:450px){
 
-@media(max-width:450px) {
+    .tabs{
 
-    .pub-tabs {
+        grid-template-columns:1fr;
+    }
 
-        grid-template-columns: 1fr;
+    .book-details{
 
+        grid-template-columns:1fr;
     }
 
 }
@@ -702,9 +1021,9 @@ body {
 <body>
 
 
-<!-- ==================================================
+<!-- =========================================================
      NAVIGATION
-================================================== -->
+========================================================= -->
 
 <header class="navbar">
 
@@ -721,7 +1040,7 @@ DR. BUTKAR
 
 <button
 class="menu-toggle"
-id="menuToggle">
+onclick="toggleMenu()">
 
 ☰
 
@@ -757,35 +1076,28 @@ Contact
 </header>
 
 
-<!-- ==================================================
+<!-- =========================================================
      HERO
-================================================== -->
+========================================================= -->
 
-<section class="pub-hero">
+<section class="hero">
 
-<div class="pub-hero-content">
+<div class="hero-content">
 
-<div class="pub-label">
-
-RESEARCH • INNOVATION • KNOWLEDGE
-
+<div class="hero-label">
+RESEARCH • BOOKS • PATENTS • INNOVATION
 </div>
 
-
 <h1>
-
-My
-<span>Publications</span>
-
+My <span>Publications</span>
 </h1>
-
 
 <p>
 
-A collection of academic contributions,
-research papers, books, patents and
-copyrights developed through research,
-innovation and technology.
+Academic books, patents, intellectual property
+and research contributions of Dr. Umakant Butkar.
+Explore the complete collection using search,
+filters and interactive publication categories.
 
 </p>
 
@@ -794,78 +1106,70 @@ innovation and technology.
 </section>
 
 
-<!-- ==================================================
-     STATISTICS
-================================================== -->
+<!-- =========================================================
+     STATS
+========================================================= -->
 
-<div class="pub-stats">
+<div class="stats">
 
-
-<div class="pub-stat">
+<div class="stat">
 
 <h2>10+</h2>
 
-<p>Books Published</p>
+<p>BOOKS</p>
 
 </div>
 
-
-<div class="pub-stat">
+<div class="stat">
 
 <h2>33+</h2>
 
-<p>Patents</p>
+<p>PATENTS PUBLISHED</p>
 
 </div>
 
+<div class="stat">
 
-<div class="pub-stat">
+<h2>03</h2>
+
+<p>PATENTS GRANTED</p>
+
+</div>
+
+<div class="stat">
 
 <h2>66+</h2>
 
-<p>Research Publications</p>
+<p>PUBLICATIONS</p>
+
+</div>
 
 </div>
 
 
-<div class="pub-stat">
-
-<h2>10+</h2>
-
-<p>Copyrights</p>
-
-</div>
-
-
-</div>
-
-
-<!-- ==================================================
+<!-- =========================================================
      MAIN
-================================================== -->
+========================================================= -->
 
-<main class="pub-container">
+<main class="container">
 
 
-<!-- ==================================================
-     TABS
-================================================== -->
+<!-- TABS -->
 
-<div class="pub-tabs">
-
+<div class="tabs">
 
 <button
-class="pub-tab active"
-data-tab="books">
+class="tab active"
+onclick="showSection('books',this)">
 
-📚 Books Published
+📚 Books
 
 </button>
 
 
 <button
-class="pub-tab"
-data-tab="patents">
+class="tab"
+onclick="showSection('patents',this)">
 
 💡 Patents
 
@@ -873,8 +1177,8 @@ data-tab="patents">
 
 
 <button
-class="pub-tab"
-data-tab="copyright">
+class="tab"
+onclick="showSection('copyright',this)">
 
 © Copyrights
 
@@ -882,212 +1186,703 @@ data-tab="copyright">
 
 
 <button
-class="pub-tab"
-data-tab="papers">
+class="tab"
+onclick="showSection('papers',this)">
 
 📄 Research Papers
 
 </button>
 
-
 </div>
 
 
-<!-- ==================================================
-     SEARCH
-================================================== -->
+<!-- SEARCH -->
 
-<div class="pub-tools">
+<div class="search-area">
 
 <input
+id="searchBox"
+class="search"
 type="text"
-id="pubSearch"
-class="pub-search"
-placeholder="🔍 Search title, author, journal, patent...">
-
+placeholder="🔍 Search title, author, ISBN, patent number...">
 
 <select
-id="pubYear"
-class="pub-year">
+id="yearFilter"
+class="year">
 
 <option value="all">
 All Years
 </option>
 
-<option value="2026">
-2026
-</option>
-
-<option value="2025">
-2025
-</option>
-
-<option value="2024">
-2024
-</option>
-
-<option value="2023">
-2023
-</option>
-
-<option value="2022">
-2022
-</option>
-
-<option value="2021">
-2021
-</option>
-
-<option value="2020">
-2020
-</option>
-
-<option value="2019">
-2019
-</option>
-
-<option value="2018">
-2018
-</option>
-
-<option value="2017">
-2017
-</option>
-
-<option value="2016">
-2016
-</option>
-
-<option value="2015">
-2015
-</option>
-
-<option value="2014">
-2014
-</option>
+<option>2026</option>
+<option>2025</option>
+<option>2024</option>
+<option>2023</option>
+<option>2022</option>
+<option>2021</option>
+<option>2020</option>
+<option>2019</option>
+<option>2018</option>
 
 </select>
 
 </div>
 
 
-<!-- ==================================================
+<!-- =========================================================
      BOOKS
-================================================== -->
+========================================================= -->
 
 <section
-class="pub-section active"
-id="books">
+id="books"
+class="section active">
 
-
-<div class="pub-section-heading">
+<div class="section-title">
 
 <h2>📚 Books Published</h2>
 
-<span>BOOKS</span>
+<span>BOOK COLLECTION</span>
 
 </div>
 
 
-<div class="pub-card"
-data-year="2025">
+<!-- BOOK 1 -->
 
-<div class="pub-icon">
+<div class="book-card"
+data-year="2024">
+
+<div class="book-cover">
+
+<img
+src="https://covers.openlibrary.org/isbn/9789355458940-L.jpg"
+alt="Data Dreams Building Tomorrow with AI and Machine Learning"
+onerror="this.src='https://books.google.com/googlebooks/images/no_cover_thumb.gif'">
+
+</div>
+
+
+<div class="book-info">
+
+<div class="book-year">
+2024 • NAMYA PRESS
+</div>
+
+<h2 class="book-title">
+Data Dreams Building Tomorrow with AI and Machine Learning
+</h2>
+
+<div class="book-authors">
+
+Prof. (Dr.) Umakant Dinkar Butkar,
+Prof. Bhosale R. S.,
+Ms. Pritibala Ingle,
+Mrs. Sinu Nambiar
+
+</div>
+
+<div class="book-details">
+
+<div class="detail">
+<strong>ISBN-13</strong>
+9789355458940
+</div>
+
+<div class="detail">
+<strong>ISBN-10</strong>
+9355458940
+</div>
+
+<div class="detail">
+<strong>Publisher</strong>
+Namya Press
+</div>
+
+<div class="detail">
+<strong>Pages</strong>
+275
+</div>
+
+</div>
+
+
+<a
+class="buy-button"
+target="_blank"
+href="https://www.amazon.in/s?k=9789355458940">
+
+🛒 Purchase / Buy Book →
+
+</a>
+
+</div>
+
+</div>
+
+
+<!-- BOOK 2 -->
+
+<div class="book-card"
+data-year="2024">
+
+<div class="book-cover">
+
+<img
+src="https://covers.openlibrary.org/isbn/9789355453433-L.jpg"
+alt="Basic to Advance Artificial Intelligence and Machine Learning Techniques"
+onerror="this.src='https://books.google.com/googlebooks/images/no_cover_thumb.gif'">
+
+</div>
+
+
+<div class="book-info">
+
+<div class="book-year">
+2024 • NAMYA PRESS
+</div>
+
+<h2 class="book-title">
+Basic to Advance – Artificial Intelligence and Machine Learning Techniques
+</h2>
+
+<div class="book-authors">
+
+Prof. (Dr.) Umakant Dinkar Butkar,
+Prof. (Dr.) Devidas Sonyabapu Thosar,
+Prof. Rajashree Devidas Thosar,
+Prof. Neha Kudu
+
+</div>
+
+<div class="book-details">
+
+<div class="detail">
+<strong>ISBN-13</strong>
+9789355453433
+</div>
+
+<div class="detail">
+<strong>ISBN-10</strong>
+9355453434
+</div>
+
+<div class="detail">
+<strong>Publisher</strong>
+Namya Press
+</div>
+
+<div class="detail">
+<strong>Year</strong>
+2024
+</div>
+
+</div>
+
+
+<a
+class="buy-button"
+target="_blank"
+href="https://www.amazon.in/s?k=9789355453433">
+
+🛒 Purchase / Buy Book →
+
+</a>
+
+</div>
+
+</div>
+
+
+<!-- BOOK 3 -->
+
+<div class="book-card"
+data-year="2023">
+
+<div class="book-cover">
+
+<img
+src="https://covers.openlibrary.org/isbn/9789355452214-L.jpg"
+alt="Industrial Applications of Machine Learning"
+onerror="this.src='https://books.google.com/googlebooks/images/no_cover_thumb.gif'">
+
+</div>
+
+
+<div class="book-info">
+
+<div class="book-year">
+2023 • NAMYA PRESS
+</div>
+
+<h2 class="book-title">
+Industrial Applications of Machine Learning
+</h2>
+
+<div class="book-authors">
+
+Deepthi Kalavala,
+Ms. P. Sree Lakshmi,
+Prof. (Dr.) Umakant Dinkar Butkar,
+Sushama Dhumal-Khanvilkar
+
+</div>
+
+<div class="book-details">
+
+<div class="detail">
+<strong>ISBN-13</strong>
+9789355452214
+</div>
+
+<div class="detail">
+<strong>ISBN-10</strong>
+9355452217
+</div>
+
+<div class="detail">
+<strong>Publisher</strong>
+Namya Press
+</div>
+
+<div class="detail">
+<strong>Year</strong>
+2023
+</div>
+
+</div>
+
+
+<a
+class="buy-button"
+target="_blank"
+href="https://www.amazon.in/s?k=9789355452214">
+
+🛒 Purchase / Buy Book →
+
+</a>
+
+</div>
+
+</div>
+
+
+<!-- BOOK 4 -->
+
+<div class="book-card"
+data-year="2023">
+
+<div class="book-cover">
+
+<img
+src="https://covers.openlibrary.org/isbn/9789355452184-L.jpg"
+alt="Applied Machine Learning A Case-based Approach"
+onerror="this.src='https://books.google.com/googlebooks/images/no_cover_thumb.gif'">
+
+</div>
+
+
+<div class="book-info">
+
+<div class="book-year">
+2023 • NAMYA PRESS
+</div>
+
+<h2 class="book-title">
+Applied Machine Learning: A Case-based Approach
+</h2>
+
+<div class="book-authors">
+
+Prof. Santosh Purushottam Tamboli,
+Prof. (Dr.) Umakant Dinkar Butkar,
+Dr. Kalyanapu Srinivas,
+Prof. Rohit S. Barve
+
+</div>
+
+<div class="book-details">
+
+<div class="detail">
+<strong>ISBN-13</strong>
+9789355452184
+</div>
+
+<div class="detail">
+<strong>ISBN-10</strong>
+9355452187
+</div>
+
+<div class="detail">
+<strong>Publisher</strong>
+Namya Press
+</div>
+
+<div class="detail">
+<strong>Year</strong>
+2023
+</div>
+
+</div>
+
+
+<a
+class="buy-button"
+target="_blank"
+href="https://www.amazon.in/s?k=9789355452184">
+
+🛒 Purchase / Buy Book →
+
+</a>
+
+</div>
+
+</div>
+
+
+<!-- BOOK 5 -->
+
+<div class="book-card"
+data-year="2023">
+
+<div class="book-cover">
+
+<img
+src="https://covers.openlibrary.org/isbn/9786206768227-L.jpg"
+alt="Cyber Security for Beginners"
+onerror="this.src='https://books.google.com/googlebooks/images/no_cover_thumb.gif'">
+
+</div>
+
+
+<div class="book-info">
+
+<div class="book-year">
+2023 • LAP LAMBERT
+</div>
+
+<h2 class="book-title">
+Cyber Security for Beginners:
+Digital Protection for Future Generation
+</h2>
+
+<div class="book-authors">
+
+Umakant Dinkar Butkar,
+Mir Iqbal Faheem,
+Akella Sarveswara Rao
+
+</div>
+
+<div class="book-details">
+
+<div class="detail">
+<strong>ISBN-13</strong>
+978-620-6-76822-7
+</div>
+
+<div class="detail">
+<strong>ISBN-10</strong>
+6206768228
+</div>
+
+<div class="detail">
+<strong>Publisher</strong>
+LAP Lambert Academic Publishing
+</div>
+
+<div class="detail">
+<strong>Pages</strong>
+292
+</div>
+
+</div>
+
+
+<a
+class="buy-button"
+target="_blank"
+href="https://www.amazon.in/s?k=9786206768227">
+
+🛒 Purchase / Buy Book →
+
+</a>
+
+</div>
+
+</div>
+
+
+<!-- BOOK 6 -->
+
+<div class="book-card"
+data-year="2023">
+
+<div class="book-cover">
+
+<img
+src="https://covers.openlibrary.org/isbn/9789355458346-L.jpg"
+alt="Innovative Advancements in AI Machine Learning and Network Security"
+onerror="this.src='https://books.google.com/googlebooks/images/no_cover_thumb.gif'">
+
+</div>
+
+
+<div class="book-info">
+
+<div class="book-year">
+2023 • NAMYA PRESS
+</div>
+
+<h2 class="book-title">
+Innovative Advancements in AI, Machine Learning and Network Security
+</h2>
+
+<div class="book-authors">
+
+Prof. (Dr.) Umakant Dinkar Butkar,
+Prof. Manisha J. Waghmare,
+Ms. Pritibala Ingle,
+Mrs. Sinu Nambiar
+
+</div>
+
+<div class="book-details">
+
+<div class="detail">
+<strong>ISBN-13</strong>
+9789355458346
+</div>
+
+<div class="detail">
+<strong>Publisher</strong>
+Namya Press
+</div>
+
+<div class="detail">
+<strong>Pages</strong>
+208
+</div>
+
+<div class="detail">
+<strong>Year</strong>
+2023
+</div>
+
+</div>
+
+
+<a
+class="buy-button"
+target="_blank"
+href="https://www.amazon.in/s?k=9789355458346">
+
+🛒 Purchase / Buy Book →
+
+</a>
+
+</div>
+
+</div>
+
+
+<!-- BOOK 7 -->
+
+<div class="book-card"
+data-year="2023">
+
+<div class="book-cover">
+
+<img
+src="https://covers.openlibrary.org/isbn/9789355452047-L.jpg"
+alt="IOT Applications on Vehicle Accident Detection and Prevention"
+onerror="this.src='https://books.google.com/googlebooks/images/no_cover_thumb.gif'">
+
+</div>
+
+
+<div class="book-info">
+
+<div class="book-year">
+2023 • NAMYA PRESS
+</div>
+
+<h2 class="book-title">
+IOT Applications on Vehicle Accident Detection and Prevention
+</h2>
+
+<div class="book-authors">
+
+Dr. Umakant Dinkar Butkar,
+Dr. Santosh Pawar,
+Ms. P. Sree Lakshmi
+
+</div>
+
+<div class="book-details">
+
+<div class="detail">
+<strong>ISBN-13</strong>
+9789355452047
+</div>
+
+<div class="detail">
+<strong>ISBN-10</strong>
+9355452047
+</div>
+
+<div class="detail">
+<strong>Publisher</strong>
+Namya Press
+</div>
+
+<div class="detail">
+<strong>Pages</strong>
+110
+</div>
+
+</div>
+
+
+<a
+class="buy-button"
+target="_blank"
+href="https://www.amazon.in/s?k=9789355452047">
+
+🛒 Purchase / Buy Book →
+
+</a>
+
+</div>
+
+</div>
+
+
+<!-- BOOK 8 -->
+
+<div class="book-card"
+data-year="2023">
+
+<div class="book-cover">
+
+<img
+src="https://covers.openlibrary.org/isbn/9789355452016-L.jpg"
+alt="Intellectual Property Rights Indian Patent Act 1970"
+onerror="this.src='https://books.google.com/googlebooks/images/no_cover_thumb.gif'">
+
+</div>
+
+
+<div class="book-info">
+
+<div class="book-year">
+2023 • NAMYA PRESS
+</div>
+
+<h2 class="book-title">
+Intellectual Property Rights –
+Indian Patent Act 1970
+</h2>
+
+<div class="book-authors">
+
+Dr. Umakant Dinkar Butkar
+
+</div>
+
+<div class="book-details">
+
+<div class="detail">
+<strong>ISBN-13</strong>
+9789355452016
+</div>
+
+<div class="detail">
+<strong>Publisher</strong>
+Namya Press
+</div>
+
+<div class="detail">
+<strong>Pages</strong>
+419
+</div>
+
+<div class="detail">
+<strong>Publication</strong>
+30 Dec 2022
+</div>
+
+</div>
+
+
+<a
+class="buy-button"
+target="_blank"
+href="https://www.amazon.in/s?k=9789355452016">
+
+🛒 Purchase / Buy Book →
+
+</a>
+
+</div>
+
+</div>
+
+
+<!-- BOOK 9 -->
+
+<div class="book-card"
+data-year="2018">
+
+<div class="book-cover">
+
+<div style="
+font-size:55px;
+color:#2563eb;
+">
 📘
 </div>
 
-<div>
-
-<div class="pub-meta">
-BOOK • 2025
-</div>
-
-<h3>
-Connected Industrial Intelligence:
-Engineering IoT–IIoT Systems,
-Applications, and Security
-</h3>
-
-<p>
-Authors: Dr. Umakant Butkar and Co-Authors
-</p>
-
-<div class="pub-tags">
-
-<span>IoT</span>
-<span>IIoT</span>
-<span>Industrial Intelligence</span>
-<span>Security</span>
-
-</div>
-
-</div>
-
 </div>
 
 
-<div class="pub-card"
-data-year="2018">
+<div class="book-info">
 
-<div class="pub-icon">
-📗
+<div class="book-year">
+2018 • HARSHWARDHAN PUBLICATION
 </div>
 
-<div>
+<h2 class="book-title">
+Fundamental Programming Language-II
+</h2>
 
-<div class="pub-meta">
-BOOK • 2018
+<div class="book-authors">
+
+Dr. Umakant Dinkar Butkar
+
 </div>
 
-<h3>
-Fundamental Programming Language-2
-</h3>
+<div class="book-details">
 
-<p>
+<div class="detail">
+<strong>Year</strong>
+2018
+</div>
+
+<div class="detail">
+<strong>Publisher</strong>
 Harshwardhan Publication Pvt. Ltd.
+</div>
+
+</div>
+
+<p style="
+font-size:11px;
+color:#64748b;
+">
+
+ISBN and verified purchase information
+were not found in the public sources checked.
+
 </p>
-
-<div class="pub-tags">
-
-<span>Programming</span>
-<span>Computer Science</span>
-
-</div>
-
-</div>
-
-</div>
-
-
-<!-- ADD MORE BOOKS HERE -->
-
-<div class="pub-card"
-data-year="2024">
-
-<div class="pub-icon">
-📕
-</div>
-
-<div>
-
-<div class="pub-meta">
-BOOK • 2024
-</div>
-
-<h3>
-Add Your Book Title Here
-</h3>
-
-<p>
-Publisher Name • ISBN • Year
-</p>
-
-<div class="pub-tags">
-
-<span>AI</span>
-<span>ML</span>
-
-</div>
 
 </div>
 
@@ -1097,156 +1892,623 @@ Publisher Name • ISBN • Year
 </section>
 
 
-<!-- ==================================================
+<!-- =========================================================
      PATENTS
-================================================== -->
+========================================================= -->
 
 <section
-class="pub-section"
-id="patents">
+id="patents"
+class="section">
 
+<div class="section-title">
 
-<div class="pub-section-heading">
+<h2>💡 Patents & Designs</h2>
 
-<h2>💡 Patents</h2>
-
-<span>INNOVATION</span>
+<span>INNOVATION DATABASE</span>
 
 </div>
 
 
-<div class="pub-card"
-data-year="2026">
+<!-- PATENT 1 -->
 
-<div class="pub-icon">
+<div class="patent-card"
+data-year="2025">
+
+<div class="patent-icon">
 💡
 </div>
 
 <div>
 
-<div class="pub-meta">
-PATENT • 2026
+<div class="patent-title">
+Multi-Platform (Web & Android) College Bus Management Solution
 </div>
 
-<h3>
-AN ADAPTIVE MACHINE LEARNING SYSTEM
-FOR REAL-TIME BEHAVIORAL PATTERN DETECTION
-</h3>
-
-<p>
-Patent Application No.:
-<strong>202621100065</strong>
-</p>
-
-<p>
-Status: Filed
-</p>
-
-<div class="pub-tags">
-
-<span>Machine Learning</span>
-<span>AI</span>
-<span>Behavior Detection</span>
+<div class="patent-meta">
+2025 • Indian Patent • Application No. 202521034087
+</div>
 
 </div>
 
+<div class="status published">
+PUBLISHED
 </div>
 
 </div>
 
 
-<div class="pub-card"
-data-year="2026">
+<!-- PATENT 2 -->
 
-<div class="pub-icon">
-⚡
-</div>
-
-<div>
-
-<div class="pub-meta">
-PATENT • 2026
-</div>
-
-<h3>
-SMART SOCIETAL OPTIMIZATION-DRIVEN
-DEEP CONVOLUTIONAL NEURAL NETWORK
-FOR EPILEPTIC SEIZURE PREDICTION
-</h3>
-
-<p>
-Patent Application No.:
-<strong>202621100064</strong>
-</p>
-
-<p>
-Status: Filed
-</p>
-
-<div class="pub-tags">
-
-<span>Deep Learning</span>
-<span>CNN</span>
-<span>AI</span>
-
-</div>
-
-</div>
-
-</div>
-
-
-<div class="pub-card"
+<div class="patent-card"
 data-year="2025">
 
-<div class="pub-icon">
-🔧
+<div class="patent-icon">
+⚙️
 </div>
 
 <div>
 
-<div class="pub-meta">
-PATENT • 2025
+<div class="patent-title">
+PROSTHETIC ARM
 </div>
 
-<h3>
-AI-Enabled Intelligent Electrical Protection
-and Predictive Maintenance Apparatus
-</h3>
-
-<p>
-Patent / Design information can be
-added here.
-</p>
-
-<div class="pub-tags">
-
-<span>AI</span>
-<span>Electrical</span>
-<span>Predictive Maintenance</span>
+<div class="patent-meta">
+2025 • Indian Patent Office
+</div>
 
 </div>
 
+<div class="status granted">
+GRANTED
 </div>
 
 </div>
 
 
-<!-- ADD MORE PATENTS HERE -->
+<!-- PATENT 3 -->
+
+<div class="patent-card"
+data-year="2025">
+
+<div class="patent-icon">
+🌐
+</div>
+
+<div>
+
+<div class="patent-title">
+POLLUTION DETECTION DEVICE
+</div>
+
+<div class="patent-meta">
+2025 • Indian Patent Office
+</div>
+
+</div>
+
+<div class="status granted">
+GRANTED
+</div>
+
+</div>
+
+
+<!-- PATENT 4 -->
+
+<div class="patent-card"
+data-year="2024">
+
+<div class="patent-icon">
+💊
+</div>
+
+<div>
+
+<div class="patent-title">
+METHOD OF PREPARATION OF BROMFENAC SODIUM SESQUIHYDRATE AND USES THEREOF
+</div>
+
+<div class="patent-meta">
+2024 • Indian Patent • 202421029962
+</div>
+
+</div>
+
+<div class="status published">
+PUBLISHED
+</div>
+
+</div>
+
+
+<!-- PATENT 5 -->
+
+<div class="patent-card"
+data-year="2024">
+
+<div class="patent-icon">
+🤖
+</div>
+
+<div>
+
+<div class="patent-title">
+IoT-based Mechanical Robotic Arm
+</div>
+
+<div class="patent-meta">
+2024 • Indian Design • Design No. 435662-001
+</div>
+
+</div>
+
+<div class="status granted">
+GRANTED
+</div>
+
+</div>
+
+
+<!-- PATENT 6 -->
+
+<div class="patent-card"
+data-year="2024">
+
+<div class="patent-icon">
+🤖
+</div>
+
+<div>
+
+<div class="patent-title">
+IOT Based Mechanical Roboarm
+</div>
+
+<div class="patent-meta">
+2024 • Indian Patent Office
+</div>
+
+</div>
+
+<div class="status granted">
+GRANTED
+</div>
+
+</div>
+
+
+<!-- PATENT 7 -->
+
+<div class="patent-card"
+data-year="2024">
+
+<div class="patent-icon">
+📄
+</div>
+
+<div>
+
+<div class="patent-title">
+AUTOMATED DOCUMENT DELIVERY APPARATUS
+</div>
+
+<div class="patent-meta">
+2024 • Indian Design • Design No. 411269-001
+</div>
+
+</div>
+
+<div class="status granted">
+GRANTED
+</div>
+
+</div>
+
+
+<!-- PATENT 8 -->
+
+<div class="patent-card"
+data-year="2024">
+
+<div class="patent-icon">
+🧠
+</div>
+
+<div>
+
+<div class="patent-title">
+AI-Based Plant Growth Detection Machine
+</div>
+
+<div class="patent-meta">
+2024 • Indian Patent Office
+</div>
+
+</div>
+
+<div class="status granted">
+GRANTED
+</div>
+
+</div>
+
+
+<!-- PATENT 9 -->
+
+<div class="patent-card"
+data-year="2024">
+
+<div class="patent-icon">
+🍎
+</div>
+
+<div>
+
+<div class="patent-title">
+AI-Based Fruit and Vegetable Quality Detection Device
+</div>
+
+<div class="patent-meta">
+2024 • Indian Design • Design No. 434905-001
+</div>
+
+</div>
+
+<div class="status granted">
+GRANTED
+</div>
+
+</div>
+
+
+<!-- PATENT 10 -->
+
+<div class="patent-card"
+data-year="2024">
+
+<div class="patent-icon">
+📢
+</div>
+
+<div>
+
+<div class="patent-title">
+AI Based Dynamic Noticeboard
+</div>
+
+<div class="patent-meta">
+2024 • Indian Patent Office
+</div>
+
+</div>
+
+<div class="status granted">
+GRANTED
+</div>
+
+</div>
+
+
+<!-- PATENT 11 -->
+
+<div class="patent-card"
+data-year="2024">
+
+<div class="patent-icon">
+📢
+</div>
+
+<div>
+
+<div class="patent-title">
+AI Based Dynamic Multipurpose Notice Board for Institutions
+</div>
+
+<div class="patent-meta">
+2024 • Indian Design • Design No. 423232-001
+</div>
+
+</div>
+
+<div class="status granted">
+GRANTED
+</div>
+
+</div>
+
+
+<!-- PATENT 12 -->
+
+<div class="patent-card"
+data-year="2024">
+
+<div class="patent-icon">
+🎓
+</div>
+
+<div>
+
+<div class="patent-title">
+Students IQ Level Checking Device
+</div>
+
+<div class="patent-meta">
+2024 • Indian Patent Office
+</div>
+
+</div>
+
+<div class="status granted">
+GRANTED
+</div>
+
+</div>
+
+
+<!-- PATENT 13 -->
+
+<div class="patent-card"
+data-year="2022">
+
+<div class="patent-icon">
+🌊
+</div>
+
+<div>
+
+<div class="patent-title">
+Wave Energy Converter: New Concept of Low-Cost Wave Energy Converter
+</div>
+
+<div class="patent-meta">
+2022 • Australian Patent • Granted
+</div>
+
+</div>
+
+<div class="status granted">
+GRANTED
+</div>
+
+</div>
+
+
+<!-- PATENT 14 -->
+
+<div class="patent-card"
+data-year="2022">
+
+<div class="patent-icon">
+📰
+</div>
+
+<div>
+
+<div class="patent-title">
+Fake News Detection in Social Media Management Using Deep Learning and AI
+</div>
+
+<div class="patent-meta">
+2022 • Indian Patent
+</div>
+
+</div>
+
+<div class="status published">
+PUBLISHED
+</div>
+
+</div>
+
+
+<!-- PATENT 15 -->
+
+<div class="patent-card"
+data-year="2022">
+
+<div class="patent-icon">
+📷
+</div>
+
+<div>
+
+<div class="patent-title">
+Crowd Detection Intelligent Camera to Prevent Covid-19 or any Other Need
+</div>
+
+<div class="patent-meta">
+2022 • Australian Patent • Patent No. 2021102668
+</div>
+
+</div>
+
+<div class="status granted">
+GRANTED
+</div>
+
+</div>
+
+
+<!-- PATENT 16 -->
+
+<div class="patent-card"
+data-year="2021">
+
+<div class="patent-icon">
+📱
+</div>
+
+<div>
+
+<div class="patent-title">
+Mobile Communication Prank Calls Avoidance by Prefixes and Number Formats
+</div>
+
+<div class="patent-meta">
+2021 • Indian Patent
+</div>
+
+</div>
+
+<div class="status published">
+PUBLISHED
+</div>
+
+</div>
+
+
+<!-- PATENT 17 -->
+
+<div class="patent-card"
+data-year="2024">
+
+<div class="patent-icon">
+🥽
+</div>
+
+<div>
+
+<div class="patent-title">
+VR Headset Design
+</div>
+
+<div class="patent-meta">
+Indian Patent Office • Patent Granted
+</div>
+
+</div>
+
+<div class="status granted">
+GRANTED
+</div>
+
+</div>
+
+
+<!-- PATENT 18 -->
+
+<div class="patent-card"
+data-year="2024">
+
+<div class="patent-icon">
+🎧
+</div>
+
+<div>
+
+<div class="patent-title">
+IoT Based Obstacle Detection Specs with Audio Controls
+</div>
+
+<div class="patent-meta">
+Indian Patent Office • Patent Granted
+</div>
+
+</div>
+
+<div class="status granted">
+GRANTED
+</div>
+
+</div>
+
+
+<!-- PATENT 19 -->
+
+<div class="patent-card"
+data-year="2024">
+
+<div class="patent-icon">
+🥕
+</div>
+
+<div>
+
+<div class="patent-title">
+Fruit and Vegetable Quality Detection Device
+</div>
+
+<div class="patent-meta">
+Indian Patent Office • Patent Granted
+</div>
+
+</div>
+
+<div class="status granted">
+GRANTED
+</div>
+
+</div>
+
+
+<!-- PATENT 20 -->
+
+<div class="patent-card"
+data-year="2024">
+
+<div class="patent-icon">
+🚁
+</div>
+
+<div>
+
+<div class="patent-title">
+AI Drone for Crowd Detection and Management
+</div>
+
+<div class="patent-meta">
+Indian Patent Office • Patent Granted
+</div>
+
+</div>
+
+<div class="status granted">
+GRANTED
+</div>
+
+</div>
+
+
+<!-- PATENT 21 -->
+
+<div class="patent-card"
+data-year="2024">
+
+<div class="patent-icon">
+🚁
+</div>
+
+<div>
+
+<div class="patent-title">
+AI Based Drone for Site Inspection
+</div>
+
+<div class="patent-meta">
+Indian Patent Office • Patent Granted
+</div>
+
+</div>
+
+<div class="status granted">
+GRANTED
+</div>
+
+</div>
+
 
 </section>
 
 
-<!-- ==================================================
+<!-- =========================================================
      COPYRIGHT
-================================================== -->
+========================================================= -->
 
 <section
-class="pub-section"
-id="copyright">
+id="copyright"
+class="section">
 
-
-<div class="pub-section-heading">
+<div class="section-title">
 
 <h2>© Copyrights</h2>
 
@@ -1255,94 +2517,45 @@ id="copyright">
 </div>
 
 
-<div class="pub-card"
-data-year="2025">
-
-<div class="pub-icon">
-©
-</div>
-
-<div>
-
-<div class="pub-meta">
-COPYRIGHT • 2025
-</div>
+<div class="simple-card">
 
 <h3>
-Add Copyright Title Here
+Document Carrying Robot
 </h3>
 
 <p>
-Copyright Registration No.:
-<strong>XXXXXXX</strong>
+Indian Copyright Office • Registered • 2024
 </p>
 
-<p>
-Registration Year: 2025
-</p>
-
-<div class="pub-tags">
-
-<span>Software</span>
-<span>AI</span>
-<span>Educational Technology</span>
-
-</div>
-
-</div>
-
 </div>
 
 
-<div class="pub-card"
-data-year="2024">
-
-<div class="pub-icon">
-©
-</div>
-
-<div>
-
-<div class="pub-meta">
-COPYRIGHT • 2024
-</div>
+<div class="simple-card">
 
 <h3>
-Add Copyright Title Here
+Additional Copyright Records
 </h3>
 
 <p>
-Copyright Registration No.:
-<strong>XXXXXXX</strong>
+More registered copyright information can
+be added here with registration number,
+year and certificate link.
 </p>
 
-<div class="pub-tags">
-
-<span>IoT</span>
-<span>Software</span>
-
 </div>
-
-</div>
-
-</div>
-
-
-<!-- ADD MORE COPYRIGHTS HERE -->
 
 </section>
 
 
-<!-- ==================================================
+<!-- =========================================================
      RESEARCH PAPERS
-================================================== -->
+========================================================= -->
 
 <section
-class="pub-section"
-id="papers">
+id="papers"
+class="section">
 
-
-<div class="pub-section-heading">
+<div class="section-title">
 
 <h2>📄 Research Papers</h2>
 
@@ -1351,18 +2564,7 @@ id="papers">
 </div>
 
 
-<div class="pub-card"
-data-year="2026">
-
-<div class="pub-icon">
-📄
-</div>
-
-<div>
-
-<div class="pub-meta">
-RESEARCH PAPER • 2026
-</div>
+<div class="simple-card">
 
 <h3>
 Snap2fix: Smart Complaint Management System
@@ -1378,30 +2580,10 @@ Indiana Journal of Multidisciplinary Research,
 2026
 </p>
 
-<div class="pub-tags">
-
-<span>AI</span>
-<span>Smart Systems</span>
-
-</div>
-
-</div>
-
 </div>
 
 
-<div class="pub-card"
-data-year="2026">
-
-<div class="pub-icon">
-📄
-</div>
-
-<div>
-
-<div class="pub-meta">
-RESEARCH PAPER • 2026
-</div>
+<div class="simple-card">
 
 <h3>
 Design and Implementation of an IoT-Based
@@ -1409,7 +2591,8 @@ Smart Office Automation System
 </h3>
 
 <p>
-U. D. Butkar and Co-Authors
+U. D. Butkar, S. Bhise, Y. Bhoye,
+B. Gaikwad, K. Padavi
 </p>
 
 <p>
@@ -1417,71 +2600,10 @@ Indiana Journal of Multidisciplinary Research,
 2026
 </p>
 
-<div class="pub-tags">
-
-<span>IoT</span>
-<span>Automation</span>
-
-</div>
-
-</div>
-
 </div>
 
 
-<div class="pub-card"
-data-year="2025">
-
-<div class="pub-icon">
-📄
-</div>
-
-<div>
-
-<div class="pub-meta">
-RESEARCH PAPER • 2025
-</div>
-
-<h3>
-Revolutionizing Intelligence:
-Synergizing Human and Artificial Intelligence
-</h3>
-
-<p>
-Swati Satyajit Ghadage,
-Umakant Dinkar Butkar,
-Rajesh Autee
-</p>
-
-<p>
-Journal of Information Systems Engineering
-and Management, 2025
-</p>
-
-<div class="pub-tags">
-
-<span>Artificial Intelligence</span>
-<span>Human-AI</span>
-
-</div>
-
-</div>
-
-</div>
-
-
-<div class="pub-card"
-data-year="2025">
-
-<div class="pub-icon">
-📄
-</div>
-
-<div>
-
-<div class="pub-meta">
-RESEARCH PAPER • 2025
-</div>
+<div class="simple-card">
 
 <h3>
 Harnessing Data Science For Sustainable
@@ -1492,80 +2614,28 @@ A Path Toward Smarter Ecosystems
 <p>
 Dr. Sweety Gokul Mahajan,
 Dr. Umakant Dinkar Butkar
-and Co-Authors
+and Co-Authors • 2025
 </p>
 
-<p>
-International Journal of Environmental
-Sciences, 2025
-</p>
-
-<div class="pub-tags">
-
-<span>Data Science</span>
-<span>Sustainability</span>
-
-</div>
-
-</div>
-
 </div>
 
 
-<div class="pub-card"
-data-year="2024">
-
-<div class="pub-icon">
-📄
-</div>
-
-<div>
-
-<div class="pub-meta">
-RESEARCH PAPER • 2024
-</div>
+<div class="simple-card">
 
 <h3>
-Application of Internet of Things and
-Machine Learning in Smart Farming for
-Efficient Resource Management
+Accident Prevention Using IoT for Car Safety
 </h3>
 
 <p>
-Umakant Butkar, Rupesh Mahajan,
-Devidas S. Thosar, Sweety Mahajan
+Farheena Memon, Priti Sonawane,
+Shruti Sunadalli, Siddhi Thorat,
+Dr. Umakant Butkar • 2025
 </p>
 
-<p>
-ShodhKosh: Journal of Visual and
-Performing Arts, 2024
-</p>
-
-<div class="pub-tags">
-
-<span>IoT</span>
-<span>Machine Learning</span>
-<span>Smart Farming</span>
-
-</div>
-
-</div>
-
 </div>
 
 
-<div class="pub-card"
-data-year="2024">
-
-<div class="pub-icon">
-📄
-</div>
-
-<div>
-
-<div class="pub-meta">
-RESEARCH PAPER • 2024
-</div>
+<div class="simple-card">
 
 <h3>
 The Future of Transportation:
@@ -1577,160 +2647,74 @@ Economy, and Society
 <p>
 Umakant Dinkar Butkar,
 Rajendra Parshram Sabale,
-Prakash Chhagan Patil
+Prakash Chhagan Patil • 2024
 </p>
 
-<p>
-ShodhKosh: Journal of Visual and
-Performing Arts, 2024
-</p>
-
-<div class="pub-tags">
-
-<span>Electric Vehicles</span>
-<span>IoT</span>
-<span>Sustainability</span>
-
-</div>
-
-</div>
-
 </div>
 
 
-<div class="pub-card"
-data-year="2023">
-
-<div class="pub-icon">
-📄
-</div>
-
-<div>
-
-<div class="pub-meta">
-RESEARCH PAPER • 2023
-</div>
+<div class="simple-card">
 
 <h3>
-Integration of Electric Vehicles,
-Renewable Energy Sources, and IoT for
-Sustainable Transportation and
-Energy Management
+Application of Internet of Things and Machine
+Learning in Smart Farming for Efficient
+Resource Management
 </h3>
 
 <p>
-Umakant Dinkar Butkar and Co-Authors
+Umakant Butkar, Rupesh Mahajan,
+Devidas S. Thosar, Sweety Mahajan • 2024
 </p>
+
+</div>
+
+
+<div class="simple-card">
+
+<h3>
+Novel Energy Storage Material and Topologies
+of Computerized Controller
+</h3>
 
 <p>
-IEEE International Conference on
-Renewable Energy Research and Applications,
-2023
+Umakant Dinkar Butkar,
+Manisha J. Waghmare • 2023
 </p>
 
-<div class="pub-tags">
-
-<span>EV</span>
-<span>IoT</span>
-<span>Renewable Energy</span>
-
-</div>
-
-</div>
-
 </div>
 
 
-<div class="pub-card"
-data-year="2023">
+<div class="simple-card">
 
-<div class="pub-icon">
-📄
+<h3>
+An Intelligent System Design for Emotion
+Recognition and Rectification Using Machine Learning
+</h3>
+
+<p>
+Umakant Dinkar Butkar,
+Manisha J. Waghmare • 2023
+</p>
+
 </div>
 
-<div>
 
-<div class="pub-meta">
-RESEARCH PAPER • 2023
-</div>
+<div class="simple-card">
 
 <h3>
 Crime Risk Forecasting using Cyber Security
-and Artificial Intelligence
+and Artificial Intelligent
 </h3>
 
 <p>
-M. U. D. Butkar and M. J. Waghmare
+Umakant Dinkar Butkar,
+Manisha J. Waghmare • 2023
 </p>
 
-<p>
-Computer Integrated Manufacturing Systems,
-2023
-</p>
-
-<div class="pub-tags">
-
-<span>Artificial Intelligence</span>
-<span>Cyber Security</span>
-
-</div>
-
-</div>
-
 </div>
 
 
-<div class="pub-card"
-data-year="2022">
-
-<div class="pub-icon">
-📄
-</div>
-
-<div>
-
-<div class="pub-meta">
-RESEARCH PAPER • 2022
-</div>
-
-<h3>
-Accident Detection and Alert System
-Using Global Positioning System
-</h3>
-
-<p>
-U. D. Butkar, N. Gandhewar
-</p>
-
-<p>
-Journal of Algebraic Statistics, 2022
-</p>
-
-<div class="pub-tags">
-
-<span>IoT</span>
-<span>GPS</span>
-<span>Vehicle Safety</span>
-
-</div>
-
-</div>
-
-</div>
-
-
-<div class="pub-card"
-data-year="2022">
-
-<div class="pub-icon">
-📄
-</div>
-
-<div>
-
-<div class="pub-meta">
-RESEARCH PAPER • 2022
-</div>
+<div class="simple-card">
 
 <h3>
 Algorithm Design for Accident Detection
@@ -1738,69 +2722,67 @@ Using the Internet of Things and GPS Module
 </h3>
 
 <p>
-U. D. Butkar, D. N. Gandhewar
+Umakant Dinkar Butkar,
+D. N. Gandhewar • 2022
 </p>
+
+</div>
+
+
+<div class="simple-card">
+
+<h3>
+Accident Detection and Alert System
+Using Global Positioning System
+</h3>
 
 <p>
-Journal of East China University of
-Science and Technology, 2022
+Umakant Dinkar Butkar,
+N. Gandhewar • 2022
 </p>
 
-<div class="pub-tags">
-
-<span>IoT</span>
-<span>GPS</span>
-
-</div>
-
-</div>
-
 </div>
 
 
-<!-- ADD MORE RESEARCH PAPERS HERE -->
+<div class="simple-card">
+
+<h3>
+A Formation of Cloud Data Sharing With
+Integrity and User Revocation
+</h3>
+
+<p>
+Umakant Butkar • 2017
+</p>
+
+</div>
+
 
 </section>
 
 
-<!-- ==================================================
-     NO RESULTS
-================================================== -->
-
-<div
-id="noResults"
-class="no-results">
-
-<h3>
-No records found
-</h3>
-
-<p>
-Try another keyword or select a different year.
-</p>
-
-</div>
-
-
-<!-- ==================================================
+<!-- =========================================================
      GOOGLE SCHOLAR
-================================================== -->
+========================================================= -->
 
 <div class="scholar">
 
 <h2>
-Complete Research Profile
+Complete Academic Profile
 </h2>
 
 <p>
-View the latest citation information,
-h-index and complete publication record.
+
+For the latest citations, h-index,
+i10-index and complete publication record,
+visit the Google Scholar profile.
+
 </p>
 
 <a
-href="https://scholar.google.com/citations?hl=en&user=rnX6w4AAAAAJ"
+class="scholar-btn"
 target="_blank"
-class="scholar-button">
+href="https://scholar.google.com/citations">
 
 View Google Scholar →
 
@@ -1812,19 +2794,19 @@ View Google Scholar →
 </main>
 
 
-<!-- ==================================================
+<!-- =========================================================
      FOOTER
-================================================== -->
+========================================================= -->
 
 <footer>
 
-<div class="footer-content">
+<div class="footer-inner">
 
 <div>
 
-<h3>
+<strong>
 &lt;DR. BUTKAR/&gt;
-</h3>
+</strong>
 
 <p>
 Academician • Researcher • Innovator
@@ -1840,207 +2822,153 @@ research → innovation → impact
 
 </div>
 
-
-<div class="copyright">
-
-© 2026 Dr. Umakant Butkar.
-All Rights Reserved.
-
-</div>
-
 </footer>
 
 
-<!-- ==================================================
+<!-- =========================================================
      JAVASCRIPT
-================================================== -->
+========================================================= -->
 
 <script>
 
 
-/* ==================================================
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+function toggleMenu(){
+
+    document
+    .getElementById("navMenu")
+    .classList
+    .toggle("active");
+
+}
+
+
+/* =========================================================
    TAB SWITCHING
-================================================== */
+========================================================= */
 
-const tabs =
-document.querySelectorAll(".pub-tab");
+function showSection(id,button){
 
-const sections =
-document.querySelectorAll(".pub-section");
-
-
-tabs.forEach(tab => {
-
-    tab.addEventListener("click", () => {
-
-        tabs.forEach(t =>
-            t.classList.remove("active")
-        );
-
-        sections.forEach(s =>
-            s.classList.remove("active")
-        );
-
-
-        tab.classList.add("active");
-
-
-        const target =
-        document.getElementById(
-            tab.dataset.tab
-        );
-
-
-        target.classList.add("active");
-
-
-        document.getElementById(
-            "pubSearch"
-        ).value = "";
-
-
-        document.getElementById(
-            "pubYear"
-        ).value = "all";
-
-
-        filterRecords();
-
+    document
+    .querySelectorAll(".section")
+    .forEach(section=>{
+        section.classList.remove("active");
     });
 
-});
+
+    document
+    .querySelectorAll(".tab")
+    .forEach(tab=>{
+        tab.classList.remove("active");
+    });
 
 
-/* ==================================================
+    document
+    .getElementById(id)
+    .classList.add("active");
+
+
+    button.classList.add("active");
+
+
+    document
+    .getElementById("searchBox")
+    .value="";
+
+    document
+    .getElementById("yearFilter")
+    .value="all";
+
+
+    filterRecords();
+
+}
+
+
+/* =========================================================
    SEARCH + YEAR FILTER
-================================================== */
+========================================================= */
 
-const search =
-document.getElementById("pubSearch");
+const searchBox =
+document.getElementById("searchBox");
 
-const year =
-document.getElementById("pubYear");
-
-const noResults =
-document.getElementById("noResults");
+const yearFilter =
+document.getElementById("yearFilter");
 
 
-function filterRecords() {
+searchBox.addEventListener(
+"input",
+filterRecords
+);
+
+
+yearFilter.addEventListener(
+"change",
+filterRecords
+);
+
+
+function filterRecords(){
 
     const keyword =
-    search.value.toLowerCase().trim();
+    searchBox.value
+    .toLowerCase()
+    .trim();
+
 
     const selectedYear =
-    year.value;
+    yearFilter.value;
 
 
     const activeSection =
     document.querySelector(
-        ".pub-section.active"
+        ".section.active"
     );
 
 
-    const cards =
+    const records =
     activeSection.querySelectorAll(
-        ".pub-card"
+        ".book-card, .patent-card, .simple-card"
     );
 
 
-    let visible = 0;
-
-
-    cards.forEach(card => {
+    records.forEach(record=>{
 
         const text =
-        card.textContent.toLowerCase();
+        record.textContent
+        .toLowerCase();
 
 
-        const cardYear =
-        card.dataset.year;
+        const recordYear =
+        record.dataset.year;
 
 
-        const matchesKeyword =
+        const keywordMatch =
         text.includes(keyword);
 
 
-        const matchesYear =
-        selectedYear === "all" ||
-        cardYear === selectedYear;
+        const yearMatch =
+        selectedYear==="all" ||
+        recordYear===selectedYear;
 
 
-        if (
-            matchesKeyword &&
-            matchesYear
-        ) {
+        if(keywordMatch && yearMatch){
 
-            card.style.display =
-            "grid";
+            record.style.display="";
 
-            visible++;
+        }
+        else{
 
-        } else {
-
-            card.style.display =
-            "none";
+            record.style.display="none";
 
         }
 
     });
 
-
-    if (visible === 0) {
-
-        noResults.style.display =
-        "block";
-
-    } else {
-
-        noResults.style.display =
-        "none";
-
-    }
-
 }
-
-
-search.addEventListener(
-    "input",
-    filterRecords
-);
-
-
-year.addEventListener(
-    "change",
-    filterRecords
-);
-
-
-/* ==================================================
-   MOBILE MENU
-================================================== */
-
-const menuToggle =
-document.getElementById("menuToggle");
-
-const navMenu =
-document.getElementById("navMenu");
-
-
-if (menuToggle) {
-
-    menuToggle.addEventListener(
-        "click",
-        () => {
-
-            navMenu.classList.toggle(
-                "active"
-            );
-
-        }
-    );
-
-}
-
 
 </script>
 
