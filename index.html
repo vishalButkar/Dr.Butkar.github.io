@@ -1645,7 +1645,359 @@ footer{
     }
 
 }
+/* =====================================================
+   RESEARCH PROFILE CARDS
+===================================================== */
 
+.profile-links-grid{
+
+    margin-top:40px;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:18px;
+
+}
+
+
+/* =====================================================
+   PROFILE CARD
+===================================================== */
+
+.research-profile-card{
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    padding:22px;
+
+    background:#fff;
+
+    border:
+    1px solid #e2e8f0;
+
+    border-radius:16px;
+
+    color:#172033;
+
+    overflow:hidden;
+
+    transition:
+    transform .35s ease,
+    box-shadow .35s ease,
+    border-color .35s ease;
+
+}
+
+
+/* glowing line */
+
+.research-profile-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-100%;
+
+    width:100%;
+
+    height:2px;
+
+    background:#38bdf8;
+
+    transition:.5s;
+
+}
+
+
+.research-profile-card:hover::before{
+
+    left:0;
+
+}
+
+
+.research-profile-card:hover{
+
+    transform:
+    translateY(-7px);
+
+    border-color:#93c5fd;
+
+    box-shadow:
+    0 18px 40px
+    rgba(15,23,42,.10);
+
+}
+
+
+/* =====================================================
+   ICON
+===================================================== */
+
+.profile-icon{
+
+    min-width:58px;
+
+    width:58px;
+
+    height:58px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:14px;
+
+    color:#fff;
+
+    font-family:"JetBrains Mono";
+
+    font-size:13px;
+
+    font-weight:700;
+
+    background:
+    linear-gradient(
+        135deg,
+        #0f172a,
+        #2563eb
+    );
+
+    box-shadow:
+    0 8px 20px
+    rgba(37,99,235,.18);
+
+    transition:.35s;
+
+}
+
+
+.research-profile-card:hover
+.profile-icon{
+
+    transform:
+    rotate(-5deg)
+    scale(1.08);
+
+}
+
+
+/* individual identity styles */
+
+.profile-icon.scholar{
+    background:#4285f4;
+}
+
+.profile-icon.scopus{
+    background:#e9711c;
+}
+
+.profile-icon.orcid{
+    background:#a6ce39;
+}
+
+.profile-icon.researchgate{
+    background:#00ccbb;
+}
+
+.profile-icon.vidwan{
+    background:#2563eb;
+}
+
+.profile-icon.researchid{
+    background:#7c3aed;
+}
+
+.profile-icon.wos{
+    background:#475569;
+}
+
+.profile-icon.ieee{
+    background:#00629b;
+}
+
+.profile-icon.books{
+    background:
+    linear-gradient(
+        135deg,
+        #7c3aed,
+        #2563eb
+    );
+}
+
+
+/* =====================================================
+   CARD CONTENT
+===================================================== */
+
+.profile-link-content{
+
+    flex:1;
+
+}
+
+
+.profile-link-content h3{
+
+    font-size:16px;
+
+    margin-bottom:5px;
+
+}
+
+
+.profile-link-content p{
+
+    color:#64748b;
+
+    font-size:10px;
+
+    line-height:1.5;
+
+}
+
+
+.profile-link-content span{
+
+    display:inline-block;
+
+    margin-top:9px;
+
+    color:#2563eb;
+
+    font-size:9px;
+
+    font-weight:700;
+
+    letter-spacing:.3px;
+
+}
+
+
+/* =====================================================
+   COLLABORATION BOX
+===================================================== */
+
+.collaboration-box{
+
+    margin-top:35px;
+
+    padding:25px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+    border-radius:16px;
+
+    color:#fff;
+
+    background:
+
+    radial-gradient(
+        circle at 90% 20%,
+        rgba(56,189,248,.18),
+        transparent 35%
+    ),
+
+    linear-gradient(
+        135deg,
+        #020617,
+        #12345b
+    );
+
+    box-shadow:
+    0 20px 45px
+    rgba(15,23,42,.12);
+
+}
+
+
+.collaboration-symbol{
+
+    min-width:55px;
+
+    width:55px;
+
+    height:55px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:14px;
+
+    font-size:25px;
+
+    color:#38bdf8;
+
+    border:
+    1px solid
+    rgba(56,189,248,.25);
+
+    background:
+    rgba(56,189,248,.08);
+
+}
+
+
+.collaboration-box h3{
+
+    font-size:16px;
+
+    margin-bottom:7px;
+
+}
+
+
+.collaboration-box p{
+
+    color:#a9bad0;
+
+    font-size:10px;
+
+    line-height:1.7;
+
+}
+
+
+/* =====================================================
+   MOBILE PROFILE GRID
+===================================================== */
+
+@media(max-width:800px){
+
+    .profile-links-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .collaboration-box{
+
+        align-items:flex-start;
+
+    }
+
+}
 </style>
 
 </head>
@@ -2429,139 +2781,387 @@ class="btn btn-primary">
 
 
 <!-- =====================================================
-     JOURNEY
+     RESEARCH PROFILES & COLLABORATION
 ===================================================== -->
 
 <section
 class="content-section"
-id="journey"
-style="background:#fff;">
+id="profiles"
+style="background:#f5f8fc;">
 
 <div class="container reveal">
 
-
 <div class="section-label">
-04 / ACADEMIC JOURNEY
+03 / RESEARCH PROFILES
 </div>
-
 
 <h2 class="section-title">
-
-Academic & Research Journey
-
+Research Profiles & Collaboration
 </h2>
 
+<p class="section-description">
 
-<div class="timeline">
+Connect with my academic, research and publication
+profiles across major international research platforms.
+
+</p>
 
 
-<div class="timeline-item">
+<div class="profile-links-grid">
 
-<div class="timeline-year">
-ACADEMIA
+
+<!-- GOOGLE SCHOLAR -->
+
+<a
+href="https://scholar.google.com/citations?hl=en&authuser=1&user=rnX6w4AAAAAJ"
+target="_blank"
+rel="noopener noreferrer"
+class="research-profile-card">
+
+<div class="profile-icon scholar">
+GS
 </div>
 
+<div class="profile-link-content">
+
 <h3>
-Computer Engineering & Higher Education
+Google Scholar
+</h3>
+
+<p>
+Publications • Citations • Research Metrics
+</p>
+
+<span>
+View Profile →
+</span>
+
+</div>
+
+</a>
+
+
+
+<!-- SCOPUS -->
+
+<a
+href="https://www.scopus.com/authid/detail.uri?authorId=58679571700"
+target="_blank"
+rel="noopener noreferrer"
+class="research-profile-card">
+
+<div class="profile-icon scopus">
+S
+</div>
+
+<div class="profile-link-content">
+
+<h3>
+Scopus
+</h3>
+
+<p>
+Author Profile • Publications • Citations
+</p>
+
+<span>
+View Author ID →
+</span>
+
+</div>
+
+</a>
+
+
+
+<!-- ORCID -->
+
+<a
+href="https://orcid.org/0000-0002-9697-4568"
+target="_blank"
+rel="noopener noreferrer"
+class="research-profile-card">
+
+<div class="profile-icon orcid">
+iD
+</div>
+
+<div class="profile-link-content">
+
+<h3>
+ORCID
+</h3>
+
+<p>
+Researcher Identifier • Publications
+</p>
+
+<span>
+View ORCID Profile →
+</span>
+
+</div>
+
+</a>
+
+
+
+<!-- RESEARCHGATE -->
+
+<a
+href="https://www.researchgate.net/profile/Umakant-Butkar?ev=hdr_xprf"
+target="_blank"
+rel="noopener noreferrer"
+class="research-profile-card">
+
+<div class="profile-icon researchgate">
+RG
+</div>
+
+<div class="profile-link-content">
+
+<h3>
+ResearchGate
+</h3>
+
+<p>
+Research • Publications • Collaboration
+</p>
+
+<span>
+View ResearchGate →
+</span>
+
+</div>
+
+</a>
+
+
+
+<!-- VIDWAN -->
+
+<a
+href="https://vidwan.inflibnet.ac.in//profile/424764"
+target="_blank"
+rel="noopener noreferrer"
+class="research-profile-card">
+
+<div class="profile-icon vidwan">
+V
+</div>
+
+<div class="profile-link-content">
+
+<h3>
+VIDWAN
+</h3>
+
+<p>
+Indian Researcher & Academic Profile
+</p>
+
+<span>
+View VIDWAN Profile →
+</span>
+
+</div>
+
+</a>
+
+
+
+<!-- RESEARCH ID -->
+
+<a
+href="https://researchid.co/umakantbutkar"
+target="_blank"
+rel="noopener noreferrer"
+class="research-profile-card">
+
+<div class="profile-icon researchid">
+RID
+</div>
+
+<div class="profile-link-content">
+
+<h3>
+ResearchID
+</h3>
+
+<p>
+Researcher Profile • Publications
+</p>
+
+<span>
+View ResearchID →
+</span>
+
+</div>
+
+</a>
+
+
+
+<!-- WEB OF SCIENCE -->
+
+<a
+href="https://www.webofscience.com/wos/author/record/NRB-7258-2025"
+target="_blank"
+rel="noopener noreferrer"
+class="research-profile-card">
+
+<div class="profile-icon wos">
+WoS
+</div>
+
+<div class="profile-link-content">
+
+<h3>
+Web of Science
+</h3>
+
+<p>
+Author Record • Research Publications
+</p>
+
+<span>
+View Author Record →
+</span>
+
+</div>
+
+</a>
+
+
+
+<!-- IEEE XPLORE -->
+
+<a
+href="https://ieeexplore.ieee.org/search/searchresult.jsp?newsearch=true&queryText=umakant%20butkar"
+target="_blank"
+rel="noopener noreferrer"
+class="research-profile-card">
+
+<div class="profile-icon ieee">
+IEEE
+</div>
+
+<div class="profile-link-content">
+
+<h3>
+IEEE Xplore
+</h3>
+
+<p>
+Research Papers • Technical Publications
+</p>
+
+<span>
+Explore IEEE Publications →
+</span>
+
+</div>
+
+</a>
+
+
+
+<!-- AMAZON BOOKS -->
+
+<a
+href="https://www.amazon.in/Books-Dr-Umakant-Dinkar-Butkar/s?rh=n%3A976389031%2Cp_27%3ADr.%2BUmakant%2BDinkar%2BButkar"
+target="_blank"
+rel="noopener noreferrer"
+class="research-profile-card book-profile">
+
+<div class="profile-icon books">
+📚
+</div>
+
+<div class="profile-link-content">
+
+<h3>
+Books – Amazon
+</h3>
+
+<p>
+Books authored and published by Dr. Umakant Butkar
+</p>
+
+<span>
+View Books →
+</span>
+
+</div>
+
+</a>
+
+
+
+<!-- NAMYA PRESS -->
+
+<a
+href="https://namyapress.com/nbl/prof-dr-umakant-dinkar-butkar"
+target="_blank"
+rel="noopener noreferrer"
+class="research-profile-card book-profile">
+
+<div class="profile-icon books">
+📖
+</div>
+
+<div class="profile-link-content">
+
+<h3>
+Books – Namya Press
+</h3>
+
+<p>
+International Books & Publications
+</p>
+
+<span>
+View Book Collection →
+</span>
+
+</div>
+
+</a>
+
+
+</div>
+
+
+<!-- COLLABORATION MESSAGE -->
+
+<div class="collaboration-box">
+
+<div class="collaboration-symbol">
+◈
+</div>
+
+<div>
+
+<h3>
+Open for Research Collaboration
 </h3>
 
 <p>
 
-Academic teaching, mentoring and research in
-Computer Engineering and emerging technologies.
+Interested in academic collaboration, joint research,
+publication, intellectual property, funded projects,
+student projects and emerging technology initiatives.
 
 </p>
 
 </div>
 
-
-<div class="timeline-item">
-
-<div class="timeline-year">
-RESEARCH
 </div>
 
-<h3>
-Artificial Intelligence • ML • IoT
-</h3>
-
-<p>
-
-Research and development activities focused on
-intelligent systems and connected technologies.
-
-</p>
-
-</div>
-
-
-<div class="timeline-item">
-
-<div class="timeline-year">
-AUTHOR
-</div>
-
-<h3>
-Books & Academic Publications
-</h3>
-
-<p>
-
-Author and contributor to books and research
-publications in emerging technology domains.
-
-</p>
-
-</div>
-
-
-<div class="timeline-item">
-
-<div class="timeline-year">
-INNOVATION
-</div>
-
-<h3>
-Patents & Intellectual Property
-</h3>
-
-<p>
-
-Innovative technology concepts leading to
-published and granted intellectual property.
-
-</p>
-
-</div>
-
-
-<div class="timeline-item">
-
-<div class="timeline-year">
-TODAY
-</div>
-
-<h3>
-Research • Innovation • Impact
-</h3>
-
-<p>
-
-Continuing academic, research and innovation
-activities with a focus on practical solutions.
-
-</p>
-
-</div>
-
-
-</div>
 
 </div>
 
 </section>
-
-
 
 <!-- =====================================================
      CTA
